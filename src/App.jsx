@@ -150,6 +150,7 @@ export default function App() {
             historyTotal={historyTotal}
             forecastMin={forecastMin}
             forecastMax={forecastMax}
+            brands={brands}
           />
         )}
 
