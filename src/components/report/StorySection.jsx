@@ -1,74 +1,90 @@
 import React from "react";
-import { BarChart3, AlertTriangle, ArrowUp, ArrowDown, Minus } from "lucide-react";
-import { SectionHeader, InsightCard } from "./ReportComponents";
+import { AlertTriangle, TrendingUp, TrendingDown } from "lucide-react";
 
 export default function StorySection({ selected }) {
-  const monthlyData = Object.entries(selected.byMonth || {}).map(([month, revenue]) => ({
-    month, revenue,
-  }));
+  const monthlyData = Object.entries(selected.byMonth || {});
+  if (monthlyData.length === 0) return null;
 
-  const peakMonth = monthlyData.reduce((max, m) => m.revenue > max.revenue ? m : max, monthlyData[0] || { revenue: 0 });
-  const recentMonth = monthlyData[monthlyData.length - 1] || { revenue: 0 };
-  const peakToRecentChange = peakMonth.revenue > 0
-    ? Math.round(((recentMonth.revenue - peakMonth.revenue) / peakMonth.revenue) * 100)
-    : 0;
+  // Find peak and calculate decline
+  const peak = monthlyData.reduce(
+    (max, [m, v]) => (v > max.value ? { month: m, value: v } : max),
+    { month: "", value: 0 },
+  );
+  const recent = monthlyData[monthlyData.length - 1];
+  const change =
+    peak.value > 0
+      ? Math.round(((recent[1] - peak.value) / peak.value) * 100)
+      : 0;
+  const hasDecline = change < -20;
 
   return (
-    <div className="bg-white border border-gray-200 rounded-2xl p-6">
-      <SectionHeader
-        icon={BarChart3}
-        title="The Story"
-        subtitle="Your performance narrative over time"
-      />
+    <div className="bg-white rounded-3xl p-8 border border-gray-100">
+      <h2 className="text-2xl font-bold text-gray-900 mb-6">Your Story</h2>
 
-      {peakToRecentChange < -30 && (
-        <InsightCard type="warning" icon={AlertTriangle} title="Significant Decline Detected">
-          Revenue dropped {Math.abs(peakToRecentChange)}% from peak ({peakMonth.month}) to recent ({recentMonth.month}).
-          Understanding why is critical for recovery.
-        </InsightCard>
-      )}
+      {/* Visual bars - simple and clear */}
+      <div className="space-y-3 mb-8">
+        {monthlyData.map(([month, revenue]) => {
+          const pct = Math.round((revenue / peak.value) * 100);
+          const isPeak = revenue === peak.value;
 
-      <div className="mt-6 overflow-x-auto">
-        <table className="w-full">
-          <thead>
-            <tr className="border-b border-gray-200">
-              <th className="text-left text-xs font-semibold text-gray-500 uppercase px-4 py-2">Month</th>
-              <th className="text-right text-xs font-semibold text-gray-500 uppercase px-4 py-2">Revenue</th>
-              <th className="text-right text-xs font-semibold text-gray-500 uppercase px-4 py-2">Change</th>
-              <th className="text-left text-xs font-semibold text-gray-500 uppercase px-4 py-2">Trend</th>
-            </tr>
-          </thead>
-          <tbody>
-            {monthlyData.map((m, i) => {
-              const prev = monthlyData[i - 1];
-              const change = prev && prev.revenue > 0 ? Math.round(((m.revenue - prev.revenue) / prev.revenue) * 100) : 0;
-              const isPeak = m.revenue === peakMonth.revenue;
-
-              return (
-                <tr key={m.month} className={`border-b border-gray-100 ${isPeak ? 'bg-green-50' : ''}`}>
-                  <td className="px-4 py-3 font-medium text-gray-900">
-                    {m.month} 2025
-                    {isPeak && <span className="ml-2 text-xs bg-green-100 text-green-700 px-2 py-0.5 rounded">PEAK</span>}
-                  </td>
-                  <td className="px-4 py-3 text-right font-semibold">${m.revenue.toLocaleString()}</td>
-                  <td className={`px-4 py-3 text-right font-medium ${change > 0 ? 'text-green-600' : change < 0 ? 'text-red-600' : 'text-gray-500'}`}>
-                    {i > 0 ? `${change > 0 ? '+' : ''}${change}%` : '-'}
-                  </td>
-                  <td className="px-4 py-3">
-                    {change > 10 ? (
-                      <span className="flex items-center gap-1 text-xs text-green-600"><ArrowUp size={14} />Growth</span>
-                    ) : change < -10 ? (
-                      <span className="flex items-center gap-1 text-xs text-red-600"><ArrowDown size={14} />Decline</span>
-                    ) : (
-                      <span className="flex items-center gap-1 text-xs text-gray-500"><Minus size={14} />Stable</span>
-                    )}
-                  </td>
-                </tr>
-              );
-            })}
-          </tbody>
-        </table>
+          return (
+            <div key={month} className="flex items-center gap-4">
+              <div className="w-12 text-sm font-medium text-gray-500">
+                {month}
+              </div>
+              <div className="flex-1 h-8 bg-gray-100 rounded-full overflow-hidden">
+                <div
+                  className={`h-full rounded-full transition-all ${
+                    isPeak ? "bg-green-500" : "bg-indigo-500"
+                  }`}
+                  style={{ width: `${pct}%` }}
+                />
+              </div>
+              <div className="w-20 text-right">
+                <span className="font-semibold text-gray-900">
+                  ${(revenue / 1000).toFixed(1)}K
+                </span>
+                {isPeak && (
+                  <span className="ml-2 text-xs text-green-600">Peak</span>
+                )}
+              </div>
+            </div>
+          );
+        })}
       </div>
+
+      {/* The insight - emotional, clear */}
+      {hasDecline ? (
+        <div className="bg-amber-50 rounded-2xl p-6 flex items-start gap-4">
+          <div className="w-12 h-12 rounded-full bg-amber-100 flex items-center justify-center flex-shrink-0">
+            <AlertTriangle className="text-amber-600" size={24} />
+          </div>
+          <div>
+            <div className="font-bold text-gray-900 text-lg mb-1">
+              Sales dropped {Math.abs(change)}% since {peak.month}
+            </div>
+            <div className="text-gray-600">
+              Your peak was ${(peak.value / 1000).toFixed(1)}K in {peak.month}.
+              Let's figure out what changed and get you back up there.
+            </div>
+          </div>
+        </div>
+      ) : (
+        <div className="bg-green-50 rounded-2xl p-6 flex items-start gap-4">
+          <div className="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0">
+            <TrendingUp className="text-green-600" size={24} />
+          </div>
+          <div>
+            <div className="font-bold text-gray-900 text-lg mb-1">
+              You're holding steady
+            </div>
+            <div className="text-gray-600">
+              Keep it up. There's still room to grow - check out the
+              opportunities below.
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

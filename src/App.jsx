@@ -157,18 +157,7 @@ export default function App() {
 
         {activeTab === "gaps" && <GapsTab selected={selected} />}
 
-        {activeTab === "simulate" && (
-          <SimulateTab
-            forecast={forecast}
-            forecastMin={forecastMin}
-            forecastMax={forecastMax}
-            scenario={scenario}
-            setScenario={setScenario}
-            decisions={decisions}
-            setDecisions={setDecisions}
-            calculateScenarioForecast={calculateScenarioForecast}
-          />
-        )}
+        {activeTab === "simulate" && <SimulateTab selected={selected} />}
 
         {activeTab === "partnership" && <PartnershipTab selected={selected} />}
 

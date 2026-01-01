@@ -1,65 +1,62 @@
 import React from "react";
-import { Download, Gift } from "lucide-react";
+import { TrendingUp, TrendingDown } from "lucide-react";
 
 export default function ReportHeader({ selected, brands = [] }) {
-  const grossProfit = Math.round(selected.revenue * 0.61);
-  const avgTransaction = selected.transactions > 0 ? Math.round(selected.revenue / selected.transactions) : 0;
   const topPct = Math.round((selected.rank / (brands.length || 174)) * 100);
+  const isTopTen = topPct <= 10;
+
+  // Determine trend from monthly data
+  const months = Object.values(selected.byMonth || {});
+  const recent = months.slice(-2);
+  const trending = recent.length >= 2 && recent[1] > recent[0];
 
   return (
-    <div className="bg-gradient-to-r from-slate-900 to-indigo-900 rounded-2xl p-8 text-white">
-      <div className="flex items-start justify-between">
+    <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-indigo-900 rounded-3xl p-10 text-white">
+      <div className="max-w-xl">
+        <h1 className="text-4xl font-bold mb-3">{selected.name}</h1>
+        <p className="text-xl text-slate-300 mb-8">
+          Here's how you're doing at Miracle Greens Bend
+        </p>
+      </div>
+
+      <div className="flex items-end gap-12">
+        {/* Main number - the one that matters */}
         <div>
-          <div className="text-indigo-300 text-sm font-medium mb-2">Producer Intelligence Report</div>
-          <h1 className="text-3xl font-bold mb-2">{selected.name}</h1>
-          <p className="text-slate-300 text-sm">
-            Strategic Partner Briefing · Data Period: May - Dec 2025
-          </p>
+          <div className="text-7xl font-bold mb-2">#{selected.rank}</div>
+          <div className="text-slate-400 text-lg">
+            out of {brands.length || 174} brands
+          </div>
         </div>
-        <div className="flex items-center gap-3">
-          <button className="flex items-center gap-2 px-4 py-2 bg-white/10 hover:bg-white/20 rounded-lg text-sm font-medium transition-colors">
-            <Download size={16} />
-            Export PDF
-          </button>
-          <button className="flex items-center gap-2 px-4 py-2 bg-indigo-500 hover:bg-indigo-400 rounded-lg text-sm font-medium transition-colors">
-            <Gift size={16} />
-            Share with Partner
-          </button>
+
+        {/* Revenue */}
+        <div>
+          <div className="text-4xl font-bold mb-2">
+            ${Math.round(selected.revenue / 1000)}K
+          </div>
+          <div className="text-slate-400">total sales</div>
+        </div>
+
+        {/* Trend indicator */}
+        <div
+          className={`flex items-center gap-2 px-4 py-2 rounded-full ${
+            trending
+              ? "bg-green-500/20 text-green-400"
+              : "bg-red-500/20 text-red-400"
+          }`}
+        >
+          {trending ? <TrendingUp size={20} /> : <TrendingDown size={20} />}
+          <span className="font-medium">
+            {trending ? "Growing" : "Declining"}
+          </span>
         </div>
       </div>
 
-      <div className="grid grid-cols-6 gap-4 mt-8">
-        <div className="bg-white/10 rounded-xl p-4">
-          <div className="text-indigo-300 text-xs font-medium">OVERALL RANK</div>
-          <div className="text-2xl font-bold mt-1">#{selected.rank}</div>
-          <div className="text-indigo-300 text-xs mt-1">of {brands.length || 174} brands</div>
+      {isTopTen && (
+        <div className="mt-8 inline-flex items-center gap-2 bg-amber-500/20 text-amber-400 px-4 py-2 rounded-full">
+          <span className="text-xl">⭐</span>
+          <span className="font-medium">You're in the top 10%</span>
         </div>
-        <div className="bg-white/10 rounded-xl p-4">
-          <div className="text-indigo-300 text-xs font-medium">TOTAL REVENUE</div>
-          <div className="text-2xl font-bold mt-1">${selected.revenue.toLocaleString()}</div>
-          <div className="text-indigo-300 text-xs mt-1">{selected.marketShare}% share</div>
-        </div>
-        <div className="bg-white/10 rounded-xl p-4">
-          <div className="text-indigo-300 text-xs font-medium">GROSS PROFIT</div>
-          <div className="text-2xl font-bold mt-1">${grossProfit.toLocaleString()}</div>
-          <div className="text-indigo-300 text-xs mt-1">61% margin</div>
-        </div>
-        <div className="bg-white/10 rounded-xl p-4">
-          <div className="text-indigo-300 text-xs font-medium">TRANSACTIONS</div>
-          <div className="text-2xl font-bold mt-1">{selected.transactions.toLocaleString()}</div>
-          <div className="text-indigo-300 text-xs mt-1">${avgTransaction} avg</div>
-        </div>
-        <div className="bg-white/10 rounded-xl p-4">
-          <div className="text-indigo-300 text-xs font-medium">CUSTOMERS</div>
-          <div className="text-2xl font-bold mt-1">{selected.customers}</div>
-          <div className="text-indigo-300 text-xs mt-1">unique buyers</div>
-        </div>
-        <div className="bg-white/10 rounded-xl p-4">
-          <div className="text-indigo-300 text-xs font-medium">POSITION</div>
-          <div className="text-2xl font-bold mt-1">Top {topPct}%</div>
-          <div className="text-indigo-300 text-xs mt-1">of all brands</div>
-        </div>
-      </div>
+      )}
     </div>
   );
 }
