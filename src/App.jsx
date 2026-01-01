@@ -6,6 +6,7 @@ import ForecastTab from "./components/ForecastTab";
 import GapsTab from "./components/GapsTab";
 import SimulateTab from "./components/SimulateTab";
 import PartnershipTab from "./components/PartnershipTab";
+import ReportTab from "./components/report/ReportTab";
 import { brands } from "./data/brands";
 import { suppliers } from "./data/suppliers";
 import { scenarioMultipliers } from "./data/multipliers";
@@ -170,6 +171,10 @@ export default function App() {
         )}
 
         {activeTab === "partnership" && <PartnershipTab selected={selected} />}
+
+        {activeTab === "report" && (
+          <ReportTab selected={selected} brands={brands} />
+        )}
       </main>
 
       <Footer />
