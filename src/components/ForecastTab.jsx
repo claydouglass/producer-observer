@@ -91,29 +91,58 @@ export default function ForecastTab({
     [selected, brands, selectedCategory, selectedType],
   );
 
-  // Derive KPIs from real data
+  // Calculate filter proportion for KPIs
+  const filterProportion = useMemo(() => {
+    if (selectedCategory === "All" && selectedType === "All") return 1;
+    let prop = 1;
+    if (selectedCategory !== "All") {
+      prop *= (selected.byCategory?.[selectedCategory] || 0) / selected.revenue;
+    }
+    if (selectedType !== "All") {
+      const types = consolidateTypes(selected.byType);
+      prop *= (types[selectedType] || 0) / selected.revenue;
+    }
+    return prop;
+  }, [selected, selectedCategory, selectedType]);
+
+  // Filtered values for KPIs
+  const filteredRevenue = Math.round(selected.revenue * filterProportion);
+  const filteredCustomers = Math.round(selected.customers * filterProportion);
+  const filteredTransactions = Math.round(
+    selected.transactions * filterProportion,
+  );
+  const filteredMarketShare = (selected.marketShare * filterProportion).toFixed(
+    2,
+  );
+
+  // Derive KPIs from real data - now filter-responsive
   const kpis = [
     {
       label: "Rank",
-      value: `#${selected.rank}`,
-      sub: `of ${brands.length || 174} brands`,
+      value: ranking ? `#${ranking.rank}` : `#${selected.rank}`,
+      sub: ranking
+        ? `of ${ranking.total} brands`
+        : `of ${brands.length || 174} brands`,
       delta:
         trend.trend === "up" ? `+${Math.abs(trend.delta)}%` : `${trend.delta}%`,
       trend: trend.trend,
     },
     {
-      label: "Market Share",
-      value: `${selected.marketShare}%`,
-      sub: "of store revenue",
+      label: "Revenue",
+      value: `$${filteredRevenue.toLocaleString()}`,
+      sub:
+        selectedCategory !== "All" || selectedType !== "All"
+          ? `${selectedCategory !== "All" ? selectedCategory : ""}${selectedCategory !== "All" && selectedType !== "All" ? " / " : ""}${selectedType !== "All" ? selectedType : ""}`
+          : "total sales",
     },
     {
       label: "Customers",
-      value: selected.customers.toString(),
+      value: filteredCustomers.toLocaleString(),
       sub: "unique buyers",
     },
     {
       label: "Transactions",
-      value: selected.transactions.toString(),
+      value: filteredTransactions.toLocaleString(),
       sub: "total sales",
     },
   ];
@@ -153,21 +182,25 @@ export default function ForecastTab({
 
   return (
     <div className="space-y-6">
-      {/* KPIs */}
-      <div className="grid grid-cols-4 gap-6">
-        {kpis.map((kpi, i) => (
-          <KPICard key={i} {...kpi} />
-        ))}
-      </div>
-
-      {/* Chart */}
+      {/* Chart with filters on top */}
       <ForecastChart
         selected={selected}
         historyPeak={historyPeak}
         historyTotal={historyTotal}
         forecastMin={forecastMin}
         forecastMax={forecastMax}
+        categoryFilter={selectedCategory}
+        setCategoryFilter={setSelectedCategory}
+        typeFilter={selectedType}
+        setTypeFilter={setSelectedType}
       />
+
+      {/* KPIs - now below chart and filter-responsive */}
+      <div className="grid grid-cols-4 gap-6">
+        {kpis.map((kpi, i) => (
+          <KPICard key={i} {...kpi} />
+        ))}
+      </div>
 
       {/* PO Insights - why we order what we order */}
       <POInsights selected={selected} />
@@ -178,31 +211,18 @@ export default function ForecastTab({
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center gap-2">
               <Flame size={18} className="text-orange-500" />
-              <span className="font-semibold text-gray-900">Your Ranking</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <select
-                value={selectedCategory}
-                onChange={(e) => setSelectedCategory(e.target.value)}
-                className="text-sm border border-gray-200 rounded-lg px-3 py-1.5 bg-white"
-              >
-                {categories.map((c) => (
-                  <option key={c} value={c}>
-                    {c}
-                  </option>
-                ))}
-              </select>
-              <select
-                value={selectedType}
-                onChange={(e) => setSelectedType(e.target.value)}
-                className="text-sm border border-gray-200 rounded-lg px-3 py-1.5 bg-white"
-              >
-                {["All", "Indica", "Hybrid", "Sativa"].map((t) => (
-                  <option key={t} value={t}>
-                    {t}
-                  </option>
-                ))}
-              </select>
+              <span className="font-semibold text-gray-900">
+                Your Ranking
+                {(selectedCategory !== "All" || selectedType !== "All") && (
+                  <span className="text-sm font-normal text-gray-500 ml-2">
+                    ({selectedCategory !== "All" ? selectedCategory : ""}
+                    {selectedCategory !== "All" && selectedType !== "All"
+                      ? " / "
+                      : ""}
+                    {selectedType !== "All" ? selectedType : ""})
+                  </span>
+                )}
+              </span>
             </div>
           </div>
 

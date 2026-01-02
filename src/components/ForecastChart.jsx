@@ -8,7 +8,7 @@ import {
   ResponsiveContainer,
   ReferenceLine,
 } from "recharts";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, Calendar } from "lucide-react";
 
 const categoryColors = {
   Flower: "#10b981",
@@ -65,6 +65,119 @@ function FilterDropdown({ label, value, options, onChange }) {
   );
 }
 
+function TimeframeDropdown({ value, onChange }) {
+  const [open, setOpen] = useState(false);
+  const [showCalendar, setShowCalendar] = useState(false);
+  const [customStart, setCustomStart] = useState("");
+  const [customEnd, setCustomEnd] = useState("");
+
+  const presets = [
+    { label: "Today", value: "today" },
+    { label: "This Week", value: "week" },
+    { label: "Last 30 Days", value: "30d" },
+    { label: "Last 90 Days", value: "90d" },
+    { label: "All Time", value: "all" },
+    { label: "Custom...", value: "custom" },
+  ];
+
+  const displayLabel = presets.find((p) => p.value === value)?.label || value;
+
+  const handlePresetClick = (preset) => {
+    if (preset === "custom") {
+      setShowCalendar(true);
+    } else {
+      onChange(preset);
+      setOpen(false);
+      setShowCalendar(false);
+    }
+  };
+
+  const handleCustomApply = () => {
+    if (customStart && customEnd) {
+      onChange(`${customStart} - ${customEnd}`);
+      setOpen(false);
+      setShowCalendar(false);
+    }
+  };
+
+  return (
+    <div className="relative">
+      <button
+        onClick={() => setOpen(!open)}
+        className="flex items-center gap-2 px-3 py-1.5 text-sm border border-gray-200 rounded-lg hover:border-gray-300 bg-white"
+      >
+        <Calendar size={14} className="text-gray-400" />
+        <span className="font-medium text-gray-900">{displayLabel}</span>
+        <ChevronDown size={14} className="text-gray-400" />
+      </button>
+      {open && (
+        <>
+          <div
+            className="fixed inset-0 z-10"
+            onClick={() => {
+              setOpen(false);
+              setShowCalendar(false);
+            }}
+          />
+          <div className="absolute top-full left-0 mt-1 bg-white border border-gray-200 rounded-lg shadow-lg z-20 py-1 min-w-[200px]">
+            {!showCalendar ? (
+              presets.map((preset) => (
+                <button
+                  key={preset.value}
+                  onClick={() => handlePresetClick(preset.value)}
+                  className={`w-full text-left px-3 py-1.5 text-sm hover:bg-gray-50 ${value === preset.value ? "bg-blue-50 text-blue-700" : "text-gray-700"}`}
+                >
+                  {preset.label}
+                </button>
+              ))
+            ) : (
+              <div className="p-3 space-y-3">
+                <div className="text-xs font-medium text-gray-500 uppercase">
+                  Custom Range
+                </div>
+                <div className="space-y-2">
+                  <div>
+                    <label className="text-xs text-gray-500">Start</label>
+                    <input
+                      type="date"
+                      value={customStart}
+                      onChange={(e) => setCustomStart(e.target.value)}
+                      className="w-full border border-gray-200 rounded px-2 py-1 text-sm"
+                    />
+                  </div>
+                  <div>
+                    <label className="text-xs text-gray-500">End</label>
+                    <input
+                      type="date"
+                      value={customEnd}
+                      onChange={(e) => setCustomEnd(e.target.value)}
+                      className="w-full border border-gray-200 rounded px-2 py-1 text-sm"
+                    />
+                  </div>
+                </div>
+                <div className="flex gap-2">
+                  <button
+                    onClick={() => setShowCalendar(false)}
+                    className="flex-1 px-3 py-1.5 text-sm text-gray-600 hover:bg-gray-50 rounded"
+                  >
+                    Back
+                  </button>
+                  <button
+                    onClick={handleCustomApply}
+                    className="flex-1 px-3 py-1.5 text-sm bg-blue-600 text-white rounded hover:bg-blue-700"
+                  >
+                    Apply
+                  </button>
+                </div>
+              </div>
+            )}
+          </div>
+        </>
+      )}
+    </div>
+  );
+}
+
 function ChartTooltip({ active, payload, label }) {
   if (!active || !payload?.length) return null;
   const dp = payload[0]?.payload;
@@ -110,10 +223,20 @@ export default function ForecastChart({
   historyTotal,
   forecastMin,
   forecastMax,
+  categoryFilter = "All",
+  setCategoryFilter,
+  typeFilter = "All",
+  setTypeFilter,
 }) {
-  const [viewMode, setViewMode] = useState("total"); // total, category, type
-  const [categoryFilter, setCategoryFilter] = useState("All");
-  const [typeFilter, setTypeFilter] = useState("All");
+  // Use internal state if no external controls provided
+  const [internalCategory, setInternalCategory] = useState("All");
+  const [internalType, setInternalType] = useState("All");
+  const [timeframe, setTimeframe] = useState("all");
+
+  const activeCategory = setCategoryFilter ? categoryFilter : internalCategory;
+  const activeType = setTypeFilter ? typeFilter : internalType;
+  const onCategoryChange = setCategoryFilter || setInternalCategory;
+  const onTypeChange = setTypeFilter || setInternalType;
 
   const consolidatedTypes = useMemo(
     () => consolidateTypes(selected?.byType),
@@ -128,14 +251,14 @@ export default function ForecastChart({
   const filterProportion = useMemo(() => {
     if (!selected) return 1;
     let prop = 1;
-    if (categoryFilter !== "All") {
-      prop *= (selected.byCategory?.[categoryFilter] || 0) / selected.revenue;
+    if (activeCategory !== "All") {
+      prop *= (selected.byCategory?.[activeCategory] || 0) / selected.revenue;
     }
-    if (typeFilter !== "All") {
-      prop *= (consolidatedTypes[typeFilter] || 0) / selected.revenue;
+    if (activeType !== "All") {
+      prop *= (consolidatedTypes[activeType] || 0) / selected.revenue;
     }
     return prop;
-  }, [selected, categoryFilter, typeFilter, consolidatedTypes]);
+  }, [selected, activeCategory, activeType, consolidatedTypes]);
 
   // Build chart data - 8 months history + 6 months forecast with widening bands
   const chartData = useMemo(() => {
@@ -202,8 +325,8 @@ export default function ForecastChart({
   if (!selected) return null;
 
   const filterLabel =
-    categoryFilter !== "All" || typeFilter !== "All"
-      ? `${categoryFilter !== "All" ? categoryFilter : ""}${categoryFilter !== "All" && typeFilter !== "All" ? " · " : ""}${typeFilter !== "All" ? typeFilter : ""}`
+    activeCategory !== "All" || activeType !== "All"
+      ? `${activeCategory !== "All" ? activeCategory : ""}${activeCategory !== "All" && activeType !== "All" ? " · " : ""}${activeType !== "All" ? activeType : ""}`
       : "All Products";
 
   return (
@@ -218,17 +341,18 @@ export default function ForecastChart({
           </div>
         </div>
         <div className="flex items-center gap-3">
+          <TimeframeDropdown value={timeframe} onChange={setTimeframe} />
           <FilterDropdown
             label="Category"
-            value={categoryFilter}
+            value={activeCategory}
             options={availableCategories}
-            onChange={setCategoryFilter}
+            onChange={onCategoryChange}
           />
           <FilterDropdown
             label="Type"
-            value={typeFilter}
+            value={activeType}
             options={["All", "Indica", "Hybrid", "Sativa"]}
-            onChange={setTypeFilter}
+            onChange={onTypeChange}
           />
         </div>
       </div>
@@ -337,8 +461,8 @@ export default function ForecastChart({
           For your production planning:
         </div>
         <div className="text-sm text-amber-700">
-          Flower takes ~4 months to grow + 2 months to sell. Start planning now
-          for {categoryFilter !== "All" ? categoryFilter : "product"} you'll
+          Flower takes ~4 months to produce + 2 months to sell. Start planning
+          now for {activeCategory !== "All" ? activeCategory : "product"} you'll
           deliver in May-June.
         </div>
       </div>
