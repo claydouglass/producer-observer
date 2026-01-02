@@ -80,6 +80,7 @@ export default function ForecastTab({
 }) {
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [selectedType, setSelectedType] = useState("All");
+  const [timeframe, setTimeframe] = useState("all");
 
   if (!selected) return null;
 
@@ -193,17 +194,16 @@ export default function ForecastTab({
         setCategoryFilter={setSelectedCategory}
         typeFilter={selectedType}
         setTypeFilter={setSelectedType}
+        timeframe={timeframe}
+        setTimeframe={setTimeframe}
       />
 
-      {/* KPIs - now below chart and filter-responsive */}
+      {/* KPIs - filter-responsive, above production planning */}
       <div className="grid grid-cols-4 gap-6">
         {kpis.map((kpi, i) => (
           <KPICard key={i} {...kpi} />
         ))}
       </div>
-
-      {/* PO Insights - why we order what we order */}
-      <POInsights selected={selected} />
 
       {/* Competitive Ranking */}
       {ranking && (

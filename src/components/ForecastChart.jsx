@@ -227,11 +227,18 @@ export default function ForecastChart({
   setCategoryFilter,
   typeFilter = "All",
   setTypeFilter,
+  timeframe: externalTimeframe,
+  setTimeframe: externalSetTimeframe,
 }) {
   // Use internal state if no external controls provided
   const [internalCategory, setInternalCategory] = useState("All");
   const [internalType, setInternalType] = useState("All");
-  const [timeframe, setTimeframe] = useState("all");
+  const [internalTimeframe, setInternalTimeframe] = useState("all");
+
+  const timeframe = externalSetTimeframe
+    ? externalTimeframe
+    : internalTimeframe;
+  const setTimeframe = externalSetTimeframe || setInternalTimeframe;
 
   const activeCategory = setCategoryFilter ? categoryFilter : internalCategory;
   const activeType = setTypeFilter ? typeFilter : internalType;
@@ -260,20 +267,28 @@ export default function ForecastChart({
     return prop;
   }, [selected, activeCategory, activeType, consolidatedTypes]);
 
-  // Build chart data - 8 months history + 6 months forecast with widening bands
+  // Get months to show based on timeframe
+  const getTimeframeMonths = (tf) => {
+    const allMonths = ["May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    switch (tf) {
+      case "today":
+      case "week":
+        return ["Dec"]; // Most recent
+      case "30d":
+        return ["Dec"]; // Last month
+      case "90d":
+        return ["Oct", "Nov", "Dec"]; // Last 3 months
+      case "all":
+      default:
+        return allMonths;
+    }
+  };
+
+  // Build chart data - history + 6 months forecast with widening bands
   const chartData = useMemo(() => {
     if (!selected?.byMonth) return [];
 
-    const historyMonths = [
-      "May",
-      "Jun",
-      "Jul",
-      "Aug",
-      "Sep",
-      "Oct",
-      "Nov",
-      "Dec",
-    ];
+    const historyMonths = getTimeframeMonths(timeframe);
     const forecastMonths = ["Jan", "Feb", "Mar", "Apr", "May", "Jun"]; // 6 month forecast
     const data = [];
 
@@ -284,8 +299,13 @@ export default function ForecastChart({
       data.push({ month, value: filtered, isForecast: false });
     });
 
-    // Forecast - 6 months with widening bands
-    const avgMonthly = (selected.revenue / 8) * filterProportion;
+    // Forecast - 6 months with widening bands (based on filtered history average)
+    const historyTotal = historyMonths.reduce(
+      (sum, m) => sum + (selected.byMonth[m] || 0),
+      0,
+    );
+    const avgMonthly = (historyTotal / historyMonths.length) * filterProportion;
+
     forecastMonths.forEach((month, i) => {
       // Uncertainty widens: 15% at month 1, up to 40% at month 6
       const baseVariance = 0.15;
@@ -302,7 +322,7 @@ export default function ForecastChart({
     });
 
     return data;
-  }, [selected, filterProportion]);
+  }, [selected, filterProportion, timeframe]);
 
   // Calculate filtered stats
   const filteredHistoryTotal = useMemo(
@@ -329,6 +349,15 @@ export default function ForecastChart({
       ? `${activeCategory !== "All" ? activeCategory : ""}${activeCategory !== "All" && activeType !== "All" ? " · " : ""}${activeType !== "All" ? activeType : ""}`
       : "All Products";
 
+  const timeframeLabel =
+    {
+      today: "Today",
+      week: "This Week",
+      "30d": "Last 30 Days",
+      "90d": "Last 90 Days",
+      all: "All Time (8 months)",
+    }[timeframe] || timeframe;
+
   return (
     <div className="p-6 rounded-xl border border-gray-200">
       <div className="flex items-center justify-between mb-6">
@@ -337,7 +366,7 @@ export default function ForecastChart({
             Demand Forecast
           </div>
           <div className="text-xs text-gray-500 mt-0.5">
-            {filterLabel} · 8 months history + 6 months forecast
+            {filterLabel} · {timeframeLabel} + 6 months forecast
           </div>
         </div>
         <div className="flex items-center gap-3">
