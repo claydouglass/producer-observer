@@ -1,25 +1,26 @@
 import React from "react";
 import { Sparkles } from "lucide-react";
 
+// Wholesale opportunity values (~45% of retail)
 const opportunities = [
   {
     name: "Gummies",
-    size: 47,
+    size: 21,
     reason: "Your customers already buy these from other brands",
   },
   {
     name: "510 Cartridges",
-    size: 47,
+    size: 21,
     reason: "Our highest-volume cart segment",
   },
   {
     name: "Pre-Roll Packs",
-    size: 27,
+    size: 12,
     reason: "Only 1 competitor here right now",
   },
   {
     name: "1oz Flower Deal",
-    size: 14,
+    size: 6,
     reason: "Your flower quality would win here",
   },
 ];
@@ -35,7 +36,7 @@ export default function GapsSection({ selected }) {
         </div>
         <div>
           <h2 className="text-2xl font-bold text-gray-900 mb-1">
-            ${totalOpp}K in opportunities
+            ${totalOpp}K wholesale opportunity
           </h2>
           <p className="text-gray-600">
             Products your customers want that you don't have yet
@@ -59,7 +60,7 @@ export default function GapsSection({ selected }) {
               <div className="text-2xl font-bold text-violet-600">
                 ${opp.size}K
               </div>
-              <div className="text-sm text-gray-400">market size</div>
+              <div className="text-sm text-gray-400">wholesale opportunity</div>
             </div>
           </div>
         ))}
@@ -69,7 +70,7 @@ export default function GapsSection({ selected }) {
         <div className="text-gray-500 mb-3">
           Even capturing 5% of these ={" "}
           <strong className="text-gray-900">
-            ${Math.round(totalOpp * 0.05)}K+ extra revenue
+            ${Math.round(totalOpp * 0.05)}K+ extra wholesale
           </strong>
         </div>
       </div>

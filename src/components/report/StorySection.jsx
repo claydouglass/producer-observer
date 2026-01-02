@@ -2,7 +2,15 @@ import React from "react";
 import { AlertTriangle, TrendingUp, TrendingDown } from "lucide-react";
 
 export default function StorySection({ selected }) {
-  const monthlyData = Object.entries(selected.byMonth || {});
+  // Use wholesale data if available, otherwise calculate from retail
+  const rawMonthlyData = selected.wholesaleByMonth || selected.byMonth || {};
+  const useWholesale = !!selected.wholesaleByMonth;
+
+  const monthlyData = Object.entries(rawMonthlyData).map(([month, value]) => [
+    month,
+    useWholesale ? value : Math.round(value * 0.45),
+  ]);
+
   if (monthlyData.length === 0) return null;
 
   // Find peak and calculate decline
@@ -23,9 +31,9 @@ export default function StorySection({ selected }) {
 
       {/* Visual bars - simple and clear */}
       <div className="space-y-3 mb-8">
-        {monthlyData.map(([month, revenue]) => {
-          const pct = Math.round((revenue / peak.value) * 100);
-          const isPeak = revenue === peak.value;
+        {monthlyData.map(([month, wholesale]) => {
+          const pct = Math.round((wholesale / peak.value) * 100);
+          const isPeak = wholesale === peak.value;
 
           return (
             <div key={month} className="flex items-center gap-4">
@@ -42,7 +50,7 @@ export default function StorySection({ selected }) {
               </div>
               <div className="w-20 text-right">
                 <span className="font-semibold text-gray-900">
-                  ${(revenue / 1000).toFixed(1)}K
+                  ${(wholesale / 1000).toFixed(1)}K
                 </span>
                 {isPeak && (
                   <span className="ml-2 text-xs text-green-600">Peak</span>

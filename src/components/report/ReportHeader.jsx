@@ -28,12 +28,12 @@ export default function ReportHeader({ selected, brands = [] }) {
           </div>
         </div>
 
-        {/* Revenue */}
+        {/* Wholesale */}
         <div>
           <div className="text-4xl font-bold mb-2">
-            ${Math.round(selected.revenue / 1000)}K
+            ${Math.round((selected.wholesale || 0) / 1000)}K
           </div>
-          <div className="text-slate-400">total sales</div>
+          <div className="text-slate-400">wholesale</div>
         </div>
 
         {/* Trend indicator */}

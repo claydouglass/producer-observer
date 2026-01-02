@@ -18,7 +18,13 @@ export default function Header({
     <header className="border-b border-gray-100">
       <div className="max-w-6xl mx-auto px-8 h-16 flex items-center justify-between">
         <div className="flex items-center gap-6">
-          <VervanaLogo height={18} />
+          <button
+            onClick={() => setActiveTab("forecast")}
+            className="hover:opacity-80 transition-opacity"
+            title="Go to Producer Observer home"
+          >
+            <VervanaLogo height={18} />
+          </button>
           <BrandSelector
             brands={brands}
             suppliers={suppliers}

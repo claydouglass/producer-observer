@@ -14,11 +14,11 @@ import {
 import { gapData, totalOpportunity, criticalGapsCount } from "../data/gapData";
 import { ProFeatureCard } from "./ProUpgradePrompt";
 
-// Demo competitor data - illustrative performance metrics
+// Demo competitor data - illustrative performance metrics (wholesale values)
 const competitorData = [
   {
     name: "Top Shelf Co",
-    revenue: 245000,
+    wholesale: 110250, // ~45% of retail
     trend: "up",
     trendPct: 12,
     categories: ["Flower", "Pre-Rolls"],
@@ -26,7 +26,7 @@ const competitorData = [
   },
   {
     name: "Green Valley Farms",
-    revenue: 198000,
+    wholesale: 89100,
     trend: "up",
     trendPct: 8,
     categories: ["Flower", "Vape"],
@@ -34,7 +34,7 @@ const competitorData = [
   },
   {
     name: "Pacific Craft",
-    revenue: 156000,
+    wholesale: 70200,
     trend: "flat",
     trendPct: 0,
     categories: ["Flower", "Edibles"],
@@ -42,7 +42,7 @@ const competitorData = [
   },
   {
     name: "Mountain High",
-    revenue: 134000,
+    wholesale: 60300,
     trend: "down",
     trendPct: -5,
     categories: ["Pre-Rolls", "Vape"],
@@ -50,7 +50,7 @@ const competitorData = [
   },
   {
     name: "Cascade Premium",
-    revenue: 112000,
+    wholesale: 50400,
     trend: "up",
     trendPct: 22,
     categories: ["Flower"],
@@ -86,7 +86,9 @@ export default function GapsTab({ selected }) {
 
       <div className="grid grid-cols-3 gap-6">
         <div className="p-5 rounded-xl bg-blue-50 border border-blue-100">
-          <div className="text-sm text-blue-600 mb-1">Total opportunity</div>
+          <div className="text-sm text-blue-600 mb-1">
+            Wholesale opportunity
+          </div>
           <div className="text-2xl font-semibold text-blue-900">
             ${Math.round(totalOpportunity / 1000)}K
           </div>
@@ -134,7 +136,9 @@ export default function GapsTab({ selected }) {
                   <div className="font-semibold text-gray-900">
                     ${(gap.market / 1000).toFixed(0)}K
                   </div>
-                  <div className="text-xs text-gray-400">market size</div>
+                  <div className="text-xs text-gray-400">
+                    wholesale opportunity
+                  </div>
                 </div>
                 {expandedGap === i ? (
                   <ChevronUp size={16} className="text-gray-400" />
@@ -238,9 +242,9 @@ export default function GapsTab({ selected }) {
                   <div className="flex items-center gap-6">
                     <div className="text-right">
                       <div className="font-semibold text-gray-900">
-                        ${(comp.revenue / 1000).toFixed(0)}K
+                        ${(comp.wholesale / 1000).toFixed(0)}K
                       </div>
-                      <div className="text-xs text-gray-400">revenue</div>
+                      <div className="text-xs text-gray-400">wholesale</div>
                     </div>
                     <div className="text-right w-16">
                       <div className="flex items-center justify-end gap-1">

@@ -1,28 +1,18 @@
 import React from "react";
-import {
-  Package,
-  DollarSign,
-  TrendingUp,
-  Calendar,
-  Target,
-} from "lucide-react";
+import { Package, DollarSign, Target } from "lucide-react";
 
-// Wholesale margin - retailers typically mark up 50-100% from wholesale
-const WHOLESALE_MARGIN = 0.45; // Producer gets ~45% of retail price
-
-// Frame insights around producer decisions: What to produce? How much? What price?
 function generateProducerInsights(selected) {
-  if (!selected?.byMonth || !selected?.byCategory)
+  if (!selected?.byMonth || !selected?.wholesaleByCategory)
     return { what: [], howMuch: [], price: [] };
 
-  const categories = Object.entries(selected.byCategory).sort(
+  const categories = Object.entries(selected.wholesaleByCategory).sort(
     (a, b) => b[1] - a[1],
   );
-  const months = Object.entries(selected.byMonth);
-  const avgMonthlyRetail = selected.revenue / 8;
-  const avgMonthlyWholesale = avgMonthlyRetail * WHOLESALE_MARGIN;
+  const months = Object.entries(selected.wholesaleByMonth || {});
+  const totalWholesale = selected.wholesale || 0;
+  const avgMonthlyWholesale = totalWholesale / 8;
 
-  // Find trends
+  // Find trends from wholesale data
   const recentAvg = months.slice(-3).reduce((s, [_, v]) => s + v, 0) / 3;
   const olderAvg = months.slice(0, 3).reduce((s, [_, v]) => s + v, 0) / 3;
   const trendPct =
@@ -33,76 +23,67 @@ function generateProducerInsights(selected) {
   // WHAT TO PRODUCE
   const topCat = categories[0];
   if (topCat) {
+    const pct = Math.round((topCat[1] / totalWholesale) * 100);
     insights.what.push({
       category: topCat[0],
-      pct: Math.round((topCat[1] / selected.revenue) * 100),
-      message: `${topCat[0]} is ${Math.round((topCat[1] / selected.revenue) * 100)}% of your sales here. Double down.`,
+      pct,
+      message: `${topCat[0]} is ${pct}% of your wholesale. Double down.`,
     });
   }
 
   if (categories.length > 1) {
     const secondCat = categories[1];
-    const secondPct = Math.round((secondCat[1] / selected.revenue) * 100);
+    const secondPct = Math.round((secondCat[1] / totalWholesale) * 100);
     if (secondPct > 15) {
       insights.what.push({
         category: secondCat[0],
         pct: secondPct,
-        message: `${secondCat[0]} is ${secondPct}% of sales. Consider expanding.`,
+        message: `${secondCat[0]} is ${secondPct}%. Consider expanding.`,
       });
     }
   }
 
-  // HOW MUCH - show wholesale values
+  // HOW MUCH
   const monthlyWholesale = Math.round(avgMonthlyWholesale);
   const sixMonthWholesale = Math.round(avgMonthlyWholesale * 6);
 
   insights.howMuch.push({
     timeframe: "Monthly",
     amount: monthlyWholesale,
-    message: `Wholesale demand: $${monthlyWholesale.toLocaleString()}/mo`,
+    message: `Demand: $${monthlyWholesale.toLocaleString()}/mo wholesale`,
   });
 
   insights.howMuch.push({
     timeframe: "6-month",
     amount: sixMonthWholesale,
-    message: `Plan for $${sixMonthWholesale.toLocaleString()} wholesale over 6 months`,
+    message: `Plan for $${sixMonthWholesale.toLocaleString()} over 6 months`,
   });
 
   if (trendPct < -15) {
     insights.howMuch.push({
       timeframe: "Warning",
       amount: trendPct,
-      message: `Sales down ${Math.abs(trendPct)}%. Adjust production.`,
+      message: `Down ${Math.abs(trendPct)}%. Adjust production.`,
       warning: true,
     });
   } else if (trendPct > 15) {
     insights.howMuch.push({
       timeframe: "Opportunity",
       amount: trendPct,
-      message: `Sales up ${trendPct}%. Increase supply.`,
+      message: `Up ${trendPct}%. Increase supply.`,
       positive: true,
     });
   }
 
-  // WHOLESALE PRICE POSITIONING
-  const avgRetailTransaction =
+  // WHOLESALE PRICING
+  const avgTransaction =
     selected.transactions > 0
-      ? Math.round(selected.revenue / selected.transactions)
+      ? Math.round(totalWholesale / selected.transactions)
       : 0;
-  const avgWholesaleTransaction = Math.round(
-    avgRetailTransaction * WHOLESALE_MARGIN,
-  );
-
-  // Calculate per-gram wholesale pricing (assuming avg 3.5g per transaction for flower)
-  const avgGramsPerTransaction = 3.5;
-  const wholesalePerGram = (
-    avgWholesaleTransaction / avgGramsPerTransaction
-  ).toFixed(2);
-
   insights.price.push({
-    metric: "Your wholesale",
-    value: avgWholesaleTransaction,
-    message: `~$${wholesalePerGram}/gram wholesale. Retailer sells at ~$${(avgRetailTransaction / avgGramsPerTransaction).toFixed(0)}/g.`,
+    metric: "Avg wholesale/sale",
+    value: avgTransaction,
+    message: `$${avgTransaction} wholesale per transaction`,
   });
 
   return insights;
@@ -110,6 +91,7 @@ function generateProducerInsights(selected) {
 
 export default function POInsights({ selected }) {
   const insights = generateProducerInsights(selected);
+  if (!insights.what.length && !insights.howMuch.length) return null;
 
   return (
     <div className="bg-white rounded-xl border border-gray-200 p-6">
@@ -148,7 +130,7 @@ export default function POInsights({ selected }) {
             {insights.howMuch.map((h, i) => (
               <div
                 key={i}
-                className={`p-3 rounded-lg ${h.warning ? "bg-red-50" : h.positive ? "bg-green-50" : "bg-green-50"}`}
+                className={`p-3 rounded-lg ${h.warning ? "bg-red-50" : "bg-green-50"}`}
               >
                 <div
                   className={`font-medium ${h.warning ? "text-red-900" : "text-green-900"}`}

@@ -12,16 +12,32 @@ function consolidateTypes(byType) {
 }
 
 export default function CategorySection({ selected }) {
-  const categories = Object.entries(selected.byCategory || {}).sort(
-    (a, b) => b[1] - a[1],
-  );
+  // Use wholesale data if available, otherwise calculate from retail
+  const rawCategories =
+    selected.wholesaleByCategory || selected.byCategory || {};
+  const useWholesale = !!selected.wholesaleByCategory;
 
-  const types = Object.entries(consolidateTypes(selected.byType))
+  const categories = Object.entries(rawCategories)
+    .map(([name, value]) => [
+      name,
+      useWholesale ? value : Math.round(value * 0.45),
+    ])
+    .sort((a, b) => b[1] - a[1]);
+
+  const rawTypes = selected.wholesaleByType || selected.byType || {};
+  const types = Object.entries(consolidateTypes(rawTypes))
+    .map(([name, value]) => [
+      name,
+      useWholesale ? value : Math.round(value * 0.45),
+    ])
     .filter(([_, v]) => v > 0)
     .sort((a, b) => b[1] - a[1]);
 
   const topCategory = categories[0];
   const topType = types[0];
+
+  // Calculate total wholesale for percentages
+  const totalWholesale = selected.wholesale || 0;
 
   const catColors = {
     Flower: "bg-green-500",
@@ -45,10 +61,10 @@ export default function CategorySection({ selected }) {
       {/* Categories */}
       <div className="mb-8">
         <div className="text-sm font-medium text-gray-400 uppercase tracking-wide mb-3">
-          By Category
+          Wholesale by Category
         </div>
         <div className="flex gap-3 flex-wrap">
-          {categories.map(([name, revenue]) => {
+          {categories.map(([name, wholesale]) => {
             const isTop = name === topCategory?.[0];
             return (
               <div
@@ -59,7 +75,7 @@ export default function CategorySection({ selected }) {
               >
                 <div className="font-semibold">{name}</div>
                 <div className={isTop ? "text-gray-300" : "text-gray-500"}>
-                  ${(revenue / 1000).toFixed(1)}K
+                  ${(wholesale / 1000).toFixed(1)}K
                 </div>
               </div>
             );
@@ -70,11 +86,11 @@ export default function CategorySection({ selected }) {
       {/* Types */}
       <div>
         <div className="text-sm font-medium text-gray-400 uppercase tracking-wide mb-3">
-          By Type
+          Wholesale by Type
         </div>
         <div className="flex gap-3">
-          {types.map(([name, revenue]) => {
-            const pct = Math.round((revenue / selected.revenue) * 100);
+          {types.map(([name, wholesale]) => {
+            const pct = Math.round((wholesale / totalWholesale) * 100);
             return (
               <div key={name} className="flex-1">
                 <div className="flex items-center justify-between mb-2">

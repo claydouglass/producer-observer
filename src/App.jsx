@@ -76,8 +76,8 @@ export default function App() {
         };
       }
 
-      // Forecast months - project based on average
-      const avgMonthly = selected.revenue / 8; // 8 months of data
+      // Forecast months - project based on average wholesale
+      const avgMonthly = selected.wholesale / 8; // 8 months of data
       const projected = Math.round(avgMonthly * scenarioMultipliers[scenario]);
       return {
         month,
@@ -92,7 +92,7 @@ export default function App() {
   // Calculate forecast with decisions
   const calculateForecast = () => {
     if (!selected) return 0;
-    let base = (selected.revenue / 8) * 6; // 6 month projection
+    let base = (selected.wholesale / 8) * 6; // 6 month projection
     if (!decisions.indicaSupply) base *= 0.7;
     let additions = 0;
     if (decisions.launch510LR) additions += 3000;
@@ -104,7 +104,7 @@ export default function App() {
 
   const calculateScenarioForecast = (s) => {
     if (!selected) return 0;
-    let base = (selected.revenue / 8) * 6;
+    let base = (selected.wholesale / 8) * 6;
     if (!decisions.indicaSupply) base *= 0.7;
     let additions = 0;
     if (decisions.launch510LR) additions += 3000;

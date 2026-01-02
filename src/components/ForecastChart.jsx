@@ -254,18 +254,22 @@ export default function ForecastChart({
     [selected],
   );
 
-  // Calculate filtered revenue proportion
+  // Calculate filtered wholesale proportion
   const filterProportion = useMemo(() => {
     if (!selected) return 1;
+    const total = selected.wholesale || 1;
     let prop = 1;
     if (activeCategory !== "All") {
-      prop *= (selected.byCategory?.[activeCategory] || 0) / selected.revenue;
+      prop *= (selected.wholesaleByCategory?.[activeCategory] || 0) / total;
     }
     if (activeType !== "All") {
-      prop *= (consolidatedTypes[activeType] || 0) / selected.revenue;
+      const wholesaleTypes = consolidateTypes(
+        selected.wholesaleByType || selected.byType,
+      );
+      prop *= (wholesaleTypes[activeType] || 0) / total;
     }
     return prop;
-  }, [selected, activeCategory, activeType, consolidatedTypes]);
+  }, [selected, activeCategory, activeType]);
 
   // Get months to show based on timeframe
   const getTimeframeMonths = (tf) => {

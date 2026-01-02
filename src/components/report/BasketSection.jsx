@@ -5,20 +5,20 @@ import ExpandableSection from "./ExpandableSection";
 // Mock basket data - would come from API
 function getBasketData() {
   const companionBrands = [
-    { brand: "Brand A", baskets: 49, revenue: 902, category: "Flower" },
-    { brand: "Brand B", baskets: 47, revenue: 1363, category: "Flower" },
-    { brand: "Brand C", baskets: 28, revenue: 1038, category: "Flower" },
-    { brand: "Brand D", baskets: 19, revenue: 518, category: "Flower" },
-    { brand: "Brand E", baskets: 16, revenue: 172, category: "Gummies" },
+    { brand: "Brand A", baskets: 49, wholesale: 406, category: "Flower" },
+    { brand: "Brand B", baskets: 47, wholesale: 613, category: "Flower" },
+    { brand: "Brand C", baskets: 28, wholesale: 467, category: "Flower" },
+    { brand: "Brand D", baskets: 19, wholesale: 233, category: "Flower" },
+    { brand: "Brand E", baskets: 16, wholesale: 77, category: "Gummies" },
   ];
 
   const companionCategories = [
-    { category: "Flower", baskets: 171, revenue: 5930 },
-    { category: "Cartridges", baskets: 57, revenue: 1743 },
-    { category: "Concentrates", baskets: 53, revenue: 1575 },
-    { category: "Edibles (Solid)", baskets: 52, revenue: 990 },
-    { category: "Pre-Roll", baskets: 45, revenue: 592 },
-    { category: "Infused Pre-Rolls", baskets: 33, revenue: 643 },
+    { category: "Flower", baskets: 171, wholesale: 2669 },
+    { category: "Cartridges", baskets: 57, wholesale: 784 },
+    { category: "Concentrates", baskets: 53, wholesale: 709 },
+    { category: "Edibles (Solid)", baskets: 52, wholesale: 446 },
+    { category: "Pre-Roll", baskets: 45, wholesale: 266 },
+    { category: "Infused Pre-Rolls", baskets: 33, wholesale: 289 },
   ];
 
   const crossSellGaps = [
@@ -32,7 +32,8 @@ function getBasketData() {
 }
 
 export default function BasketSection({ selected }) {
-  const { companionBrands, companionCategories, crossSellGaps } = getBasketData();
+  const { companionBrands, companionCategories, crossSellGaps } =
+    getBasketData();
   const totalGapBaskets = crossSellGaps.reduce((s, g) => s + g.baskets, 0);
 
   return (
@@ -42,8 +43,12 @@ export default function BasketSection({ selected }) {
           <ShoppingCart className="text-blue-600" size={24} />
         </div>
         <div>
-          <h2 className="text-2xl font-bold text-gray-900 mb-1">Basket Affinity</h2>
-          <p className="text-gray-500">What customers buy alongside your products</p>
+          <h2 className="text-2xl font-bold text-gray-900 mb-1">
+            Basket Affinity
+          </h2>
+          <p className="text-gray-500">
+            What customers buy alongside your products
+          </p>
         </div>
       </div>
 
@@ -86,12 +91,18 @@ export default function BasketSection({ selected }) {
                   <div className="h-3 bg-gray-100 rounded-full overflow-hidden">
                     <div
                       className="h-full bg-blue-500 rounded-full"
-                      style={{ width: `${(c.baskets / companionCategories[0].baskets) * 100}%` }}
+                      style={{
+                        width: `${(c.baskets / companionCategories[0].baskets) * 100}%`,
+                      }}
                     />
                   </div>
                 </div>
-                <div className="w-20 text-right text-sm">{c.baskets} baskets</div>
-                <div className="w-20 text-right text-sm text-gray-500">${c.revenue.toLocaleString()}</div>
+                <div className="w-20 text-right text-sm">
+                  {c.baskets} baskets
+                </div>
+                <div className="w-20 text-right text-sm text-gray-500">
+                  ${c.wholesale.toLocaleString()}
+                </div>
               </div>
             ))}
           </div>
@@ -105,20 +116,26 @@ export default function BasketSection({ selected }) {
         >
           <div className="grid grid-cols-2 gap-3">
             {companionBrands.map((b) => (
-              <div key={b.brand} className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+              <div
+                key={b.brand}
+                className="flex items-center justify-between p-3 bg-gray-50 rounded-lg"
+              >
                 <div>
                   <div className="font-medium">{b.brand}</div>
                   <div className="text-sm text-gray-500">{b.category}</div>
                 </div>
                 <div className="text-right">
                   <div className="font-medium">{b.baskets} shared</div>
-                  <div className="text-sm text-gray-500">${b.revenue.toLocaleString()}</div>
+                  <div className="text-sm text-gray-500">
+                    ${b.wholesale.toLocaleString()}
+                  </div>
                 </div>
               </div>
             ))}
           </div>
           <div className="mt-4 p-3 bg-blue-50 rounded-lg text-sm text-blue-700">
-            These brands appear frequently in baskets with yours. Consider complementary positioning.
+            These brands appear frequently in baskets with yours. Consider
+            complementary positioning.
           </div>
         </ExpandableSection>
       </div>

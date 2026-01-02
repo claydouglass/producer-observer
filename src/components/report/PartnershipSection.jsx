@@ -2,7 +2,8 @@ import React from "react";
 import { ArrowRight, CheckCircle } from "lucide-react";
 
 export default function PartnershipSection({ selected }) {
-  const potential = Math.round(selected.revenue * 1.84);
+  const wholesale = selected.wholesale || 0;
+  const potential = Math.round(wholesale * 1.84);
 
   return (
     <>
