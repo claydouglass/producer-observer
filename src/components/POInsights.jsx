@@ -7,6 +7,9 @@ import {
   Target,
 } from "lucide-react";
 
+// Wholesale margin - retailers typically mark up 50-100% from wholesale
+const WHOLESALE_MARGIN = 0.45; // Producer gets ~45% of retail price
+
 // Frame insights around producer decisions: What to produce? How much? What price?
 function generateProducerInsights(selected) {
   if (!selected?.byMonth || !selected?.byCategory)
@@ -16,19 +19,14 @@ function generateProducerInsights(selected) {
     (a, b) => b[1] - a[1],
   );
   const months = Object.entries(selected.byMonth);
-  const avgMonthly = selected.revenue / 8;
+  const avgMonthlyRetail = selected.revenue / 8;
+  const avgMonthlyWholesale = avgMonthlyRetail * WHOLESALE_MARGIN;
 
   // Find trends
   const recentAvg = months.slice(-3).reduce((s, [_, v]) => s + v, 0) / 3;
   const olderAvg = months.slice(0, 3).reduce((s, [_, v]) => s + v, 0) / 3;
   const trendPct =
     olderAvg > 0 ? Math.round(((recentAvg - olderAvg) / olderAvg) * 100) : 0;
-
-  // Peak analysis
-  const peak = months.reduce(
-    (max, [m, v]) => (v > max.value ? { month: m, value: v } : max),
-    { month: "", value: 0 },
-  );
 
   const insights = { what: [], howMuch: [], price: [] };
 
@@ -49,52 +47,62 @@ function generateProducerInsights(selected) {
       insights.what.push({
         category: secondCat[0],
         pct: secondPct,
-        message: `${secondCat[0]} is growing (${secondPct}% of sales). Consider expanding.`,
+        message: `${secondCat[0]} is ${secondPct}% of sales. Consider expanding.`,
       });
     }
   }
 
-  // HOW MUCH
-  const monthlyDemand = Math.round(avgMonthly);
-  const sixMonthDemand = Math.round(avgMonthly * 6);
+  // HOW MUCH - show wholesale values
+  const monthlyWholesale = Math.round(avgMonthlyWholesale);
+  const sixMonthWholesale = Math.round(avgMonthlyWholesale * 6);
 
   insights.howMuch.push({
     timeframe: "Monthly",
-    amount: monthlyDemand,
-    message: `Average monthly demand: $${monthlyDemand.toLocaleString()}`,
+    amount: monthlyWholesale,
+    message: `Wholesale demand: $${monthlyWholesale.toLocaleString()}/mo`,
   });
 
   insights.howMuch.push({
     timeframe: "6-month",
-    amount: sixMonthDemand,
-    message: `Plan for $${sixMonthDemand.toLocaleString()} over next 6 months`,
+    amount: sixMonthWholesale,
+    message: `Plan for $${sixMonthWholesale.toLocaleString()} wholesale over 6 months`,
   });
 
   if (trendPct < -15) {
     insights.howMuch.push({
       timeframe: "Warning",
       amount: trendPct,
-      message: `Sales trending down ${Math.abs(trendPct)}%. Adjust production accordingly.`,
+      message: `Sales down ${Math.abs(trendPct)}%. Adjust production.`,
       warning: true,
     });
   } else if (trendPct > 15) {
     insights.howMuch.push({
       timeframe: "Opportunity",
       amount: trendPct,
-      message: `Sales up ${trendPct}%. Consider increasing supply.`,
+      message: `Sales up ${trendPct}%. Increase supply.`,
       positive: true,
     });
   }
 
-  // PRICE POSITIONING
-  const avgTransaction =
+  // WHOLESALE PRICE POSITIONING
+  const avgRetailTransaction =
     selected.transactions > 0
       ? Math.round(selected.revenue / selected.transactions)
       : 0;
+  const avgWholesaleTransaction = Math.round(
+    avgRetailTransaction * WHOLESALE_MARGIN,
+  );
+
+  // Calculate per-gram wholesale pricing (assuming avg 3.5g per transaction for flower)
+  const avgGramsPerTransaction = 3.5;
+  const wholesalePerGram = (
+    avgWholesaleTransaction / avgGramsPerTransaction
+  ).toFixed(2);
+
   insights.price.push({
-    metric: "Avg transaction",
-    value: avgTransaction,
-    message: `Average sale is $${avgTransaction}. Your customers buy ${avgTransaction < 30 ? "value" : avgTransaction < 50 ? "mid-tier" : "premium"}.`,
+    metric: "Your wholesale",
+    value: avgWholesaleTransaction,
+    message: `~$${wholesalePerGram}/gram wholesale. Retailer sells at ~$${(avgRetailTransaction / avgGramsPerTransaction).toFixed(0)}/g.`,
   });
 
   return insights;
@@ -157,12 +165,12 @@ export default function POInsights({ selected }) {
           </div>
         </div>
 
-        {/* PRICE */}
+        {/* WHOLESALE PRICE */}
         <div>
           <div className="flex items-center gap-2 mb-3">
             <DollarSign size={16} className="text-amber-500" />
             <span className="text-sm font-semibold text-gray-700">
-              Price Positioning
+              Wholesale Pricing
             </span>
           </div>
           <div className="space-y-2">
