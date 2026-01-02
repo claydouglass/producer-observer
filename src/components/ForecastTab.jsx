@@ -106,14 +106,43 @@ export default function ForecastTab({
     return prop;
   }, [selected, selectedCategory, selectedType]);
 
-  // Filtered values for KPIs
-  const filteredRevenue = Math.round(selected.revenue * filterProportion);
+  // Get wholesale value (actual from data or calculated)
+  const totalWholesale =
+    selected.wholesale || Math.round(selected.revenue * 0.45);
+
+  // Filtered values for KPIs - use wholesale data when available
+  const filteredWholesale = useMemo(() => {
+    if (selectedCategory === "All" && selectedType === "All") {
+      return totalWholesale;
+    }
+    // Use actual wholesale by category/type if available
+    let wholesale = totalWholesale;
+    if (selectedCategory !== "All" && selected.wholesaleByCategory) {
+      wholesale =
+        selected.wholesaleByCategory[selectedCategory] ||
+        totalWholesale * filterProportion;
+    }
+    if (selectedType !== "All" && selected.wholesaleByType) {
+      const types = consolidateTypes(selected.wholesaleByType);
+      if (selectedCategory === "All") {
+        wholesale = types[selectedType] || totalWholesale * filterProportion;
+      } else {
+        // Both filters - use proportion
+        wholesale = Math.round(totalWholesale * filterProportion);
+      }
+    }
+    return Math.round(wholesale);
+  }, [
+    selected,
+    selectedCategory,
+    selectedType,
+    totalWholesale,
+    filterProportion,
+  ]);
+
   const filteredCustomers = Math.round(selected.customers * filterProportion);
   const filteredTransactions = Math.round(
     selected.transactions * filterProportion,
-  );
-  const filteredMarketShare = (selected.marketShare * filterProportion).toFixed(
-    2,
   );
 
   // Build filter label for KPIs
@@ -135,9 +164,9 @@ export default function ForecastTab({
       trend: trend.trend,
     },
     {
-      label: "Revenue",
-      value: `$${filteredRevenue.toLocaleString()}`,
-      sub: filterLabel || "total sales",
+      label: "Wholesale",
+      value: `$${filteredWholesale.toLocaleString()}`,
+      sub: filterLabel || "your revenue",
     },
     {
       label: "Customers",

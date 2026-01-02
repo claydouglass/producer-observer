@@ -4,6 +4,7 @@ export default function PageHeader({ selected, viewMode, retailerName }) {
   if (!selected) return null;
 
   const totalBrands = 174; // from data
+  const wholesale = selected.wholesale || Math.round(selected.revenue * 0.45);
 
   return (
     <div className="border-b border-gray-100">
@@ -40,9 +41,9 @@ export default function PageHeader({ selected, viewMode, retailerName }) {
                 </div>
               </div>
               <div>
-                <div className="text-sm text-gray-500">Revenue</div>
+                <div className="text-sm text-gray-500">Wholesale</div>
                 <div className="text-2xl font-semibold text-gray-900">
-                  ${selected.revenue.toLocaleString()}
+                  ${wholesale.toLocaleString()}
                 </div>
               </div>
               <div>

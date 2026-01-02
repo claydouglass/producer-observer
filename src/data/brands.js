@@ -1,4 +1,4 @@
-// Auto-generated from CSV - 174 brands
+// Auto-generated from CSV - 174 brands with wholesale cost data
 export const brands = [
   {
     "id": "brand-1",
@@ -35,6 +35,29 @@ export const brands = [
       "50/50": 26182.71,
       "Sativa": 10360.19,
       "Indica": 8595.92
+    },
+    "wholesale": 22202.47,
+    "wholesaleByMonth": {
+      "May": 1577.76,
+      "Jun": 2304.22,
+      "Jul": 2025.82,
+      "Aug": 2285.45,
+      "Sep": 2529.61,
+      "Oct": 4579.09,
+      "Nov": 3691.3,
+      "Dec": 3209.22
+    },
+    "wholesaleByCategory": {
+      "Flower": 18324.28,
+      "Pre-Roll": 3222.0,
+      "Infused Pre-Rolls": 656.19
+    },
+    "wholesaleByType": {
+      "Sativa-dom": 2509.03,
+      "Indica-dom": 4668.22,
+      "50/50": 7916.96,
+      "Sativa": 2952.16,
+      "Indica": 2559.18
     }
   },
   {
@@ -70,6 +93,30 @@ export const brands = [
       "Sativa": 2501.36,
       "50/50": 21616.3,
       "Indica": 400.61
+    },
+    "wholesale": 21.0,
+    "wholesaleByMonth": {
+      "May": 21.0,
+      "Jun": 0.0,
+      "Jul": 0.0,
+      "Aug": 0.0,
+      "Sep": 0.0,
+      "Oct": 0.0,
+      "Nov": 0.0,
+      "Dec": 0.0
+    },
+    "wholesaleByCategory": {
+      "Flower": 0.0,
+      "Cartridges": 0.0,
+      "Pre-Roll": 21.0,
+      "Accessories": 0.0
+    },
+    "wholesaleByType": {
+      "Indica-dom": 0.0,
+      "Sativa-dom": 2.0,
+      "Sativa": 0.0,
+      "50/50": 19.0,
+      "Indica": 0.0
     }
   },
   {
@@ -138,6 +185,29 @@ export const brands = [
       "Sativa": 1347.16,
       "Indica": 1313.36,
       "Sativa-dom": 89.97
+    },
+    "wholesale": 19386.19,
+    "wholesaleByMonth": {
+      "May": 1338.47,
+      "Jun": 2499.81,
+      "Jul": 2494.4,
+      "Aug": 1915.35,
+      "Sep": 2291.4,
+      "Oct": 2459.5,
+      "Nov": 3067.3,
+      "Dec": 3319.96
+    },
+    "wholesaleByCategory": {
+      "Cartridges": 16499.19,
+      "Concentrates": 1798.6,
+      "Accessories": 120.0,
+      "Infused Pre-Rolls": 968.4
+    },
+    "wholesaleByType": {
+      "50/50": 1080.34,
+      "Sativa": 626.4,
+      "Indica": 626.76,
+      "Sativa-dom": 42.0
     }
   },
   {
@@ -182,7 +252,22 @@ export const brands = [
     "byCategory": {
       "Cartridges": 25702.98
     },
-    "byType": {}
+    "byType": {},
+    "wholesale": 11515.01,
+    "wholesaleByMonth": {
+      "May": 965.24,
+      "Jun": 1231.43,
+      "Jul": 1464.56,
+      "Aug": 1571.58,
+      "Sep": 1257.44,
+      "Oct": 1760.44,
+      "Nov": 1856.88,
+      "Dec": 1407.44
+    },
+    "wholesaleByCategory": {
+      "Cartridges": 11515.01
+    },
+    "wholesaleByType": {}
   },
   {
     "id": "brand-5",
@@ -223,6 +308,26 @@ export const brands = [
       "50/50": 213.28,
       "Indica": 328.74,
       "Sativa": 265.14
+    },
+    "wholesale": 10899.71,
+    "wholesaleByMonth": {
+      "May": 648.66,
+      "Jun": 1159.36,
+      "Jul": 1393.0,
+      "Aug": 1478.25,
+      "Sep": 1409.6,
+      "Oct": 1334.89,
+      "Nov": 1639.64,
+      "Dec": 1836.31
+    },
+    "wholesaleByCategory": {
+      "Cartridges": 10288.83,
+      "Concentrates": 610.88
+    },
+    "wholesaleByType": {
+      "50/50": 118.08,
+      "Indica": 172.09,
+      "Sativa": 134.95
     }
   },
   {
@@ -266,6 +371,27 @@ export const brands = [
       "50/50": 1733.83,
       "Sativa": 697.76,
       "Indica": 256.5
+    },
+    "wholesale": 10794.73,
+    "wholesaleByMonth": {
+      "Aug": 840.0,
+      "Sep": 1010.0,
+      "Oct": 2491.47,
+      "Nov": 3419.84,
+      "Dec": 3033.42
+    },
+    "wholesaleByCategory": {
+      "Cartridges": 6890.0,
+      "Edibles (Solid)": 1917.23,
+      "Tinctures": 412.5,
+      "Concentrates": 1575.0
+    },
+    "wholesaleByType": {
+      "Sativa-dom": 121.8,
+      "Indica-dom": 575.0,
+      "50/50": 890.3,
+      "Sativa": 338.5,
+      "Indica": 125.0
     }
   },
   {
@@ -334,6 +460,27 @@ export const brands = [
       "Sativa": 93.6,
       "50/50": 307.6,
       "Sativa-dom": 583.87
+    },
+    "wholesale": 10897.73,
+    "wholesaleByMonth": {
+      "May": 843.92,
+      "Jun": 1366.49,
+      "Jul": 1716.99,
+      "Aug": 1373.33,
+      "Sep": 1105.0,
+      "Oct": 1429.0,
+      "Nov": 1491.0,
+      "Dec": 1572.0
+    },
+    "wholesaleByCategory": {
+      "Cartridges": 9903.08,
+      "Infused Pre-Rolls": 994.65
+    },
+    "wholesaleByType": {
+      "Indica-dom": 449.65,
+      "Sativa": 37.0,
+      "50/50": 146.0,
+      "Sativa-dom": 247.0
     }
   },
   {
@@ -387,6 +534,29 @@ export const brands = [
       "50/50": 1380.46,
       "Indica": 1245.6,
       "Sativa": 1032.29
+    },
+    "wholesale": 10113.23,
+    "wholesaleByMonth": {
+      "May": 649.61,
+      "Jun": 1632.89,
+      "Jul": 1057.91,
+      "Aug": 1338.99,
+      "Sep": 1299.03,
+      "Oct": 1332.35,
+      "Nov": 1204.5,
+      "Dec": 1597.95
+    },
+    "wholesaleByCategory": {
+      "Cartridges": 7790.6,
+      "Infused Pre-Rolls": 990.7,
+      "Tinctures": 123.98,
+      "Edibles (Solid)": 1207.95
+    },
+    "wholesaleByType": {
+      "Sativa-dom": 284.82,
+      "50/50": 668.45,
+      "Indica": 627.25,
+      "Sativa": 471.25
     }
   },
   {
@@ -416,6 +586,23 @@ export const brands = [
     },
     "byType": {
       "Indica-dom": 479.84
+    },
+    "wholesale": 8745.18,
+    "wholesaleByMonth": {
+      "May": 1295.89,
+      "Jun": 1279.98,
+      "Jul": 1009.49,
+      "Aug": 1037.39,
+      "Sep": 1005.55,
+      "Oct": 1125.35,
+      "Nov": 997.92,
+      "Dec": 993.61
+    },
+    "wholesaleByCategory": {
+      "Edibles (Solid)": 8745.18
+    },
+    "wholesaleByType": {
+      "Indica-dom": 221.0
     }
   },
   {
@@ -451,6 +638,28 @@ export const brands = [
       "Sativa-dom": 1784.85,
       "Indica": 1130.67,
       "Sativa": 923.33
+    },
+    "wholesale": 5523.36,
+    "wholesaleByMonth": {
+      "Jul": 169.51,
+      "Aug": 707.84,
+      "Sep": 1567.53,
+      "Oct": 1424.45,
+      "Nov": 668.24,
+      "Dec": 985.79
+    },
+    "wholesaleByCategory": {
+      "Flower": 3106.15,
+      "Cartridges": 629.02,
+      "Concentrates": 1132.94,
+      "Infused Pre-Rolls": 655.25
+    },
+    "wholesaleByType": {
+      "Indica-dom": 1889.81,
+      "50/50": 1533.27,
+      "Sativa-dom": 435.86,
+      "Indica": 550.54,
+      "Sativa": 484.86
     }
   },
   {
@@ -496,6 +705,25 @@ export const brands = [
     "byType": {
       "Indica": 637.33,
       "Sativa-dom": 45.6
+    },
+    "wholesale": 7513.76,
+    "wholesaleByMonth": {
+      "May": 657.61,
+      "Jun": 1409.16,
+      "Jul": 871.4,
+      "Aug": 882.25,
+      "Sep": 737.72,
+      "Oct": 1033.91,
+      "Nov": 1006.86,
+      "Dec": 914.85
+    },
+    "wholesaleByCategory": {
+      "Edibles (Solid)": 6053.65,
+      "Hemp": 1460.11
+    },
+    "wholesaleByType": {
+      "Indica": 362.15,
+      "Sativa-dom": 19.0
     }
   },
   {
@@ -528,6 +756,27 @@ export const brands = [
       "Sativa-dom": 1706.61,
       "Sativa": 4147.73,
       "Indica-dom": 7034.07
+    },
+    "wholesale": 5180.75,
+    "wholesaleByMonth": {
+      "May": 1.03,
+      "Jun": 5.0,
+      "Jul": 0.0,
+      "Aug": 1372.38,
+      "Sep": 877.19,
+      "Oct": 1065.26,
+      "Nov": 667.87,
+      "Dec": 1192.02
+    },
+    "wholesaleByCategory": {
+      "Flower": 5175.75,
+      "Pre-Roll": 5.0
+    },
+    "wholesaleByType": {
+      "50/50": 518.18,
+      "Sativa-dom": 0.0,
+      "Sativa": 1603.84,
+      "Indica-dom": 3058.73
     }
   },
   {
@@ -560,6 +809,27 @@ export const brands = [
       "50/50": 6061.19,
       "Sativa": 3411.68,
       "Indica": 4303.47
+    },
+    "wholesale": 6045.1,
+    "wholesaleByMonth": {
+      "May": 234.25,
+      "Jun": 250.75,
+      "Jul": 436.78,
+      "Aug": 1075.35,
+      "Sep": 885.51,
+      "Oct": 948.56,
+      "Nov": 1074.63,
+      "Dec": 1139.27
+    },
+    "wholesaleByCategory": {
+      "Pre-Roll": 1155.5,
+      "Flower": 4879.6,
+      "Concentrates": 10.0
+    },
+    "wholesaleByType": {
+      "50/50": 2746.82,
+      "Sativa": 1485.69,
+      "Indica": 1714.32
     }
   },
   {
@@ -605,6 +875,28 @@ export const brands = [
       "Indica": 3874.62,
       "50/50": 3988.52,
       "Sativa-dom": 562.31
+    },
+    "wholesale": 6304.92,
+    "wholesaleByMonth": {
+      "May": 426.71,
+      "Jun": 444.21,
+      "Jul": 752.0,
+      "Aug": 517.0,
+      "Sep": 602.0,
+      "Oct": 956.0,
+      "Nov": 1229.5,
+      "Dec": 1377.5
+    },
+    "wholesaleByCategory": {
+      "Concentrates": 5123.33,
+      "Extracts": 1181.59
+    },
+    "wholesaleByType": {
+      "Indica-dom": 648.59,
+      "Sativa": 1048.0,
+      "Indica": 1878.0,
+      "50/50": 1920.0,
+      "Sativa-dom": 287.0
     }
   },
   {
@@ -643,6 +935,28 @@ export const brands = [
       "Sativa": 563.55,
       "Sativa-dom": 358.7,
       "Indica": 48.52
+    },
+    "wholesale": 5659.02,
+    "wholesaleByMonth": {
+      "May": 479.58,
+      "Jun": 1155.04,
+      "Jul": 1123.65,
+      "Aug": 1106.35,
+      "Sep": 1040.9,
+      "Oct": 675.6,
+      "Nov": 77.9
+    },
+    "wholesaleByCategory": {
+      "Edibles (Solid)": 2459.02,
+      "Concentrates": 2675.0,
+      "Tinctures": 525.0
+    },
+    "wholesaleByType": {
+      "Indica-dom": 350.0,
+      "50/50": 1627.9,
+      "Sativa": 249.4,
+      "Sativa-dom": 176.1,
+      "Indica": 25.0
     }
   },
   {
@@ -690,6 +1004,25 @@ export const brands = [
       "Indica-dom": 993.9,
       "Sativa-dom": 869.14,
       "50/50": 118.07
+    },
+    "wholesale": 5097.69,
+    "wholesaleByMonth": {
+      "May": 460.77,
+      "Jun": 584.68,
+      "Jul": 425.36,
+      "Aug": 595.08,
+      "Sep": 623.54,
+      "Oct": 695.09,
+      "Nov": 746.47,
+      "Dec": 966.7
+    },
+    "wholesaleByCategory": {
+      "Edibles (Liquid)": 5097.69
+    },
+    "wholesaleByType": {
+      "Indica-dom": 514.75,
+      "Sativa-dom": 442.8,
+      "50/50": 98.4
     }
   },
   {
@@ -720,6 +1053,25 @@ export const brands = [
       "Sativa-dom": 550.92,
       "Indica": 1337.36,
       "Indica-dom": 1343.34
+    },
+    "wholesale": 969.84,
+    "wholesaleByMonth": {
+      "May": 595.97,
+      "Jun": 317.14,
+      "Jul": 56.73,
+      "Aug": 0.0,
+      "Sep": 0.0,
+      "Oct": 0.0,
+      "Nov": 0.0
+    },
+    "wholesaleByCategory": {
+      "Flower": 969.84
+    },
+    "wholesaleByType": {
+      "50/50": 520.84,
+      "Sativa-dom": 448.61,
+      "Indica": 0.3,
+      "Indica-dom": 0.0
     }
   },
   {
@@ -752,6 +1104,26 @@ export const brands = [
       "Indica-dom": 751.9,
       "Sativa": 1182.27,
       "50/50": 557.11
+    },
+    "wholesale": 1102.37,
+    "wholesaleByMonth": {
+      "May": 0.0,
+      "Jun": 0.0,
+      "Jul": 161.76,
+      "Aug": 211.74,
+      "Sep": 181.8,
+      "Oct": 145.6,
+      "Nov": 138.59,
+      "Dec": 262.88
+    },
+    "wholesaleByCategory": {
+      "Flower": 1102.37
+    },
+    "wholesaleByType": {
+      "Indica": 898.99,
+      "Indica-dom": 0.0,
+      "Sativa": 0.0,
+      "50/50": 203.38
     }
   },
   {
@@ -781,6 +1153,23 @@ export const brands = [
       "Sativa": 4677.16,
       "50/50": 922.14,
       "Sativa-dom": 3243.82
+    },
+    "wholesale": 2833.45,
+    "wholesaleByMonth": {
+      "Jun": 419.71,
+      "Jul": 212.22,
+      "Aug": 637.57,
+      "Sep": 901.79,
+      "Oct": 438.88,
+      "Nov": 223.28
+    },
+    "wholesaleByCategory": {
+      "Flower": 2833.45
+    },
+    "wholesaleByType": {
+      "Sativa": 1756.27,
+      "50/50": 174.82,
+      "Sativa-dom": 898.84
     }
   },
   {
@@ -811,7 +1200,22 @@ export const brands = [
     "byCategory": {
       "Cartridges": 8064.68
     },
-    "byType": {}
+    "byType": {},
+    "wholesale": 3368.38,
+    "wholesaleByMonth": {
+      "May": 225.4,
+      "Jun": 373.55,
+      "Jul": 277.43,
+      "Aug": 609.0,
+      "Sep": 437.5,
+      "Oct": 490.0,
+      "Nov": 444.5,
+      "Dec": 511.0
+    },
+    "wholesaleByCategory": {
+      "Cartridges": 3368.38
+    },
+    "wholesaleByType": {}
   },
   {
     "id": "brand-21",
@@ -838,6 +1242,22 @@ export const brands = [
       "Sativa": 1945.55,
       "Indica": 949.8,
       "50/50": 3667.39
+    },
+    "wholesale": 3252.0,
+    "wholesaleByMonth": {
+      "Oct": 691.41,
+      "Nov": 1251.03,
+      "Dec": 1309.56
+    },
+    "wholesaleByCategory": {
+      "Flower": 1615.7,
+      "Pre-Roll": 1636.3
+    },
+    "wholesaleByType": {
+      "Indica-dom": 268.82,
+      "Sativa": 856.2,
+      "Indica": 457.6,
+      "50/50": 1669.38
     }
   },
   {
@@ -869,6 +1289,26 @@ export const brands = [
       "50/50": 3023.4,
       "Indica": 964.15,
       "Indica-dom": 367.26
+    },
+    "wholesale": 2598.51,
+    "wholesaleByMonth": {
+      "May": 116.46,
+      "Jun": 254.16,
+      "Jul": 246.42,
+      "Aug": 125.97,
+      "Sep": 86.09,
+      "Oct": 512.17,
+      "Nov": 339.41,
+      "Dec": 917.83
+    },
+    "wholesaleByCategory": {
+      "Flower": 2598.51
+    },
+    "wholesaleByType": {
+      "Sativa-dom": 749.12,
+      "50/50": 1315.56,
+      "Indica": 390.58,
+      "Indica-dom": 143.25
     }
   },
   {
@@ -911,6 +1351,26 @@ export const brands = [
       "Sativa": 1810.12,
       "50/50": 1942.95,
       "Indica": 1832.6
+    },
+    "wholesale": 2625.32,
+    "wholesaleByMonth": {
+      "May": 456.72,
+      "Jun": 338.84,
+      "Jul": 230.92,
+      "Aug": 375.14,
+      "Sep": 349.0,
+      "Oct": 359.56,
+      "Nov": 208.0,
+      "Dec": 307.14
+    },
+    "wholesaleByCategory": {
+      "Concentrates": 2625.32
+    },
+    "wholesaleByType": {
+      "Indica-dom": 166.25,
+      "Sativa": 723.02,
+      "50/50": 752.93,
+      "Indica": 691.0
     }
   },
   {
@@ -948,7 +1408,23 @@ export const brands = [
       "Cartridges": 5877.1,
       "Accessories": 71.38
     },
-    "byType": {}
+    "byType": {},
+    "wholesale": 1900.79,
+    "wholesaleByMonth": {
+      "May": 337.5,
+      "Jun": 525.0,
+      "Jul": 395.01,
+      "Aug": 65.01,
+      "Sep": 35.0,
+      "Oct": 90.0,
+      "Nov": 173.31,
+      "Dec": 279.96
+    },
+    "wholesaleByCategory": {
+      "Cartridges": 1863.29,
+      "Accessories": 37.5
+    },
+    "wholesaleByType": {}
   },
   {
     "id": "brand-25",
@@ -976,7 +1452,22 @@ export const brands = [
     "byCategory": {
       "Tinctures": 5929.2
     },
-    "byType": {}
+    "byType": {},
+    "wholesale": 2895.0,
+    "wholesaleByMonth": {
+      "May": 280.0,
+      "Jun": 565.0,
+      "Jul": 185.0,
+      "Aug": 355.0,
+      "Sep": 385.0,
+      "Oct": 375.0,
+      "Nov": 300.0,
+      "Dec": 450.0
+    },
+    "wholesaleByCategory": {
+      "Tinctures": 2895.0
+    },
+    "wholesaleByType": {}
   },
   {
     "id": "brand-26",
@@ -1003,6 +1494,22 @@ export const brands = [
       "50/50": 978.5,
       "Sativa-dom": 523.88,
       "Indica": 878.31
+    },
+    "wholesale": 2882.58,
+    "wholesaleByMonth": {
+      "May": 1093.87,
+      "Jun": 1419.68,
+      "Jul": 360.23,
+      "Aug": 8.8
+    },
+    "wholesaleByCategory": {
+      "Flower": 2882.58
+    },
+    "wholesaleByType": {
+      "Indica-dom": 1347.3,
+      "50/50": 596.02,
+      "Sativa-dom": 249.54,
+      "Indica": 405.14
     }
   },
   {
@@ -1043,7 +1550,24 @@ export const brands = [
       "Topicals": 2812.87,
       "Hemp": 274.2
     },
-    "byType": {}
+    "byType": {},
+    "wholesale": 2504.54,
+    "wholesaleByMonth": {
+      "May": 700.66,
+      "Jun": 279.09,
+      "Jul": 340.53,
+      "Aug": 208.75,
+      "Sep": 237.01,
+      "Oct": 191.0,
+      "Nov": 294.5,
+      "Dec": 253.0
+    },
+    "wholesaleByCategory": {
+      "Tinctures": 1002.49,
+      "Topicals": 1502.0,
+      "Hemp": 0.05
+    },
+    "wholesaleByType": {}
   },
   {
     "id": "brand-28",
@@ -1074,7 +1598,23 @@ export const brands = [
       "Cartridges": 3964.35,
       "Concentrates": 622.74
     },
-    "byType": {}
+    "byType": {},
+    "wholesale": 2961.5,
+    "wholesaleByMonth": {
+      "May": 657.5,
+      "Jun": 853.0,
+      "Jul": 696.0,
+      "Aug": 275.0,
+      "Sep": 110.0,
+      "Oct": 155.0,
+      "Nov": 165.0,
+      "Dec": 50.0
+    },
+    "wholesaleByCategory": {
+      "Cartridges": 2311.5,
+      "Concentrates": 650.0
+    },
+    "wholesaleByType": {}
   },
   {
     "id": "brand-29",
@@ -1102,6 +1642,23 @@ export const brands = [
     "byType": {
       "Sativa": 3261.21,
       "Sativa-dom": 891.46
+    },
+    "wholesale": 2746.4,
+    "wholesaleByMonth": {
+      "May": 1163.13,
+      "Jun": 584.13,
+      "Jul": 336.74,
+      "Aug": 171.76,
+      "Sep": 214.75,
+      "Oct": 275.89
+    },
+    "wholesaleByCategory": {
+      "Flower": 2510.3,
+      "Pre-Roll": 236.1
+    },
+    "wholesaleByType": {
+      "Sativa": 1927.96,
+      "Sativa-dom": 739.08
     }
   },
   {
@@ -1136,6 +1693,27 @@ export const brands = [
       "Indica-dom": 141.8,
       "Sativa-dom": 559.5,
       "50/50": 2722.75
+    },
+    "wholesale": 2310.52,
+    "wholesaleByMonth": {
+      "May": 392.73,
+      "Jun": 309.3,
+      "Jul": 500.24,
+      "Aug": 187.13,
+      "Sep": 285.39,
+      "Oct": 218.57,
+      "Nov": 239.18,
+      "Dec": 177.98
+    },
+    "wholesaleByCategory": {
+      "Infused Pre-Rolls": 275.5,
+      "Pre-Roll": 1917.0,
+      "Infuseds": 118.02
+    },
+    "wholesaleByType": {
+      "Indica-dom": 93.1,
+      "Sativa-dom": 304.64,
+      "50/50": 1378.72
     }
   },
   {
@@ -1181,6 +1759,25 @@ export const brands = [
     "byType": {
       "50/50": 133.35,
       "Sativa": 36.4
+    },
+    "wholesale": 2128.29,
+    "wholesaleByMonth": {
+      "May": 349.62,
+      "Jun": 320.6,
+      "Jul": 226.97,
+      "Aug": 210.97,
+      "Sep": 242.75,
+      "Oct": 181.25,
+      "Nov": 251.58,
+      "Dec": 344.55
+    },
+    "wholesaleByCategory": {
+      "Edibles (Solid)": 2068.29,
+      "Tinctures": 60.0
+    },
+    "wholesaleByType": {
+      "50/50": 63.0,
+      "Sativa": 18.0
     }
   },
   {
@@ -1212,6 +1809,25 @@ export const brands = [
       "Indica": 1242.14,
       "Sativa": 1436.38,
       "50/50": 1182.0
+    },
+    "wholesale": 1740.0,
+    "wholesaleByMonth": {
+      "May": 70.0,
+      "Jun": 100.0,
+      "Jul": 300.0,
+      "Aug": 260.0,
+      "Sep": 230.0,
+      "Oct": 390.0,
+      "Nov": 190.0,
+      "Dec": 200.0
+    },
+    "wholesaleByCategory": {
+      "Pre-Roll": 1740.0
+    },
+    "wholesaleByType": {
+      "Indica": 540.0,
+      "Sativa": 640.0,
+      "50/50": 530.0
     }
   },
   {
@@ -1243,7 +1859,23 @@ export const brands = [
       "Edibles (Solid)": 3787.8,
       "Accessories": 43.85
     },
-    "byType": {}
+    "byType": {},
+    "wholesale": 872.43,
+    "wholesaleByMonth": {
+      "May": 2.13,
+      "Jun": 16.12,
+      "Jul": 2.24,
+      "Aug": 1.48,
+      "Sep": 92.86,
+      "Oct": 293.0,
+      "Nov": 305.6,
+      "Dec": 159.0
+    },
+    "wholesaleByCategory": {
+      "Edibles (Solid)": 852.83,
+      "Accessories": 19.6
+    },
+    "wholesaleByType": {}
   },
   {
     "id": "brand-34",
@@ -1273,6 +1905,22 @@ export const brands = [
     "byType": {
       "Sativa": 502.68,
       "Indica": 219.3
+    },
+    "wholesale": 1845.71,
+    "wholesaleByMonth": {
+      "May": 311.99,
+      "Jun": 487.72,
+      "Jul": 249.5,
+      "Aug": 376.5,
+      "Sep": 210.0,
+      "Oct": 210.0
+    },
+    "wholesaleByCategory": {
+      "Edibles (Solid)": 1845.71
+    },
+    "wholesaleByType": {
+      "Sativa": 250.5,
+      "Indica": 100.0
     }
   },
   {
@@ -1304,6 +1952,26 @@ export const brands = [
       "Indica-dom": 1535.27,
       "50/50": 931.68,
       "Sativa": 592.52
+    },
+    "wholesale": 36.0,
+    "wholesaleByMonth": {
+      "May": 23.0,
+      "Jun": 13.0,
+      "Jul": 0.0,
+      "Aug": 0.0,
+      "Sep": 0.0,
+      "Oct": 0.0,
+      "Nov": 0.0,
+      "Dec": 0.0
+    },
+    "wholesaleByCategory": {
+      "Pre-Roll": 36.0
+    },
+    "wholesaleByType": {
+      "Sativa-dom": 36.0,
+      "Indica-dom": 0.0,
+      "50/50": 0.0,
+      "Sativa": 0.0
     }
   },
   {
@@ -1331,6 +1999,22 @@ export const brands = [
     "byType": {
       "Indica-dom": 684.99,
       "50/50": 2455.88
+    },
+    "wholesale": 1731.86,
+    "wholesaleByMonth": {
+      "May": 251.01,
+      "Jun": 604.76,
+      "Jul": 379.48,
+      "Aug": 27.87,
+      "Sep": 24.85,
+      "Oct": 443.89
+    },
+    "wholesaleByCategory": {
+      "Flower": 1731.86
+    },
+    "wholesaleByType": {
+      "Indica-dom": 433.84,
+      "50/50": 1155.62
     }
   },
   {
@@ -1375,6 +2059,26 @@ export const brands = [
       "50/50": 1220.16,
       "Indica": 1256.22,
       "Sativa": 818.33
+    },
+    "wholesale": 1725.68,
+    "wholesaleByMonth": {
+      "May": 303.8,
+      "Jun": 121.75,
+      "Jul": 109.55,
+      "Aug": 290.15,
+      "Sep": 306.28,
+      "Oct": 173.55,
+      "Nov": 185.15,
+      "Dec": 235.45
+    },
+    "wholesaleByCategory": {
+      "Infused Pre-Rolls": 1179.48,
+      "Pre-Roll": 546.2
+    },
+    "wholesaleByType": {
+      "50/50": 627.05,
+      "Indica": 643.63,
+      "Sativa": 455.0
     }
   },
   {
@@ -1406,6 +2110,23 @@ export const brands = [
     },
     "byType": {
       "Indica": 16.0
+    },
+    "wholesale": 2097.86,
+    "wholesaleByMonth": {
+      "May": 639.86,
+      "Jun": 162.0,
+      "Jul": 81.0,
+      "Aug": 162.0,
+      "Sep": 189.0,
+      "Oct": 243.0,
+      "Nov": 297.0,
+      "Dec": 324.0
+    },
+    "wholesaleByCategory": {
+      "Pre-Roll": 2097.86
+    },
+    "wholesaleByType": {
+      "Indica": 11.66
     }
   },
   {
@@ -1430,7 +2151,22 @@ export const brands = [
     "byCategory": {
       "Accessories": 3213.61
     },
-    "byType": {}
+    "byType": {},
+    "wholesale": 1535.9,
+    "wholesaleByMonth": {
+      "May": 16.5,
+      "Jun": 49.5,
+      "Jul": 144.85,
+      "Aug": 327.65,
+      "Sep": 271.2,
+      "Oct": 230.15,
+      "Nov": 270.1,
+      "Dec": 225.95
+    },
+    "wholesaleByCategory": {
+      "Accessories": 1535.9
+    },
+    "wholesaleByType": {}
   },
   {
     "id": "brand-40",
@@ -1463,6 +2199,22 @@ export const brands = [
     },
     "byType": {
       "Sativa-dom": 344.4
+    },
+    "wholesale": 1875.74,
+    "wholesaleByMonth": {
+      "May": 496.67,
+      "Jun": 546.27,
+      "Jul": 150.68,
+      "Aug": 167.22,
+      "Sep": 164.4,
+      "Oct": 185.75,
+      "Nov": 164.75
+    },
+    "wholesaleByCategory": {
+      "Edibles (Solid)": 1875.74
+    },
+    "wholesaleByType": {
+      "Sativa-dom": 255.25
     }
   },
   {
@@ -1487,7 +2239,16 @@ export const brands = [
     "byCategory": {
       "Cartridges": 3057.82
     },
-    "byType": {}
+    "byType": {},
+    "wholesale": 874.25,
+    "wholesaleByMonth": {
+      "Nov": 289.25,
+      "Dec": 585.0
+    },
+    "wholesaleByCategory": {
+      "Cartridges": 874.25
+    },
+    "wholesaleByType": {}
   },
   {
     "id": "brand-42",
@@ -1522,6 +2283,18 @@ export const brands = [
     },
     "byType": {
       "Sativa": 298.4
+    },
+    "wholesale": 1403.5,
+    "wholesaleByMonth": {
+      "Oct": 185.0,
+      "Nov": 531.0,
+      "Dec": 687.5
+    },
+    "wholesaleByCategory": {
+      "Edibles (Solid)": 1403.5
+    },
+    "wholesaleByType": {
+      "Sativa": 150.5
     }
   },
   {
@@ -1556,6 +2329,23 @@ export const brands = [
       "Sativa": 915.29,
       "Indica": 602.81,
       "50/50": 179.69
+    },
+    "wholesale": 1376.86,
+    "wholesaleByMonth": {
+      "Aug": 72.9,
+      "Sep": 126.9,
+      "Oct": 108.0,
+      "Nov": 423.3,
+      "Dec": 645.76
+    },
+    "wholesaleByCategory": {
+      "Infused Pre-Rolls": 769.86,
+      "Cartridges": 607.0
+    },
+    "wholesaleByType": {
+      "Sativa": 453.96,
+      "Indica": 229.5,
+      "50/50": 86.4
     }
   },
   {
@@ -1583,6 +2373,22 @@ export const brands = [
       "50/50": 1869.1,
       "Indica": 525.0,
       "Sativa": 276.0
+    },
+    "wholesale": 1244.1,
+    "wholesaleByMonth": {
+      "Jun": 78.75,
+      "Jul": 225.0,
+      "Aug": 315.45,
+      "Sep": 345.9,
+      "Oct": 279.0
+    },
+    "wholesaleByCategory": {
+      "Pre-Roll": 1244.1
+    },
+    "wholesaleByType": {
+      "50/50": 851.25,
+      "Indica": 244.8,
+      "Sativa": 136.8
     }
   },
   {
@@ -1607,7 +2413,20 @@ export const brands = [
     "byCategory": {
       "Edibles (Solid)": 2661.28
     },
-    "byType": {}
+    "byType": {},
+    "wholesale": 1350.0,
+    "wholesaleByMonth": {
+      "Jul": 18.0,
+      "Aug": 207.0,
+      "Sep": 153.0,
+      "Oct": 288.0,
+      "Nov": 405.0,
+      "Dec": 279.0
+    },
+    "wholesaleByCategory": {
+      "Edibles (Solid)": 1350.0
+    },
+    "wholesaleByType": {}
   },
   {
     "id": "brand-46",
@@ -1634,6 +2453,22 @@ export const brands = [
     "byType": {
       "Indica-dom": 1159.99,
       "50/50": 1497.58
+    },
+    "wholesale": 715.85,
+    "wholesaleByMonth": {
+      "Jul": 117.25,
+      "Aug": 269.07,
+      "Sep": 161.18,
+      "Oct": 62.39,
+      "Nov": 60.24,
+      "Dec": 45.72
+    },
+    "wholesaleByCategory": {
+      "Flower": 715.85
+    },
+    "wholesaleByType": {
+      "Indica-dom": 416.35,
+      "50/50": 299.5
     }
   },
   {
@@ -1666,6 +2501,26 @@ export const brands = [
       "Sativa": 977.6,
       "50/50": 688.65,
       "Indica-dom": 184.0
+    },
+    "wholesale": 1429.9,
+    "wholesaleByMonth": {
+      "May": 180.9,
+      "Jun": 180.0,
+      "Jul": 182.0,
+      "Aug": 188.5,
+      "Sep": 221.5,
+      "Oct": 229.5,
+      "Nov": 160.5,
+      "Dec": 87.0
+    },
+    "wholesaleByCategory": {
+      "Concentrates": 1429.9
+    },
+    "wholesaleByType": {
+      "Indica": 459.4,
+      "Sativa": 507.0,
+      "50/50": 378.0,
+      "Indica-dom": 85.5
     }
   },
   {
@@ -1697,6 +2552,25 @@ export const brands = [
       "Sativa-dom": 20.0,
       "Sativa": 246.14,
       "Indica": 715.2
+    },
+    "wholesale": 1111.0,
+    "wholesaleByMonth": {
+      "May": 71.5,
+      "Jun": 123.75,
+      "Jul": 123.75,
+      "Aug": 123.75,
+      "Sep": 165.0,
+      "Oct": 214.5,
+      "Nov": 206.25,
+      "Dec": 82.5
+    },
+    "wholesaleByCategory": {
+      "Infused Pre-Rolls": 1111.0
+    },
+    "wholesaleByType": {
+      "Sativa-dom": 8.25,
+      "Sativa": 107.25,
+      "Indica": 330.0
     }
   },
   {
@@ -1725,6 +2599,23 @@ export const brands = [
       "Sativa": 1687.34,
       "50/50": 267.62,
       "Indica-dom": 317.5
+    },
+    "wholesale": 1181.12,
+    "wholesaleByMonth": {
+      "May": 7.27,
+      "Jun": 185.19,
+      "Jul": 311.33,
+      "Aug": 534.75,
+      "Sep": 98.28,
+      "Oct": 44.3
+    },
+    "wholesaleByCategory": {
+      "Flower": 1181.12
+    },
+    "wholesaleByType": {
+      "Sativa": 629.82,
+      "50/50": 207.98,
+      "Indica-dom": 343.32
     }
   },
   {
@@ -1752,6 +2643,22 @@ export const brands = [
     },
     "byType": {
       "50/50": 2155.87
+    },
+    "wholesale": 721.85,
+    "wholesaleByMonth": {
+      "May": 69.17,
+      "Jun": 159.69,
+      "Jul": 141.84,
+      "Aug": 19.9,
+      "Sep": 16.02,
+      "Oct": 191.67,
+      "Nov": 123.56
+    },
+    "wholesaleByCategory": {
+      "Flower": 721.85
+    },
+    "wholesaleByType": {
+      "50/50": 718.33
     }
   }
 ];

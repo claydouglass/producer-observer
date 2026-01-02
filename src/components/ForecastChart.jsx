@@ -285,6 +285,7 @@ export default function ForecastChart({
   };
 
   // Build chart data - history + 6 months forecast with widening bands
+  // Use wholesale data (what producer earns) instead of retail revenue
   const chartData = useMemo(() => {
     if (!selected?.byMonth) return [];
 
@@ -292,16 +293,26 @@ export default function ForecastChart({
     const forecastMonths = ["Jan", "Feb", "Mar", "Apr", "May", "Jun"]; // 6 month forecast
     const data = [];
 
-    // History - actual data, filtered
+    // Use wholesaleByMonth if available, otherwise calculate from revenue
+    const monthlyData = selected.wholesaleByMonth || {};
+    const hasWholesaleData = Object.keys(monthlyData).length > 0;
+
+    // History - actual wholesale data, filtered
     historyMonths.forEach((month) => {
-      const raw = selected.byMonth[month] || 0;
+      const raw = hasWholesaleData
+        ? monthlyData[month] || 0
+        : (selected.byMonth[month] || 0) * 0.45; // fallback to 45% of retail
       const filtered = Math.round(raw * filterProportion);
       data.push({ month, value: filtered, isForecast: false });
     });
 
     // Forecast - 6 months with widening bands (based on filtered history average)
     const historyTotal = historyMonths.reduce(
-      (sum, m) => sum + (selected.byMonth[m] || 0),
+      (sum, m) =>
+        sum +
+        (hasWholesaleData
+          ? monthlyData[m] || 0
+          : (selected.byMonth[m] || 0) * 0.45),
       0,
     );
     const avgMonthly = (historyTotal / historyMonths.length) * filterProportion;
@@ -324,23 +335,46 @@ export default function ForecastChart({
     return data;
   }, [selected, filterProportion, timeframe]);
 
-  // Calculate filtered stats
-  const filteredHistoryTotal = useMemo(
-    () => Math.round(historyTotal * filterProportion),
-    [historyTotal, filterProportion],
-  );
-  const filteredHistoryPeak = useMemo(
-    () => Math.round(historyPeak * filterProportion),
-    [historyPeak, filterProportion],
-  );
-  const filteredForecastMin = useMemo(
-    () => Math.round(forecastMin * filterProportion * 1.5),
-    [forecastMin, filterProportion],
-  ); // 6 months
-  const filteredForecastMax = useMemo(
-    () => Math.round(forecastMax * filterProportion * 1.5),
-    [forecastMax, filterProportion],
-  );
+  // Calculate filtered wholesale stats
+  const filteredWholesaleTotal = useMemo(() => {
+    const monthlyData = selected?.wholesaleByMonth || {};
+    const hasWholesaleData = Object.keys(monthlyData).length > 0;
+    const historyMonths = getTimeframeMonths(timeframe);
+    const total = historyMonths.reduce(
+      (sum, m) =>
+        sum +
+        (hasWholesaleData
+          ? monthlyData[m] || 0
+          : (selected?.byMonth?.[m] || 0) * 0.45),
+      0,
+    );
+    return Math.round(total * filterProportion);
+  }, [selected, filterProportion, timeframe]);
+
+  const filteredWholesalePeak = useMemo(() => {
+    const monthlyData = selected?.wholesaleByMonth || {};
+    const hasWholesaleData = Object.keys(monthlyData).length > 0;
+    const historyMonths = getTimeframeMonths(timeframe);
+    const peak = historyMonths.reduce((max, m) => {
+      const val = hasWholesaleData
+        ? monthlyData[m] || 0
+        : (selected?.byMonth?.[m] || 0) * 0.45;
+      return val > max ? val : max;
+    }, 0);
+    return Math.round(peak * filterProportion);
+  }, [selected, filterProportion, timeframe]);
+
+  const filteredForecastMin = useMemo(() => {
+    const avgMonthly =
+      filteredWholesaleTotal / getTimeframeMonths(timeframe).length;
+    return Math.round(avgMonthly * 6 * 0.85); // 6 months, conservative
+  }, [filteredWholesaleTotal, timeframe]);
+
+  const filteredForecastMax = useMemo(() => {
+    const avgMonthly =
+      filteredWholesaleTotal / getTimeframeMonths(timeframe).length;
+    return Math.round(avgMonthly * 6 * 1.15); // 6 months, optimistic
+  }, [filteredWholesaleTotal, timeframe]);
 
   if (!selected) return null;
 
@@ -451,7 +485,7 @@ export default function ForecastChart({
       <div className="flex items-center justify-center gap-6 mt-4 pt-4 border-t border-gray-100">
         <div className="flex items-center gap-1.5 text-xs text-gray-600">
           <div className="w-3 h-3 rounded bg-indigo-500" />
-          <span>Actual sales</span>
+          <span>Actual wholesale</span>
         </div>
         <div className="flex items-center gap-1.5 text-xs text-gray-600">
           <div className="w-3 h-3 rounded bg-blue-200 border border-blue-300" />
@@ -465,18 +499,18 @@ export default function ForecastChart({
           <div>
             <div className="text-xs text-gray-500">Peak month</div>
             <div className="text-lg font-semibold text-gray-900">
-              ${filteredHistoryPeak.toLocaleString()}
+              ${filteredWholesalePeak.toLocaleString()}
             </div>
           </div>
           <div>
-            <div className="text-xs text-gray-500">8-month actual</div>
+            <div className="text-xs text-gray-500">Wholesale total</div>
             <div className="text-lg font-semibold text-gray-900">
-              ${filteredHistoryTotal.toLocaleString()}
+              ${filteredWholesaleTotal.toLocaleString()}
             </div>
           </div>
         </div>
         <div className="text-right">
-          <div className="text-xs text-gray-500">6-month forecast range</div>
+          <div className="text-xs text-gray-500">6-month forecast</div>
           <div className="text-lg font-semibold text-blue-600">
             ${filteredForecastMin.toLocaleString()} – $
             {filteredForecastMax.toLocaleString()}
