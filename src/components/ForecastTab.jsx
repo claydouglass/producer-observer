@@ -116,13 +116,19 @@ export default function ForecastTab({
     2,
   );
 
+  // Build filter label for KPIs
+  const filterLabel =
+    selectedCategory !== "All" || selectedType !== "All"
+      ? `${selectedCategory !== "All" ? selectedCategory : ""}${selectedCategory !== "All" && selectedType !== "All" ? " / " : ""}${selectedType !== "All" ? selectedType : ""}`
+      : null;
+
   // Derive KPIs from real data - now filter-responsive
   const kpis = [
     {
       label: "Rank",
       value: ranking ? `#${ranking.rank}` : `#${selected.rank}`,
       sub: ranking
-        ? `of ${ranking.total} brands`
+        ? `of ${ranking.total} in ${filterLabel || "all brands"}`
         : `of ${brands.length || 174} brands`,
       delta:
         trend.trend === "up" ? `+${Math.abs(trend.delta)}%` : `${trend.delta}%`,
@@ -131,20 +137,17 @@ export default function ForecastTab({
     {
       label: "Revenue",
       value: `$${filteredRevenue.toLocaleString()}`,
-      sub:
-        selectedCategory !== "All" || selectedType !== "All"
-          ? `${selectedCategory !== "All" ? selectedCategory : ""}${selectedCategory !== "All" && selectedType !== "All" ? " / " : ""}${selectedType !== "All" ? selectedType : ""}`
-          : "total sales",
+      sub: filterLabel || "total sales",
     },
     {
       label: "Customers",
       value: filteredCustomers.toLocaleString(),
-      sub: "unique buyers",
+      sub: filterLabel ? `${filterLabel} buyers` : "unique buyers",
     },
     {
       label: "Transactions",
       value: filteredTransactions.toLocaleString(),
-      sub: "total sales",
+      sub: filterLabel ? `${filterLabel} sales` : "total sales",
     },
   ];
 
