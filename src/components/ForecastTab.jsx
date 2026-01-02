@@ -198,12 +198,15 @@ export default function ForecastTab({
         setTimeframe={setTimeframe}
       />
 
-      {/* KPIs - filter-responsive, above production planning */}
+      {/* KPIs - filter-responsive */}
       <div className="grid grid-cols-4 gap-6">
         {kpis.map((kpi, i) => (
           <KPICard key={i} {...kpi} />
         ))}
       </div>
+
+      {/* Production Insights */}
+      <POInsights selected={selected} />
 
       {/* Competitive Ranking */}
       {ranking && (

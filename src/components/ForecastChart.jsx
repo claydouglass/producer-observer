@@ -483,18 +483,6 @@ export default function ForecastChart({
           </div>
         </div>
       </div>
-
-      {/* Producer decision context */}
-      <div className="mt-4 p-4 bg-amber-50 rounded-xl border border-amber-100">
-        <div className="text-sm font-medium text-amber-900 mb-1">
-          For your production planning:
-        </div>
-        <div className="text-sm text-amber-700">
-          Flower takes ~4 months to produce + 2 months to sell. Start planning
-          now for {activeCategory !== "All" ? activeCategory : "product"} you'll
-          deliver in May-June.
-        </div>
-      </div>
     </div>
   );
 }
