@@ -253,7 +253,7 @@ export default function ProductionTab({ selected, brands = [] }) {
                           key={m}
                           className="px-3 py-3 text-right text-blue-600 font-medium"
                         >
-                          {u.value.toLocaleString()} {u.label}
+                          {(u.value || 0).toLocaleString()} {u.label}
                         </td>
                       ))}
                     </tr>
@@ -331,8 +331,8 @@ export default function ProductionTab({ selected, brands = [] }) {
                   </span>
                   <span className="text-gray-700">
                     {viewMode === "cash"
-                      ? `$${d.forecast6m.toLocaleString()}`
-                      : `${d.forecastUnits6m.toLocaleString()} units`}
+                      ? `$${(d.forecast6m || 0).toLocaleString()}`
+                      : `${(d.forecastUnits6m || 0).toLocaleString()} units`}
                   </span>
                 </div>
               ))}
