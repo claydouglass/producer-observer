@@ -1,3 +1,49 @@
+// Format units based on category
+export function formatUnits(units, category) {
+  const rounded = Math.round(units);
+  const formatted = rounded.toLocaleString();
+
+  switch (category) {
+    case "Flower":
+      return { value: formatted, label: "g" };
+    case "Concentrates":
+    case "Extracts":
+      return { value: formatted, label: "g" };
+    case "Pre-Roll":
+    case "Infused Pre-Rolls":
+      return { value: formatted, label: rounded === 1 ? "pack" : "packs" };
+    case "Tinctures":
+    case "Edibles (Liquid)":
+      return { value: formatted, label: rounded === 1 ? "bottle" : "bottles" };
+    case "Cartridges":
+    case "Edibles (Solid)":
+    case "Topicals":
+    case "Accessories":
+    case "Hemp":
+    case "Infuseds":
+    default:
+      return { value: formatted, label: rounded === 1 ? "unit" : "units" };
+  }
+}
+
+// Get unit label for category (for table headers)
+export function getCategoryUnitLabel(category) {
+  switch (category) {
+    case "Flower":
+    case "Concentrates":
+    case "Extracts":
+      return "Grams";
+    case "Pre-Roll":
+    case "Infused Pre-Rolls":
+      return "Packs";
+    case "Tinctures":
+    case "Edibles (Liquid)":
+      return "Bottles";
+    default:
+      return "Units";
+  }
+}
+
 // Consolidate types to 3 buckets
 export function consolidateTypes(byType) {
   const c = { Indica: 0, Hybrid: 0, Sativa: 0 };
