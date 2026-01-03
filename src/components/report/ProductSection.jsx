@@ -126,19 +126,35 @@ export default function ProductSection({ selected, timeframe = "all" }) {
   };
 
   // Sort indicator
-  const SortHeader = ({ field, children, align = "left" }) => (
-    <th
-      className={`${align === "right" ? "text-right" : "text-left"} px-3 py-2 text-gray-500 font-medium cursor-pointer hover:text-gray-700 select-none`}
-      onClick={() => handleSort(field)}
-    >
-      <span className="inline-flex items-center gap-1">
-        {children}
-        {sortField === field && (
-          <span className="text-blue-500">{sortDir === "asc" ? "↑" : "↓"}</span>
-        )}
-      </span>
-    </th>
-  );
+  const SortHeader = ({ field, children, align = "left" }) => {
+    const alignClass =
+      align === "right"
+        ? "text-right"
+        : align === "center"
+          ? "text-center"
+          : "text-left";
+    const justifyClass =
+      align === "right"
+        ? "justify-end"
+        : align === "center"
+          ? "justify-center"
+          : "justify-start";
+    return (
+      <th
+        className={`${alignClass} px-3 py-2 text-gray-500 font-medium cursor-pointer hover:text-gray-700 select-none`}
+        onClick={() => handleSort(field)}
+      >
+        <span className={`inline-flex items-center gap-1 ${justifyClass}`}>
+          {children}
+          {sortField === field && (
+            <span className="text-blue-500">
+              {sortDir === "asc" ? "↑" : "↓"}
+            </span>
+          )}
+        </span>
+      </th>
+    );
+  };
 
   return (
     <div className="p-6 rounded-xl border border-gray-200">
@@ -247,7 +263,7 @@ export default function ProductSection({ selected, timeframe = "all" }) {
                 <SortHeader field="name">Product</SortHeader>
                 <SortHeader field="category">Category</SortHeader>
                 <SortHeader field="type">Type</SortHeader>
-                <SortHeader field="units" align="right">
+                <SortHeader field="units" align="center">
                   {filter === "All" ? "Qty" : getCategoryUnitLabel(filter)}
                 </SortHeader>
                 <SortHeader field="wholesale" align="right">
