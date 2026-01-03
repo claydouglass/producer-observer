@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from "react";
-import { ChevronDown, ChevronUp } from "lucide-react";
+import { ChevronDown, ChevronUp, Download, ArrowUpDown } from "lucide-react";
 import {
   getProductsByDateRange,
   formatUnits,
@@ -20,6 +20,8 @@ function consolidateSpecies(species) {
 export default function ProductSection({ selected, timeframe = "all" }) {
   const [expanded, setExpanded] = useState(false);
   const [filter, setFilter] = useState("All");
+  const [sortField, setSortField] = useState("wholesale");
+  const [sortDir, setSortDir] = useState("desc");
 
   const allProducts = selected.products || [];
   if (!allProducts.length) return null;
@@ -31,15 +33,112 @@ export default function ProductSection({ selected, timeframe = "all" }) {
   );
 
   const categories = ["All", ...new Set(scaledProducts.map((p) => p.category))];
-  const products =
+  const filteredProducts =
     filter === "All"
       ? scaledProducts
       : scaledProducts.filter((p) => p.category === filter);
+
+  // Sort products
+  const products = useMemo(() => {
+    const sorted = [...filteredProducts].sort((a, b) => {
+      let aVal, bVal;
+      switch (sortField) {
+        case "name":
+          aVal = a.name.split("|")[0].trim().toLowerCase();
+          bVal = b.name.split("|")[0].trim().toLowerCase();
+          return sortDir === "asc"
+            ? aVal.localeCompare(bVal)
+            : bVal.localeCompare(aVal);
+        case "category":
+          aVal = a.category || "";
+          bVal = b.category || "";
+          return sortDir === "asc"
+            ? aVal.localeCompare(bVal)
+            : bVal.localeCompare(aVal);
+        case "type":
+          aVal = consolidateSpecies(a.species) || "";
+          bVal = consolidateSpecies(b.species) || "";
+          return sortDir === "asc"
+            ? aVal.localeCompare(bVal)
+            : bVal.localeCompare(aVal);
+        case "units":
+          aVal = a.units || 0;
+          bVal = b.units || 0;
+          return sortDir === "asc" ? aVal - bVal : bVal - aVal;
+        case "wholesale":
+        default:
+          aVal = a.wholesale || 0;
+          bVal = b.wholesale || 0;
+          return sortDir === "asc" ? aVal - bVal : bVal - aVal;
+      }
+    });
+    return sorted;
+  }, [filteredProducts, sortField, sortDir]);
+
   const totalRevenue = products.reduce((sum, p) => sum + p.wholesale, 0);
   const totalUnits = products.reduce((sum, p) => sum + p.units, 0);
 
   // Format header units based on selected filter
   const headerUnits = formatUnits(totalUnits, filter === "All" ? null : filter);
+
+  // Handle sort
+  const handleSort = (field) => {
+    if (sortField === field) {
+      setSortDir(sortDir === "asc" ? "desc" : "asc");
+    } else {
+      setSortField(field);
+      setSortDir("desc");
+    }
+  };
+
+  // Download CSV
+  const downloadCSV = () => {
+    const headers = [
+      "Rank",
+      "Product",
+      "Category",
+      "Type",
+      "Qty",
+      "Unit",
+      "Revenue",
+    ];
+    const rows = products.map((p, i) => {
+      const unitInfo = formatUnits(p.units, p.category);
+      return [
+        i + 1,
+        `"${p.name.split("|")[0].trim()}"`,
+        p.category,
+        consolidateSpecies(p.species) || "",
+        unitInfo.value,
+        unitInfo.label,
+        p.wholesale.toFixed(2),
+      ];
+    });
+
+    const csv = [headers.join(","), ...rows.map((r) => r.join(","))].join("\n");
+    const blob = new Blob([csv], { type: "text/csv" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = `${selected.name.replace(/\s+/g, "_")}_products_${timeframe}.csv`;
+    a.click();
+    URL.revokeObjectURL(url);
+  };
+
+  // Sort indicator
+  const SortHeader = ({ field, children, align = "left" }) => (
+    <th
+      className={`${align === "right" ? "text-right" : "text-left"} px-3 py-2 text-gray-500 font-medium cursor-pointer hover:text-gray-700 select-none`}
+      onClick={() => handleSort(field)}
+    >
+      <span className="inline-flex items-center gap-1">
+        {children}
+        {sortField === field && (
+          <span className="text-blue-500">{sortDir === "asc" ? "↑" : "↓"}</span>
+        )}
+      </span>
+    </th>
+  );
 
   return (
     <div className="p-6 rounded-xl border border-gray-200">
@@ -114,15 +213,27 @@ export default function ProductSection({ selected, timeframe = "all" }) {
         })}
       </div>
 
-      {/* Expand toggle */}
+      {/* Expand toggle and download */}
       {products.length > 5 && (
-        <button
-          onClick={() => setExpanded(!expanded)}
-          className="flex items-center gap-2 text-sm text-gray-600 hover:text-gray-900"
-        >
-          {expanded ? "Hide" : `View all ${products.length}`}
-          {expanded ? <ChevronUp size={14} /> : <ChevronDown size={14} />}
-        </button>
+        <div className="flex items-center justify-between">
+          <button
+            onClick={() => setExpanded(!expanded)}
+            className="flex items-center gap-2 text-sm text-gray-600 hover:text-gray-900"
+          >
+            {expanded ? "Hide" : `View all ${products.length}`}
+            {expanded ? <ChevronUp size={14} /> : <ChevronDown size={14} />}
+          </button>
+          {expanded && (
+            <button
+              onClick={downloadCSV}
+              className="flex items-center gap-1.5 text-sm text-gray-500 hover:text-gray-700"
+              title="Download CSV"
+            >
+              <Download size={14} />
+              CSV
+            </button>
+          )}
+        </div>
       )}
 
       {expanded && (
@@ -130,36 +241,62 @@ export default function ProductSection({ selected, timeframe = "all" }) {
           <table className="w-full text-sm">
             <thead className="bg-gray-50">
               <tr>
-                <th className="text-left px-3 py-2 text-gray-500 font-medium">
-                  Product
+                <th className="text-left px-3 py-2 text-gray-500 font-medium w-12">
+                  #
                 </th>
-                <th className="text-left px-3 py-2 text-gray-500 font-medium">
-                  Category
-                </th>
-                <th className="text-right px-3 py-2 text-gray-500 font-medium">
+                <SortHeader field="name">Product</SortHeader>
+                <SortHeader field="category">Category</SortHeader>
+                <SortHeader field="type">Type</SortHeader>
+                <SortHeader field="units" align="right">
                   {filter === "All" ? "Qty" : getCategoryUnitLabel(filter)}
-                </th>
-                <th className="text-right px-3 py-2 text-gray-500 font-medium">
+                </SortHeader>
+                <SortHeader field="wholesale" align="right">
                   Revenue
-                </th>
+                </SortHeader>
               </tr>
             </thead>
             <tbody>
-              {products.map((p) => {
+              {products.map((p, i) => {
                 const unitInfo = formatUnits(p.units, p.category);
+                const type = consolidateSpecies(p.species);
                 return (
-                  <tr key={p.name} className="border-t border-gray-100">
+                  <tr
+                    key={p.name}
+                    className="border-t border-gray-100 hover:bg-gray-50"
+                  >
+                    <td className="px-3 py-2 text-gray-400 font-medium">
+                      {i + 1}
+                    </td>
                     <td className="px-3 py-2 font-medium text-gray-900">
                       {p.name.split("|")[0].trim()}
                     </td>
                     <td className="px-3 py-2 text-gray-500">{p.category}</td>
-                    <td className="px-3 py-2 text-right font-semibold text-gray-900">
-                      {unitInfo.value}{" "}
-                      <span className="text-gray-400 font-normal">
-                        {unitInfo.label}
-                      </span>
+                    <td className="px-3 py-2">
+                      {type && (
+                        <span
+                          className={`text-xs px-2 py-0.5 rounded-full ${
+                            type === "Indica"
+                              ? "bg-purple-100 text-purple-700"
+                              : type === "Sativa"
+                                ? "bg-yellow-100 text-yellow-700"
+                                : "bg-green-100 text-green-700"
+                          }`}
+                        >
+                          {type}
+                        </span>
+                      )}
                     </td>
-                    <td className="px-3 py-2 text-right text-green-600">
+                    <td className="px-3 py-2">
+                      <div className="flex items-center justify-end gap-1">
+                        <span className="font-semibold text-gray-900 text-right">
+                          {unitInfo.value}
+                        </span>
+                        <span className="text-gray-400 w-12 text-left">
+                          {unitInfo.label}
+                        </span>
+                      </div>
+                    </td>
+                    <td className="px-3 py-2 text-right text-green-600 font-medium">
                       ${p.wholesale.toLocaleString()}
                     </td>
                   </tr>
