@@ -1,11 +1,14 @@
 import React, { useState } from "react";
-import { ChevronDown, ChevronUp } from "lucide-react";
+import { ChevronDown, ChevronUp, Download } from "lucide-react";
 import { formatUnits } from "../utils/rankings";
 
 // Determine price tier from unit price
 function getTier(wholesale, units) {
   if (!units || units === 0) return null;
   const unitPrice = wholesale / units;
+
+  // Filter out obvious bad data (unit price > $100 is likely data error)
+  if (unitPrice > 100) return null;
 
   if (unitPrice >= 15) return "Ultra ($15+)";
   if (unitPrice >= 10) return "Premium ($10-15)";
@@ -39,6 +42,42 @@ function TierRow({ tier, tierColor }) {
     (a, b) => b.wholesale - a.wholesale,
   );
 
+  // Download CSV for this tier
+  const downloadCSV = (e) => {
+    e.stopPropagation();
+    const headers = [
+      "Rank",
+      "Product",
+      "Category",
+      "Qty",
+      "Unit",
+      "Revenue",
+      "$/unit",
+    ];
+    const rows = sortedProducts.map((p, i) => {
+      const unitInfo = formatUnits(p.units, p.category);
+      const unitPrice = p.units > 0 ? (p.wholesale / p.units).toFixed(2) : "";
+      return [
+        i + 1,
+        `"${p.name.split("|")[0].trim()}"`,
+        p.category,
+        unitInfo.value,
+        unitInfo.label,
+        p.wholesale.toFixed(2),
+        unitPrice,
+      ];
+    });
+
+    const csv = [headers.join(","), ...rows.map((r) => r.join(","))].join("\n");
+    const blob = new Blob([csv], { type: "text/csv" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = `${tier.name.replace(/[^a-zA-Z0-9]/g, "_")}_products.csv`;
+    a.click();
+    URL.revokeObjectURL(url);
+  };
+
   return (
     <div className="bg-gray-50 rounded-lg overflow-hidden">
       <button
@@ -71,6 +110,16 @@ function TierRow({ tier, tierColor }) {
 
       {expanded && (
         <div className="border-t border-gray-200 bg-white">
+          <div className="flex justify-end px-3 py-2 border-b border-gray-100">
+            <button
+              onClick={downloadCSV}
+              className="flex items-center gap-1.5 text-sm text-gray-500 hover:text-gray-700"
+              title="Download CSV"
+            >
+              <Download size={14} />
+              CSV
+            </button>
+          </div>
           <table className="w-full text-sm">
             <thead className="bg-gray-50">
               <tr>

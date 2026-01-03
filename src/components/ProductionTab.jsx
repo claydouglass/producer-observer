@@ -173,6 +173,8 @@ export default function ProductionTab({ selected, brands = [] }) {
         wholesale: Math.round(d.wholesale),
         units: Math.round(d.units),
         monthlyUnits: d.units / 3, // Based on Q4 average
+        forecast6m: Math.round((d.wholesale / 3) * 6), // 6 month forecast based on Q4 monthly avg
+        forecastUnits6m: Math.round((d.units / 3) * 6), // 6 month units forecast
       }))
       .sort((a, b) => b.units - a.units);
   }, [selected]);
