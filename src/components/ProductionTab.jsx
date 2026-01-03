@@ -146,36 +146,81 @@ export default function ProductionTab({ selected, brands = [] }) {
   // Forward months for forecast
   const forecastMonths = ["Jan", "Feb", "Mar", "Apr", "May", "Jun"];
 
-  // Build category × species matrix
+  // Build category × species matrix with growth trends
   const demandMatrix = useMemo(() => {
-    const products = getProductsByDateRange(selected.products, "90d");
+    const products90d = getProductsByDateRange(selected.products, "90d");
+    const products30d = getProductsByDateRange(selected.products, "30d");
+
     const matrix = {};
 
-    products.forEach((p) => {
+    // Build 90d totals
+    products90d.forEach((p) => {
       const cat = p.category;
       const species = consolidateSpecies(p.species);
-
-      // Skip Unknown species
       if (species === "Unknown") return;
 
       const key = `${cat}|${species}`;
-
       if (!matrix[key]) {
-        matrix[key] = { category: cat, species, wholesale: 0, units: 0 };
+        matrix[key] = {
+          category: cat,
+          species,
+          wholesale90: 0,
+          units90: 0,
+          wholesale30: 0,
+          units30: 0,
+        };
       }
-      matrix[key].wholesale += p.wholesale;
-      matrix[key].units += p.units;
+      matrix[key].wholesale90 += p.wholesale;
+      matrix[key].units90 += p.units;
+    });
+
+    // Add 30d data for growth calc
+    products30d.forEach((p) => {
+      const cat = p.category;
+      const species = consolidateSpecies(p.species);
+      if (species === "Unknown") return;
+
+      const key = `${cat}|${species}`;
+      if (matrix[key]) {
+        matrix[key].wholesale30 += p.wholesale;
+        matrix[key].units30 += p.units;
+      }
     });
 
     return Object.values(matrix)
-      .map((d) => ({
-        ...d,
-        wholesale: Math.round(d.wholesale),
-        units: Math.round(d.units),
-        monthlyUnits: d.units / 3, // Based on Q4 average
-        forecast6m: Math.round((d.wholesale / 3) * 6), // 6 month forecast based on Q4 monthly avg
-        forecastUnits6m: Math.round((d.units / 3) * 6), // 6 month units forecast
-      }))
+      .map((d) => {
+        // Compare last 30d to avg of prior 60d
+        const prior60dMonthly = (d.units90 - d.units30) / 2;
+        const last30d = d.units30;
+        const monthlyGrowthRate =
+          prior60dMonthly > 0
+            ? (last30d - prior60dMonthly) / prior60dMonthly
+            : 0;
+
+        // Cap growth rate at +/- 20% per month for reasonable forecasts
+        const cappedGrowth = Math.max(-0.2, Math.min(0.2, monthlyGrowthRate));
+
+        // Generate 6-month forecast with compounding growth
+        const baseMonthly = d.units90 / 3;
+        const forecast = [];
+        let current = baseMonthly;
+        for (let i = 0; i < 6; i++) {
+          current = current * (1 + cappedGrowth);
+          forecast.push(Math.round(current));
+        }
+
+        return {
+          category: d.category,
+          species: d.species,
+          wholesale: Math.round(d.wholesale90),
+          units: Math.round(d.units90),
+          monthlyUnits: baseMonthly,
+          growthRate: Math.round(cappedGrowth * 100),
+          forecast, // Array of 6 monthly forecasts
+          forecast6m: Math.round((d.wholesale90 / 3) * 6),
+          forecastUnits6m: forecast.reduce((sum, v) => sum + v, 0),
+        };
+      })
       .sort((a, b) => b.units - a.units);
   }, [selected]);
 
@@ -208,7 +253,7 @@ export default function ProductionTab({ selected, brands = [] }) {
       >
         <div className="space-y-4">
           <p className="text-sm text-gray-600">
-            Based on demand at this store, here's what's selling:
+            Based on demand, here's what's likely to sell:
           </p>
 
           {/* Category × Species Matrix with forward months */}
@@ -218,6 +263,9 @@ export default function ProductionTab({ selected, brands = [] }) {
                 <tr>
                   <th className="text-left px-4 py-3 font-medium text-gray-700">
                     Category / Type
+                  </th>
+                  <th className="text-right px-3 py-3 font-medium text-gray-700 text-xs">
+                    Trend
                   </th>
                   {forecastMonths.map((m) => (
                     <th
@@ -231,7 +279,6 @@ export default function ProductionTab({ selected, brands = [] }) {
               </thead>
               <tbody>
                 {demandMatrix.slice(0, 8).map((d, i) => {
-                  const u = formatUnits(d.monthlyUnits, d.category);
                   return (
                     <tr
                       key={`${d.category}-${d.species}`}
@@ -248,14 +295,30 @@ export default function ProductionTab({ selected, brands = [] }) {
                           </span>
                         )}
                       </td>
-                      {forecastMonths.map((m) => (
-                        <td
-                          key={m}
-                          className="px-3 py-3 text-right text-blue-600 font-medium"
-                        >
-                          {(u.value || 0).toLocaleString()} {u.label}
-                        </td>
-                      ))}
+                      <td
+                        className={`px-3 py-3 text-right text-xs font-medium ${
+                          d.growthRate > 0
+                            ? "text-green-600"
+                            : d.growthRate < 0
+                              ? "text-red-500"
+                              : "text-gray-400"
+                        }`}
+                      >
+                        {d.growthRate > 0 ? "+" : ""}
+                        {d.growthRate}%
+                      </td>
+                      {forecastMonths.map((m, idx) => {
+                        const forecastVal = d.forecast[idx] || 0;
+                        const u = formatUnits(forecastVal, d.category);
+                        return (
+                          <td
+                            key={m}
+                            className="px-3 py-3 text-right text-blue-600 font-medium"
+                          >
+                            {(u.value || 0).toLocaleString()} {u.label}
+                          </td>
+                        );
+                      })}
                     </tr>
                   );
                 })}
