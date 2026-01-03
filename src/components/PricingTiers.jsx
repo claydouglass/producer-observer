@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
+import { ChevronDown, ChevronUp } from "lucide-react";
+import { formatUnits } from "../utils/rankings";
 
 // Determine price tier from unit price
 function getTier(wholesale, units) {
@@ -27,6 +29,110 @@ const TIER_COLORS = {
   "Value ($4-7)": "bg-yellow-500",
   "Budget (<$4)": "bg-gray-400",
 };
+
+// Expandable tier row component
+function TierRow({ tier, tierColor }) {
+  const [expanded, setExpanded] = useState(false);
+
+  // Sort products by revenue descending
+  const sortedProducts = [...tier.products].sort(
+    (a, b) => b.wholesale - a.wholesale,
+  );
+
+  return (
+    <div className="bg-gray-50 rounded-lg overflow-hidden">
+      <button
+        onClick={() => setExpanded(!expanded)}
+        className="w-full flex justify-between items-center p-3 hover:bg-gray-100 transition-colors"
+      >
+        <div className="flex items-center gap-3">
+          <div className={`w-2 h-8 rounded ${tierColor || "bg-gray-400"}`} />
+          <div className="text-left">
+            <span className="font-medium text-gray-900">{tier.name}</span>
+            <span className="text-sm text-gray-500 ml-2">
+              {tier.count} {tier.count === 1 ? "product" : "products"}
+            </span>
+          </div>
+        </div>
+        <div className="flex items-center gap-3">
+          <div className="text-right">
+            <span className="font-semibold text-gray-900">
+              ${tier.revenue.toLocaleString()}
+            </span>
+            <span className="text-sm text-gray-500 ml-2">{tier.pct}%</span>
+          </div>
+          {expanded ? (
+            <ChevronUp size={16} className="text-gray-400" />
+          ) : (
+            <ChevronDown size={16} className="text-gray-400" />
+          )}
+        </div>
+      </button>
+
+      {expanded && (
+        <div className="border-t border-gray-200 bg-white">
+          <table className="w-full text-sm">
+            <thead className="bg-gray-50">
+              <tr>
+                <th className="text-left px-3 py-2 text-gray-500 font-medium">
+                  #
+                </th>
+                <th className="text-left px-3 py-2 text-gray-500 font-medium">
+                  Product
+                </th>
+                <th className="text-left px-3 py-2 text-gray-500 font-medium">
+                  Category
+                </th>
+                <th className="text-right px-3 py-2 text-gray-500 font-medium">
+                  Qty
+                </th>
+                <th className="text-right px-3 py-2 text-gray-500 font-medium">
+                  Revenue
+                </th>
+                <th className="text-right px-3 py-2 text-gray-500 font-medium">
+                  $/unit
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              {sortedProducts.map((p, i) => {
+                const unitInfo = formatUnits(p.units, p.category);
+                const unitPrice =
+                  p.units > 0 ? (p.wholesale / p.units).toFixed(2) : "—";
+                return (
+                  <tr
+                    key={p.name}
+                    className="border-t border-gray-100 hover:bg-gray-50"
+                  >
+                    <td className="px-3 py-2 text-gray-400">{i + 1}</td>
+                    <td className="px-3 py-2 font-medium text-gray-900">
+                      {p.name.split("|")[0].trim()}
+                    </td>
+                    <td className="px-3 py-2 text-gray-500">{p.category}</td>
+                    <td className="px-3 py-2 text-right">
+                      <span className="font-medium text-gray-900">
+                        {unitInfo.value}
+                      </span>
+                      <span className="text-gray-400 ml-1">
+                        {unitInfo.label}
+                      </span>
+                    </td>
+                    <td className="px-3 py-2 text-right text-green-600 font-medium">
+                      ${p.wholesale.toLocaleString()}
+                    </td>
+                    <td className="px-3 py-2 text-right text-gray-600">
+                      ${unitPrice}
+                    </td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+        </div>
+      )}
+    </div>
+  );
+}
 
 export default function PricingTiers({ products = [] }) {
   if (!products.length) {
@@ -105,28 +211,7 @@ export default function PricingTiers({ products = [] }) {
       {/* Tier breakdown */}
       <div className="space-y-2">
         {tiers.map((t) => (
-          <div
-            key={t.name}
-            className="flex justify-between items-center p-3 bg-gray-50 rounded-lg"
-          >
-            <div className="flex items-center gap-3">
-              <div
-                className={`w-2 h-8 rounded ${TIER_COLORS[t.name] || "bg-gray-400"}`}
-              />
-              <div>
-                <span className="font-medium text-gray-900">{t.name}</span>
-                <span className="text-sm text-gray-500 ml-2">
-                  {t.count} products
-                </span>
-              </div>
-            </div>
-            <div className="text-right">
-              <span className="font-semibold text-gray-900">
-                ${t.revenue.toLocaleString()}
-              </span>
-              <span className="text-sm text-gray-500 ml-2">{t.pct}%</span>
-            </div>
-          </div>
+          <TierRow key={t.name} tier={t} tierColor={TIER_COLORS[t.name]} />
         ))}
       </div>
 
