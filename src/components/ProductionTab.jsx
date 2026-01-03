@@ -382,9 +382,9 @@ export default function ProductionTab({ selected, brands = [] }) {
         </div>
       </QuestionCard>
 
-      {/* Question 4: What categories are growing? */}
+      {/* Question 4: What's growing vs shrinking? */}
       <QuestionCard
-        question="What categories are growing?"
+        question="What should I produce more of? Less of?"
         answer={
           topCategory
             ? `${topCategory.name} is ${topCategory.growth > 0 ? "+" : ""}${topCategory.growth}% vs last period.`
