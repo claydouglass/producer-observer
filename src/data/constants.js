@@ -1,7 +1,10 @@
 export const tabs = [
   { id: "retail", label: "Retail" },
+  { id: "consumers", label: "Consumers" },
+  { id: "orders", label: "Orders" },
   { id: "production", label: "Production" },
-  { id: "customers", label: "Customers" },
+  { id: "catalog", label: "Catalog" },
+  { id: "delivery", label: "Delivery" },
   { id: "partnership", label: "Partnership" },
 ];
 

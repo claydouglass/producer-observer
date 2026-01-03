@@ -6,6 +6,7 @@ import RetailTab from "./components/RetailTab";
 import ProductionTab from "./components/ProductionTab";
 import CustomersTab from "./components/CustomersTab";
 import PartnershipTab from "./components/PartnershipTab";
+import DeliveryTab from "./components/delivery/DeliveryTab";
 import { brands } from "./data/brands";
 import { suppliers } from "./data/suppliers";
 import { scenarioMultipliers } from "./data/multipliers";
@@ -154,13 +155,41 @@ export default function App() {
           <RetailTab selected={selected} brands={brands} />
         )}
 
+        {activeTab === "consumers" && (
+          <CustomersTab selected={selected} brands={brands} />
+        )}
+
+        {activeTab === "orders" && (
+          <div className="text-center py-16">
+            <div className="text-6xl mb-4">📦</div>
+            <h2 className="text-2xl font-semibold text-gray-900 mb-2">
+              Orders
+            </h2>
+            <p className="text-gray-500 max-w-md mx-auto">
+              Real-time order management coming soon. View incoming orders,
+              track fulfillment, and analyze order patterns.
+            </p>
+          </div>
+        )}
+
         {activeTab === "production" && (
           <ProductionTab selected={selected} brands={brands} />
         )}
 
-        {activeTab === "customers" && (
-          <CustomersTab selected={selected} brands={brands} />
+        {activeTab === "catalog" && (
+          <div className="text-center py-16">
+            <div className="text-6xl mb-4">📋</div>
+            <h2 className="text-2xl font-semibold text-gray-900 mb-2">
+              Catalog
+            </h2>
+            <p className="text-gray-500 max-w-md mx-auto">
+              Your living product catalog coming soon. Manage products, pricing
+              tiers, and availability for retailers.
+            </p>
+          </div>
         )}
+
+        {activeTab === "delivery" && <DeliveryTab />}
 
         {activeTab === "partnership" && (
           <PartnershipTab selected={selected} brands={brands} />
