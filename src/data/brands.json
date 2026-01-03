@@ -1,0 +1,4386 @@
+[
+  {
+    "name": "Grown Rogue",
+    "rank": 1,
+    "revenue": 76145.86,
+    "marketShare": 12.58,
+    "transactions": 3141,
+    "customers": 666,
+    "distributors": [
+      "Grown Rogue",
+      "Grown Rogue - Airport",
+      "Grown Rogue Gardens",
+      "Grown Rogue Gardens, LLC."
+    ],
+    "byMonth": {
+      "May": 3779.2200000000003,
+      "Jun": 6251.290000000001,
+      "Jul": 6342.820000000003,
+      "Aug": 10273.730000000003,
+      "Sep": 11348.610000000015,
+      "Oct": 13465.989999999983,
+      "Nov": 13334.829999999998,
+      "Dec": 11349.370000000003
+    },
+    "byCategory": {
+      "Flower": 66248.35999999956,
+      "Pre-Roll": 8317.490000000002,
+      "Infused Pre-Rolls": 1580.0100000000011
+    },
+    "byType": {
+      "Sativa-dom": 9916.629999999994,
+      "Indica-dom": 19440.80000000002,
+      "50/50": 26182.71000000015,
+      "Sativa": 10360.189999999999,
+      "Indica": 8595.919999999993
+    }
+  },
+  {
+    "name": "Miracle Farms",
+    "rank": 2,
+    "revenue": 67181.7,
+    "marketShare": 11.1,
+    "transactions": 5854,
+    "customers": 810,
+    "distributors": [
+      "Miracle Farms"
+    ],
+    "byMonth": {
+      "May": 6550.639999999994,
+      "Jun": 10365.980000000003,
+      "Jul": 11323.2,
+      "Aug": 10119.9,
+      "Sep": 6982.0899999999965,
+      "Oct": 6213.949999999994,
+      "Nov": 8073.910000000016,
+      "Dec": 7552.030000000007
+    },
+    "byCategory": {
+      "Flower": 34300.059999999954,
+      "Cartridges": 19497.27000000001,
+      "Pre-Roll": 13247.930000000117,
+      "Accessories": 136.44
+    },
+    "byType": {
+      "Indica-dom": 15389.020000000002,
+      "Sativa-dom": 7608.420000000005,
+      "Sativa": 2501.360000000001,
+      "50/50": 21616.29999999984,
+      "Indica": 400.6100000000001
+    }
+  },
+  {
+    "name": "NW Kind",
+    "rank": 3,
+    "revenue": 39740.8,
+    "marketShare": 6.57,
+    "transactions": 1580,
+    "customers": 302,
+    "distributors": [
+      "ARC Gardens",
+      "ARC Gardens, LLC",
+      "Alibi Cannabis",
+      "Applegate Gold, LLC",
+      "BUCO Farms, LLC",
+      "Bogart Farms LLC",
+      "Buddies Farms",
+      "Buddlie Buddy Farms",
+      "Flower Family Farms",
+      "Flyte Co",
+      "Frontier Farms",
+      "GRIZZLY AGRICULTURE",
+      "Galaxy Gardens",
+      "Half Baked Farms",
+      "Hazy Valley Horticulture",
+      "High Valley Organics",
+      "Leap Farms",
+      "Lone Pine Agro",
+      "Lone Pine Agro LLC",
+      "MACDADDY FARMS, LLC",
+      "McKinley Farms LLC",
+      "Mike's Green Farm",
+      "NW Kind",
+      "NWKindLLC",
+      "New Frontier LLC",
+      "Old School Gardens",
+      "Oregon Blissful Botanicals",
+      "Panda Farms",
+      "Pioneer Farms, LLC",
+      "Rebel Spirit",
+      "Rogue River Family Farms",
+      "Silver Leaf Cannabis Company",
+      "Siren",
+      "Sweet Grass",
+      "The Crop Shop Cannabis"
+    ],
+    "byMonth": {
+      "May": 2098.7799999999997,
+      "Jun": 5028.740000000001,
+      "Jul": 5626.620000000001,
+      "Aug": 4232.62,
+      "Sep": 4733.370000000003,
+      "Oct": 5050.870000000001,
+      "Nov": 6294.9599999999955,
+      "Dec": 6674.839999999998
+    },
+    "byCategory": {
+      "Cartridges": 33847.99,
+      "Concentrates": 3579.6199999999985,
+      "Accessories": 298.5,
+      "Infused Pre-Rolls": 2014.6900000000032
+    },
+    "byType": {
+      "50/50": 2020.1800000000028,
+      "Sativa": 1347.1600000000012,
+      "Indica": 1313.360000000001,
+      "Sativa-dom": 89.97
+    }
+  },
+  {
+    "name": "Freshy",
+    "rank": 4,
+    "revenue": 25702.98,
+    "marketShare": 4.25,
+    "transactions": 1348,
+    "customers": 273,
+    "distributors": [
+      "Atrium Farms",
+      "Buddies Farms",
+      "Calvin's Greens",
+      "Conger Grow",
+      "Cultivate Jo",
+      "Farm Solutions DGP",
+      "Galaxy Gardens",
+      "Highland Provisions",
+      "Humble",
+      "Mentari Farms",
+      "Oregon Roots",
+      "Pacific Coast Partners, LLC",
+      "SOFF",
+      "Self Made Cannabis Company",
+      "Skunk Valley Farm, LLC",
+      "Stardust Cultivation",
+      "The Oregon Horticulture Company, LLC",
+      "TrueCare Farms",
+      "Urban Pharms"
+    ],
+    "byMonth": {
+      "May": 1272.1499999999999,
+      "Jun": 2780.489999999999,
+      "Jul": 3564.699999999994,
+      "Aug": 3912.1099999999924,
+      "Sep": 2894.779999999996,
+      "Oct": 3931.3299999999936,
+      "Nov": 4172.1799999999885,
+      "Dec": 3175.239999999996
+    },
+    "byCategory": {
+      "Cartridges": 25702.980000000312
+    },
+    "byType": {}
+  },
+  {
+    "name": "Higher Cultures",
+    "rank": 5,
+    "revenue": 21969.01,
+    "marketShare": 3.63,
+    "transactions": 702,
+    "customers": 187,
+    "distributors": [
+      "528hz Gardens",
+      "BUCO Farms, LLC",
+      "Bigsby Farms",
+      "Desert River Flower Co",
+      "Emerald Green Gardens",
+      "Galaxy Gardens",
+      "Gud Gardens",
+      "Indigo Gardens",
+      "Kaprikorn",
+      "Sasha Gardens",
+      "Weedology Farms"
+    ],
+    "byMonth": {
+      "May": 1007.01,
+      "Jun": 2429.7799999999997,
+      "Jul": 3020.5499999999997,
+      "Aug": 3209.84,
+      "Sep": 2831.18,
+      "Oct": 2761.6799999999994,
+      "Nov": 3343.7700000000004,
+      "Dec": 3365.2
+    },
+    "byCategory": {
+      "Cartridges": 20778.60000000001,
+      "Concentrates": 1190.4100000000003
+    },
+    "byType": {
+      "50/50": 213.28,
+      "Indica": 328.74000000000007,
+      "Sativa": 265.14
+    }
+  },
+  {
+    "name": "Verdant",
+    "rank": 6,
+    "revenue": 21682.68,
+    "marketShare": 3.58,
+    "transactions": 1199,
+    "customers": 212,
+    "distributors": [
+      "Aroma",
+      "B-Force",
+      "Bliss Cultivation",
+      "Chehalem Ridge Cannabis",
+      "Foley Farms",
+      "HUG Farms",
+      "Highland Provisions",
+      "Jeeter Ventures",
+      "Piff Stixs",
+      "Special Branded",
+      "Uncle Johns Farm",
+      "Verdant Leaf"
+    ],
+    "byMonth": {
+      "Aug": 1782.3399999999992,
+      "Sep": 2096.5999999999995,
+      "Oct": 4842.700000000003,
+      "Nov": 6894.449999999998,
+      "Dec": 6066.589999999998
+    },
+    "byCategory": {
+      "Cartridges": 13710.650000000003,
+      "Edibles (Solid)": 4145.119999999995,
+      "Tinctures": 809.71,
+      "Concentrates": 3017.2
+    },
+    "byType": {
+      "Sativa-dom": 279.99999999999994,
+      "Indica-dom": 1094.02,
+      "50/50": 1733.8299999999997,
+      "Sativa": 697.7600000000002,
+      "Indica": 256.5
+    }
+  },
+  {
+    "name": "Entourage Cannabis",
+    "rank": 7,
+    "revenue": 20964.82,
+    "marketShare": 3.46,
+    "transactions": 678,
+    "customers": 165,
+    "distributors": [
+      "Alibi Cannabis",
+      "Alta Gardens",
+      "Arise Cannabis",
+      "BROKEN ARROW PHARM",
+      "Bishop Orchards",
+      "Blue and Yellow",
+      "Ebb & Flow",
+      "Emerald Valley Growers",
+      "Falahi",
+      "Fenario Farms",
+      "Galaxy Gardens",
+      "Green Bandit",
+      "Ground Up Farms",
+      "Grown Rogue",
+      "Grown Rogue - Airport",
+      "HUG Farms",
+      "Hillside Herbs / Roganja / Massive Seeds",
+      "Indigo Gardens",
+      "Lofty",
+      "Luminous Gardens",
+      "Medicinal Roots, LLC",
+      "Mentari Farms",
+      "NUGZ",
+      "Noble Farms",
+      "Pacific NW Farms #2",
+      "Pacific North West Farms",
+      "Peacock Flower Farm",
+      "Pin Farms",
+      "Remedy River",
+      "Sasha Gardens",
+      "Shangri La Farms",
+      "Sol Cultivations INC",
+      "Summit Valley LLC",
+      "Thunder Farms",
+      "Tmcc",
+      "Warm Springs Cannabis Production Ent",
+      "Wildman Genetics"
+    ],
+    "byMonth": {
+      "May": 840.43,
+      "Jun": 2958.449999999999,
+      "Jul": 3657.8599999999997,
+      "Aug": 2950.1399999999994,
+      "Sep": 2282.9,
+      "Oct": 2644.999999999999,
+      "Nov": 2815.9099999999994,
+      "Dec": 2814.130000000001
+    },
+    "byCategory": {
+      "Cartridges": 18717.440000000042,
+      "Infused Pre-Rolls": 2247.3799999999997
+    },
+    "byType": {
+      "Indica-dom": 1007.3100000000001,
+      "Sativa": 93.6,
+      "50/50": 307.6,
+      "Sativa-dom": 583.87
+    }
+  },
+  {
+    "name": "Mule",
+    "rank": 8,
+    "revenue": 20329.55,
+    "marketShare": 3.36,
+    "transactions": 871,
+    "customers": 250,
+    "distributors": [
+      "5150 Cannabis",
+      "AGFO LLC",
+      "ARC Gardens",
+      "Alter Farms",
+      "Applegate River Farm,LLC",
+      "Bubba Botanicals",
+      "Buddies Cannabis",
+      "Eclectic Cannabis",
+      "Frontier Farms",
+      "Frontier Farms - Dee",
+      "Golden Jackal Farm",
+      "MACDADDY FARMS, LLC",
+      "MJ Farms, LLC",
+      "Mule Extracts",
+      "Noblecraft",
+      "Oregon Prime",
+      "RiteKind",
+      "Rogue River Family Farms",
+      "Stardust Cultivation",
+      "Talia Tallah Farms"
+    ],
+    "byMonth": {
+      "May": 1259.09,
+      "Jun": 2741.57,
+      "Jul": 2185.64,
+      "Aug": 2893.3999999999987,
+      "Sep": 2809.69,
+      "Oct": 2774.630000000001,
+      "Nov": 2448.0599999999986,
+      "Dec": 3217.47
+    },
+    "byCategory": {
+      "Cartridges": 15577.820000000014,
+      "Infused Pre-Rolls": 1941.099999999998,
+      "Tinctures": 285.02,
+      "Edibles (Solid)": 2525.6100000000006
+    },
+    "byType": {
+      "Sativa-dom": 538.21,
+      "50/50": 1380.46,
+      "Indica": 1245.5999999999992,
+      "Sativa": 1032.2900000000004
+    }
+  },
+  {
+    "name": "Drops",
+    "rank": 9,
+    "revenue": 17759.28,
+    "marketShare": 2.93,
+    "transactions": 1225,
+    "customers": 220,
+    "distributors": [
+      "Drops",
+      "Smoky Flower Farm"
+    ],
+    "byMonth": {
+      "May": 1223.0599999999997,
+      "Jun": 2087.46,
+      "Jul": 2427.4,
+      "Aug": 2518.5500000000006,
+      "Sep": 2362.5,
+      "Oct": 2603.3099999999995,
+      "Nov": 2223.1500000000005,
+      "Dec": 2313.8500000000004
+    },
+    "byCategory": {
+      "Edibles (Solid)": 17759.27999999997
+    },
+    "byType": {
+      "Indica-dom": 479.84000000000003
+    }
+  },
+  {
+    "name": "Oregrown",
+    "rank": 10,
+    "revenue": 16735.74,
+    "marketShare": 2.77,
+    "transactions": 535,
+    "customers": 190,
+    "distributors": [
+      "Frontier Farms",
+      "Oregrown",
+      "Terra Australis"
+    ],
+    "byMonth": {
+      "Jul": 749.94,
+      "Aug": 2560.81,
+      "Sep": 5129.709999999998,
+      "Oct": 4345.779999999998,
+      "Nov": 1799.7300000000007,
+      "Dec": 2149.7700000000004
+    },
+    "byCategory": {
+      "Flower": 11680.260000000002,
+      "Cartridges": 1468.0300000000007,
+      "Concentrates": 2105.240000000001,
+      "Infused Pre-Rolls": 1482.2100000000005
+    },
+    "byType": {
+      "Indica-dom": 6931.52,
+      "50/50": 4497.339999999994,
+      "Sativa-dom": 1784.85,
+      "Indica": 1130.6700000000003,
+      "Sativa": 923.3300000000005
+    }
+  },
+  {
+    "name": "Wyld",
+    "rank": 11,
+    "revenue": 14796.96,
+    "marketShare": 2.44,
+    "transactions": 738,
+    "customers": 179,
+    "distributors": [
+      "ARC Gardens",
+      "ARC Gardens, LLC",
+      "BUCO Farms, LLC",
+      "Eco Clean Prime",
+      "Foggy Mountain Farms",
+      "Galaxy Gardens",
+      "Moto Perpetuo Farm",
+      "Northwest Natural Goods LLC",
+      "Oregon Prime",
+      "Picnic Oregon",
+      "Quantum Farms",
+      "SOFF",
+      "Sasha Gardens",
+      "Sunny Valley Farm",
+      "The Delta Company",
+      "Wyld"
+    ],
+    "byMonth": {
+      "May": 993.8300000000005,
+      "Jun": 2570.6799999999985,
+      "Jul": 1835.300000000002,
+      "Aug": 1883.6200000000024,
+      "Sep": 1573.480000000002,
+      "Oct": 2018.4600000000012,
+      "Nov": 2028.1600000000008,
+      "Dec": 1893.4300000000005
+    },
+    "byCategory": {
+      "Edibles (Solid)": 12286.73999999998,
+      "Hemp": 2510.2200000000007
+    },
+    "byType": {
+      "Indica": 637.3299999999998,
+      "Sativa-dom": 45.6
+    }
+  },
+  {
+    "name": "Noble Farms",
+    "rank": 12,
+    "revenue": 14162.43,
+    "marketShare": 2.34,
+    "transactions": 366,
+    "customers": 144,
+    "distributors": [
+      "Noble Farms"
+    ],
+    "byMonth": {
+      "May": 69.17,
+      "Jun": 426.25,
+      "Jul": 1280.3600000000004,
+      "Aug": 3051.640000000001,
+      "Sep": 1938.7300000000005,
+      "Oct": 2649.430000000001,
+      "Nov": 1995.7200000000005,
+      "Dec": 2751.13
+    },
+    "byCategory": {
+      "Flower": 14162.430000000004,
+      "Pre-Roll": 0.0
+    },
+    "byType": {
+      "50/50": 1274.0200000000004,
+      "Sativa-dom": 1706.6100000000004,
+      "Sativa": 4147.7300000000005,
+      "Indica-dom": 7034.069999999999
+    }
+  },
+  {
+    "name": "Garden First Cannabis",
+    "rank": 13,
+    "revenue": 14047.04,
+    "marketShare": 2.32,
+    "transactions": 503,
+    "customers": 163,
+    "distributors": [
+      "Garden First Cannabis"
+    ],
+    "byMonth": {
+      "May": 112.1,
+      "Jun": 329.90000000000003,
+      "Jul": 1140.49,
+      "Aug": 2780.5,
+      "Sep": 2407.08,
+      "Oct": 2361.670000000001,
+      "Nov": 2245.490000000001,
+      "Dec": 2669.809999999999
+    },
+    "byCategory": {
+      "Pre-Roll": 1807.6200000000008,
+      "Flower": 12221.019999999988,
+      "Concentrates": 18.4
+    },
+    "byType": {
+      "50/50": 6061.19,
+      "Sativa": 3411.679999999999,
+      "Indica": 4303.469999999999
+    }
+  },
+  {
+    "name": "Altered Alchemy",
+    "rank": 14,
+    "revenue": 12617.36,
+    "marketShare": 2.08,
+    "transactions": 786,
+    "customers": 119,
+    "distributors": [
+      "Applegate Gold, LLC",
+      "Arcane Agriculture",
+      "DHT Holdings LLC",
+      "Dirty Arm Farm",
+      "High Point",
+      "Imperial Farms",
+      "Mountain Sun Botanicals",
+      "Pin Farms",
+      "Quality Affordable Products LLC",
+      "Rolen Stone Farms",
+      "Shady Coconut Farm and Gardens",
+      "WeGrowGreen, LLC",
+      "Wildman Genetics"
+    ],
+    "byMonth": {
+      "May": 599.38,
+      "Jun": 976.3899999999999,
+      "Jul": 1589.6500000000003,
+      "Aug": 1138.72,
+      "Sep": 1279.980000000001,
+      "Oct": 1931.2600000000014,
+      "Nov": 2449.100000000003,
+      "Dec": 2652.879999999999
+    },
+    "byCategory": {
+      "Concentrates": 10526.769999999986,
+      "Extracts": 2090.590000000002
+    },
+    "byType": {
+      "Indica-dom": 1160.8000000000006,
+      "Sativa": 2229.920000000001,
+      "Indica": 3874.62,
+      "50/50": 3988.5199999999973,
+      "Sativa-dom": 562.3099999999998
+    }
+  },
+  {
+    "name": "Verdant Leaf",
+    "rank": 15,
+    "revenue": 12239.46,
+    "marketShare": 2.02,
+    "transactions": 785,
+    "customers": 135,
+    "distributors": [
+      "Chehalem Ridge Cannabis",
+      "Green Tek Gardens",
+      "HUG Farms",
+      "MariCo Farms",
+      "Terra Verde",
+      "Verdant Leaf"
+    ],
+    "byMonth": {
+      "May": 1065.31,
+      "Jun": 2530.7799999999997,
+      "Jul": 2460.66,
+      "Aug": 2411.549999999999,
+      "Sep": 2186.9000000000005,
+      "Oct": 1407.6599999999992,
+      "Nov": 176.6
+    },
+    "byCategory": {
+      "Edibles (Solid)": 5663.40000000001,
+      "Concentrates": 5408.360000000005,
+      "Tinctures": 1167.7
+    },
+    "byType": {
+      "Indica-dom": 687.8199999999999,
+      "50/50": 3296.5799999999995,
+      "Sativa": 563.55,
+      "Sativa-dom": 358.70000000000005,
+      "Indica": 48.519999999999996
+    }
+  },
+  {
+    "name": "Magic Number",
+    "rank": 16,
+    "revenue": 9496.33,
+    "marketShare": 1.57,
+    "transactions": 797,
+    "customers": 150,
+    "distributors": [
+      "A1 Cultivation",
+      "AGFO LLC",
+      "ARC Gardens",
+      "ARC Gardens, LLC",
+      "Ananda Farms",
+      "BUCO Farms, LLC",
+      "Buddlie Buddy Farms",
+      "FA Ranch",
+      "Highland Provisions",
+      "Kore Cannabis",
+      "Magic Number",
+      "My Design Gardens",
+      "Rising Leaf Farms, LLC",
+      "SACRED FLOWER FARMS",
+      "Sasha Gardens",
+      "Smoky Flower Farm",
+      "Southern Oregon Cannabis",
+      "Special Branded"
+    ],
+    "byMonth": {
+      "May": 424.6,
+      "Jun": 1031.3800000000008,
+      "Jul": 960.2900000000004,
+      "Aug": 1196.7700000000004,
+      "Sep": 1251.02,
+      "Oct": 1320.19,
+      "Nov": 1436.5300000000002,
+      "Dec": 1875.5500000000009
+    },
+    "byCategory": {
+      "Edibles (Liquid)": 9496.330000000018
+    },
+    "byType": {
+      "Indica-dom": 993.8999999999997,
+      "Sativa-dom": 869.14,
+      "50/50": 118.07000000000002
+    }
+  },
+  {
+    "name": "Surfr Select",
+    "rank": 17,
+    "revenue": 9039.24,
+    "marketShare": 1.49,
+    "transactions": 254,
+    "customers": 101,
+    "distributors": [
+      "High Latitude Farms"
+    ],
+    "byMonth": {
+      "May": 1185.41,
+      "Jun": 4572.189999999998,
+      "Jul": 2425.4900000000002,
+      "Aug": 462.15000000000003,
+      "Sep": 198.1,
+      "Oct": 153.42000000000002,
+      "Nov": 42.48
+    },
+    "byCategory": {
+      "Flower": 9039.24
+    },
+    "byType": {
+      "50/50": 4695.8200000000015,
+      "Sativa-dom": 550.92,
+      "Indica": 1337.36,
+      "Indica-dom": 1343.3400000000004
+    }
+  },
+  {
+    "name": "Virgin Cannabis",
+    "rank": 18,
+    "revenue": 9038.31,
+    "marketShare": 1.49,
+    "transactions": 300,
+    "customers": 113,
+    "distributors": [
+      "Virgin Cannabis",
+      "Virgin Leaf"
+    ],
+    "byMonth": {
+      "May": 721.9399999999999,
+      "Jun": 1251.3500000000001,
+      "Jul": 1727.4199999999998,
+      "Aug": 1371.23,
+      "Sep": 951.5700000000002,
+      "Oct": 788.51,
+      "Nov": 742.83,
+      "Dec": 1483.4599999999998
+    },
+    "byCategory": {
+      "Flower": 9038.309999999998
+    },
+    "byType": {
+      "Indica": 6446.0300000000025,
+      "Indica-dom": 751.9000000000001,
+      "Sativa": 1182.2700000000002,
+      "50/50": 557.11
+    }
+  },
+  {
+    "name": "Frontier Farms",
+    "rank": 19,
+    "revenue": 8862.62,
+    "marketShare": 1.46,
+    "transactions": 345,
+    "customers": 133,
+    "distributors": [
+      "Frontier Farms",
+      "Frontier Farms - Dee"
+    ],
+    "byMonth": {
+      "Jun": 1071.25,
+      "Jul": 1104.58,
+      "Aug": 2356.74,
+      "Sep": 2777.4600000000005,
+      "Oct": 1079.56,
+      "Nov": 473.03
+    },
+    "byCategory": {
+      "Flower": 8862.620000000003
+    },
+    "byType": {
+      "Sativa": 4677.160000000002,
+      "50/50": 922.14,
+      "Sativa-dom": 3243.8199999999993
+    }
+  },
+  {
+    "name": "Puck Fortland",
+    "rank": 20,
+    "revenue": 8064.68,
+    "marketShare": 1.33,
+    "transactions": 447,
+    "customers": 113,
+    "distributors": [
+      "Conger Grow",
+      "Galaxy Gardens",
+      "Highland Provisions",
+      "Stardust Cultivation",
+      "The Oregon Horticulture Company, LLC"
+    ],
+    "byMonth": {
+      "May": 305.27,
+      "Jun": 685.6100000000002,
+      "Jul": 641.82,
+      "Aug": 1581.000000000001,
+      "Sep": 1176.200000000001,
+      "Oct": 1229.280000000001,
+      "Nov": 1177.7300000000007,
+      "Dec": 1267.7700000000013
+    },
+    "byCategory": {
+      "Cartridges": 8064.679999999956
+    },
+    "byType": {}
+  },
+  {
+    "name": "Good Garden",
+    "rank": 21,
+    "revenue": 7204.19,
+    "marketShare": 1.19,
+    "transactions": 338,
+    "customers": 109,
+    "distributors": [
+      "Gud Gardens"
+    ],
+    "byMonth": {
+      "Oct": 1561.3300000000006,
+      "Nov": 2827.419999999999,
+      "Dec": 2815.44
+    },
+    "byCategory": {
+      "Flower": 3848.110000000001,
+      "Pre-Roll": 3356.079999999997
+    },
+    "byType": {
+      "Indica-dom": 641.4500000000002,
+      "Sativa": 1945.55,
+      "Indica": 949.7999999999998,
+      "50/50": 3667.3899999999976
+    }
+  },
+  {
+    "name": "Fenario Farms",
+    "rank": 22,
+    "revenue": 6312.82,
+    "marketShare": 1.04,
+    "transactions": 167,
+    "customers": 79,
+    "distributors": [
+      "Fenario Farms"
+    ],
+    "byMonth": {
+      "May": 340.61999999999995,
+      "Jun": 726.6299999999999,
+      "Jul": 558.47,
+      "Aug": 406.85,
+      "Sep": 234.04,
+      "Oct": 1227.9300000000003,
+      "Nov": 821.2900000000001,
+      "Dec": 1996.99
+    },
+    "byCategory": {
+      "Flower": 6312.82
+    },
+    "byType": {
+      "Sativa-dom": 1958.0099999999998,
+      "50/50": 3023.3999999999987,
+      "Indica": 964.15,
+      "Indica-dom": 367.26
+    }
+  },
+  {
+    "name": "Bobsled",
+    "rank": 23,
+    "revenue": 6261.89,
+    "marketShare": 1.03,
+    "transactions": 298,
+    "customers": 46,
+    "distributors": [
+      "BZS Resource",
+      "Bobsled Farms",
+      "Bobsled Farms LLC",
+      "Eclectic Cannabis",
+      "Frontier Farms",
+      "Frontier Farms - Dee",
+      "Happy Flower LLC",
+      "JJ Farms Oregon, LLC",
+      "Quality Group",
+      "Sow Canna II",
+      "Table Rock Cultivators LLC",
+      "West Coast Genetics"
+    ],
+    "byMonth": {
+      "May": 672.89,
+      "Jun": 843.9499999999999,
+      "Jul": 633.1500000000001,
+      "Aug": 1009.4999999999999,
+      "Sep": 913.1399999999999,
+      "Oct": 907.6099999999999,
+      "Nov": 530.25,
+      "Dec": 751.3999999999997
+    },
+    "byCategory": {
+      "Concentrates": 6261.890000000002
+    },
+    "byType": {
+      "Indica-dom": 176.59000000000003,
+      "Sativa": 1810.1199999999994,
+      "50/50": 1942.9499999999998,
+      "Indica": 1832.6000000000001
+    }
+  },
+  {
+    "name": "Moonwalk",
+    "rank": 24,
+    "revenue": 5948.48,
+    "marketShare": 0.98,
+    "transactions": 113,
+    "customers": 29,
+    "distributors": [
+      "Applegate River Roots",
+      "Bonafide Cannabis",
+      "High Latitude Farms",
+      "Kanaba Farms",
+      "Pot For Planet",
+      "Remedy River",
+      "River Grown",
+      "SACRED FLOWER FARMS",
+      "Summit Valley LLC",
+      "The Crop Shop Cannabis",
+      "Wildman Genetics"
+    ],
+    "byMonth": {
+      "May": 749.6800000000001,
+      "Jun": 1146.6,
+      "Jul": 1132.0,
+      "Aug": 546.6,
+      "Sep": 399.0,
+      "Oct": 834.5999999999999,
+      "Nov": 444.0,
+      "Dec": 696.0
+    },
+    "byCategory": {
+      "Cartridges": 5877.0999999999985,
+      "Accessories": 71.38
+    },
+    "byType": {}
+  },
+  {
+    "name": "Crown B Alchemy",
+    "rank": 25,
+    "revenue": 5929.2,
+    "marketShare": 0.98,
+    "transactions": 114,
+    "customers": 18,
+    "distributors": [
+      "Galaxy Gardens",
+      "SOFF",
+      "Stardust Cultivation"
+    ],
+    "byMonth": {
+      "May": 326.0,
+      "Jun": 982.8,
+      "Jul": 434.9,
+      "Aug": 804.4000000000001,
+      "Sep": 903.1,
+      "Oct": 858.0,
+      "Nov": 678.0,
+      "Dec": 942.0
+    },
+    "byCategory": {
+      "Tinctures": 5929.2
+    },
+    "byType": {}
+  },
+  {
+    "name": "Makru Farms",
+    "rank": 26,
+    "revenue": 5623.06,
+    "marketShare": 0.93,
+    "transactions": 293,
+    "customers": 119,
+    "distributors": [
+      "Makru Farms"
+    ],
+    "byMonth": {
+      "May": 2223.2599999999998,
+      "Jun": 2591.29,
+      "Jul": 808.4999999999999,
+      "Aug": 0.01
+    },
+    "byCategory": {
+      "Flower": 5623.0599999999995
+    },
+    "byType": {
+      "Indica-dom": 2651.2799999999993,
+      "50/50": 978.5000000000001,
+      "Sativa-dom": 523.88,
+      "Indica": 878.3099999999998
+    }
+  },
+  {
+    "name": "High Desert Pure",
+    "rank": 27,
+    "revenue": 4920.73,
+    "marketShare": 0.81,
+    "transactions": 109,
+    "customers": 40,
+    "distributors": [
+      "Capital Cannabis",
+      "Dream Girl Cannabis",
+      "East Wind Cannabis",
+      "Frontier Farms - Dee",
+      "Galaxy Gardens",
+      "Genesis Pharms",
+      "Gorgeous Green Farms",
+      "High Desert Pure",
+      "Juicy Farms",
+      "Stardust Cultivation",
+      "The Chipper Chicken",
+      "Virgin Leaf",
+      "Wicked Flower Farm"
+    ],
+    "byMonth": {
+      "May": 516.6800000000001,
+      "Jun": 527.3,
+      "Jul": 997.58,
+      "Aug": 504.7,
+      "Sep": 660.21,
+      "Oct": 425.65999999999997,
+      "Nov": 686.3,
+      "Dec": 602.3
+    },
+    "byCategory": {
+      "Tinctures": 1833.6600000000003,
+      "Topicals": 2812.870000000001,
+      "Hemp": 274.2
+    },
+    "byType": {}
+  },
+  {
+    "name": "Echo Electuary",
+    "rank": 28,
+    "revenue": 4587.09,
+    "marketShare": 0.76,
+    "transactions": 92,
+    "customers": 33,
+    "distributors": [
+      "Ananda Farms",
+      "Apis Hyve LLC",
+      "Evan's Creek Farms",
+      "SACRED FLOWER FARMS",
+      "Sasha Gardens"
+    ],
+    "byMonth": {
+      "May": 335.84000000000003,
+      "Jun": 1238.2099999999998,
+      "Jul": 1174.5400000000002,
+      "Aug": 683.5,
+      "Sep": 288.0,
+      "Oct": 396.0,
+      "Nov": 351.0,
+      "Dec": 120.0
+    },
+    "byCategory": {
+      "Cartridges": 3964.3499999999995,
+      "Concentrates": 622.74
+    },
+    "byType": {}
+  },
+  {
+    "name": "Up Stream",
+    "rank": 29,
+    "revenue": 4246.6,
+    "marketShare": 0.7,
+    "transactions": 161,
+    "customers": 66,
+    "distributors": [
+      "Up Stream"
+    ],
+    "byMonth": {
+      "May": 1128.21,
+      "Jun": 804.7500000000002,
+      "Jul": 772.9399999999999,
+      "Aug": 553.6800000000001,
+      "Sep": 637.68,
+      "Oct": 349.34
+    },
+    "byCategory": {
+      "Flower": 3888.2700000000027,
+      "Pre-Roll": 358.33
+    },
+    "byType": {
+      "Sativa": 3261.2100000000023,
+      "Sativa-dom": 891.4600000000002
+    }
+  },
+  {
+    "name": "Benson Arbor",
+    "rank": 30,
+    "revenue": 4020.15,
+    "marketShare": 0.66,
+    "transactions": 193,
+    "customers": 52,
+    "distributors": [
+      "Benson Arbor",
+      "JD Grown",
+      "Phoenix Rising Farm"
+    ],
+    "byMonth": {
+      "May": 326.6,
+      "Jun": 500.25,
+      "Jul": 980.8499999999999,
+      "Aug": 418.0,
+      "Sep": 584.4000000000002,
+      "Oct": 426.22,
+      "Nov": 443.13000000000005,
+      "Dec": 340.70000000000005
+    },
+    "byCategory": {
+      "Infused Pre-Rolls": 461.15000000000015,
+      "Pre-Roll": 3329.300000000002,
+      "Infuseds": 229.69999999999996
+    },
+    "byType": {
+      "Indica-dom": 141.8,
+      "Sativa-dom": 559.5,
+      "50/50": 2722.7500000000005
+    }
+  },
+  {
+    "name": "Smokiez",
+    "rank": 31,
+    "revenue": 3996.85,
+    "marketShare": 0.66,
+    "transactions": 283,
+    "customers": 65,
+    "distributors": [
+      "Attis Farms; Celadon Cannabis",
+      "C&R Oregon Corporation",
+      "Conger Grow",
+      "Eco Clean Prime",
+      "Folia",
+      "Frontier Farms",
+      "Frontier Farms - Dee",
+      "Galaxy Gardens",
+      "Mike's Green Farm",
+      "Million Elephants, LLC",
+      "Nectar Stick",
+      "Oregon Grow, LLC",
+      "Oregon Model Farms",
+      "Pioneer Farms, LLC",
+      "Self Made Cannabis Company",
+      "Stardust Cultivation"
+    ],
+    "byMonth": {
+      "May": 203.1,
+      "Jun": 702.4,
+      "Jul": 553.0,
+      "Aug": 422.7300000000001,
+      "Sep": 504.7600000000001,
+      "Oct": 390.53000000000014,
+      "Nov": 524.94,
+      "Dec": 695.3900000000002
+    },
+    "byCategory": {
+      "Edibles (Solid)": 3840.849999999984,
+      "Tinctures": 156.0
+    },
+    "byType": {
+      "50/50": 133.35,
+      "Sativa": 36.4
+    }
+  },
+  {
+    "name": "Yeti",
+    "rank": 32,
+    "revenue": 3928.92,
+    "marketShare": 0.65,
+    "transactions": 156,
+    "customers": 37,
+    "distributors": [
+      "Grown Rogue",
+      "Grown Rogue - Airport"
+    ],
+    "byMonth": {
+      "May": 164.4,
+      "Jun": 225.24,
+      "Jul": 713.25,
+      "Aug": 585.01,
+      "Sep": 515.8199999999999,
+      "Oct": 855.1999999999999,
+      "Nov": 411.59999999999997,
+      "Dec": 458.4
+    },
+    "byCategory": {
+      "Pre-Roll": 3928.9199999999973
+    },
+    "byType": {
+      "Indica": 1242.14,
+      "Sativa": 1436.3800000000003,
+      "50/50": 1182.0000000000002
+    }
+  },
+  {
+    "name": "Miracle Greens",
+    "rank": 33,
+    "revenue": 3831.65,
+    "marketShare": 0.63,
+    "transactions": 506,
+    "customers": 82,
+    "distributors": [
+      "ATC ENTERPRISE, LLC",
+      "Conger Grow",
+      "Galaxy Gardens",
+      "Oregon Prime",
+      "Special Branded"
+    ],
+    "byMonth": {
+      "May": 350.17,
+      "Jun": 681.1399999999999,
+      "Jul": 551.55,
+      "Aug": 356.19,
+      "Sep": 299.85,
+      "Oct": 602.0999999999998,
+      "Nov": 657.45,
+      "Dec": 333.20000000000005
+    },
+    "byCategory": {
+      "Edibles (Solid)": 3787.8000000000015,
+      "Accessories": 43.85
+    },
+    "byType": {}
+  },
+  {
+    "name": "Gr\u00f6n Distro",
+    "rank": 34,
+    "revenue": 3615.37,
+    "marketShare": 0.6,
+    "transactions": 369,
+    "customers": 65,
+    "distributors": [
+      "Emerald Green Gardens",
+      "Half Baked Farms",
+      "Million Elephants",
+      "The Oregon Horticulture Company, LLC"
+    ],
+    "byMonth": {
+      "May": 364.59000000000003,
+      "Jun": 964.95,
+      "Jul": 550.8199999999999,
+      "Aug": 808.0099999999998,
+      "Sep": 466.65999999999997,
+      "Oct": 460.34000000000003
+    },
+    "byCategory": {
+      "Edibles (Solid)": 3615.3700000000035
+    },
+    "byType": {
+      "Sativa": 502.67999999999995,
+      "Indica": 219.3
+    }
+  },
+  {
+    "name": "MIRACLE FARMS",
+    "rank": 35,
+    "revenue": 3520.51,
+    "marketShare": 0.58,
+    "transactions": 931,
+    "customers": 206,
+    "distributors": [
+      "Miracle Farms"
+    ],
+    "byMonth": {
+      "May": 436.9500000000001,
+      "Jun": 958.3000000000001,
+      "Jul": 824.2800000000002,
+      "Aug": 442.2600000000001,
+      "Sep": 394.7,
+      "Oct": 291.56999999999994,
+      "Nov": 120.34999999999998,
+      "Dec": 52.10000000000002
+    },
+    "byCategory": {
+      "Pre-Roll": 3520.5099999999898
+    },
+    "byType": {
+      "Sativa-dom": 461.0400000000005,
+      "Indica-dom": 1535.2700000000004,
+      "50/50": 931.6800000000004,
+      "Sativa": 592.5199999999999
+    }
+  },
+  {
+    "name": "Blazing Trails",
+    "rank": 36,
+    "revenue": 3295.25,
+    "marketShare": 0.54,
+    "transactions": 111,
+    "customers": 61,
+    "distributors": [
+      "Blazing Trails"
+    ],
+    "byMonth": {
+      "May": 503.54,
+      "Jun": 1241.37,
+      "Jul": 861.2800000000001,
+      "Aug": 91.9,
+      "Sep": 42.31,
+      "Oct": 554.8499999999999
+    },
+    "byCategory": {
+      "Flower": 3295.2499999999977
+    },
+    "byType": {
+      "Indica-dom": 684.9900000000001,
+      "50/50": 2455.879999999999
+    }
+  },
+  {
+    "name": "Portland Heights",
+    "rank": 37,
+    "revenue": 3294.71,
+    "marketShare": 0.54,
+    "transactions": 209,
+    "customers": 48,
+    "distributors": [
+      "Folium Farms",
+      "Greenway Farm LLC",
+      "Grown Rogue - Airport",
+      "Juicy Jackson",
+      "Million Elephants",
+      "New Frontier LLC",
+      "Otis Gardens",
+      "Rogue River Family Farms",
+      "Self Made Cannabis Company",
+      "Stardust Cultivation",
+      "Sugarbud",
+      "Sunlight Ridge, LLC",
+      "Terra Verde",
+      "The Oregon Horticulture Company, LLC"
+    ],
+    "byMonth": {
+      "May": 233.17,
+      "Jun": 259.07,
+      "Jul": 293.99,
+      "Aug": 666.19,
+      "Sep": 618.0200000000001,
+      "Oct": 358.25000000000006,
+      "Nov": 382.63000000000005,
+      "Dec": 483.39
+    },
+    "byCategory": {
+      "Infused Pre-Rolls": 2358.229999999999,
+      "Pre-Roll": 936.4800000000002
+    },
+    "byType": {
+      "50/50": 1220.1600000000003,
+      "Indica": 1256.2199999999996,
+      "Sativa": 818.3300000000003
+    }
+  },
+  {
+    "name": "Lifted NW",
+    "rank": 38,
+    "revenue": 3248.46,
+    "marketShare": 0.54,
+    "transactions": 64,
+    "customers": 18,
+    "distributors": [
+      "A1 Cultivation",
+      "Alibi Cannabis",
+      "Makru Farms",
+      "Win68 LLC"
+    ],
+    "byMonth": {
+      "May": 396.21000000000004,
+      "Jun": 305.5,
+      "Jul": 130.0,
+      "Aug": 344.75,
+      "Sep": 378.25,
+      "Oct": 465.0,
+      "Nov": 595.0,
+      "Dec": 633.75
+    },
+    "byCategory": {
+      "Pre-Roll": 3248.46
+    },
+    "byType": {
+      "Indica": 16.0
+    }
+  },
+  {
+    "name": "Clearly",
+    "rank": 39,
+    "revenue": 3213.61,
+    "marketShare": 0.53,
+    "transactions": 212,
+    "customers": 105,
+    "distributors": [],
+    "byMonth": {
+      "May": 40.0,
+      "Jun": 117.0,
+      "Jul": 314.76000000000005,
+      "Aug": 690.95,
+      "Sep": 560.4000000000001,
+      "Oct": 490.75,
+      "Nov": 553.4,
+      "Dec": 446.35
+    },
+    "byCategory": {
+      "Accessories": 3213.609999999999
+    },
+    "byType": {}
+  },
+  {
+    "name": "Good Tide",
+    "rank": 40,
+    "revenue": 3127.54,
+    "marketShare": 0.52,
+    "transactions": 133,
+    "customers": 29,
+    "distributors": [
+      "ARC Gardens, LLC",
+      "Foggy Mountain Farms",
+      "Northwest Bud Company LLC",
+      "Outdoor Farms Inc.",
+      "Picnic Oregon",
+      "Sasha Gardens",
+      "Sunny Valley Farm"
+    ],
+    "byMonth": {
+      "May": 334.69000000000005,
+      "Jun": 765.41,
+      "Jul": 370.74,
+      "Aug": 423.9,
+      "Sep": 391.40000000000003,
+      "Oct": 458.2,
+      "Nov": 383.20000000000005
+    },
+    "byCategory": {
+      "Edibles (Solid)": 3127.5399999999995
+    },
+    "byType": {
+      "Sativa-dom": 344.40000000000003
+    }
+  },
+  {
+    "name": "Winberry Farms",
+    "rank": 41,
+    "revenue": 3057.82,
+    "marketShare": 0.51,
+    "transactions": 238,
+    "customers": 69,
+    "distributors": [
+      "Effective Holdings LLC",
+      "Kumba Hills Farms",
+      "Leap Farms",
+      "Special Branded",
+      "Wilderville Farms, LLC"
+    ],
+    "byMonth": {
+      "Nov": 1039.1600000000003,
+      "Dec": 2018.6600000000035
+    },
+    "byCategory": {
+      "Cartridges": 3057.819999999995
+    },
+    "byType": {}
+  },
+  {
+    "name": "Groon",
+    "rank": 42,
+    "revenue": 2860.94,
+    "marketShare": 0.47,
+    "transactions": 256,
+    "customers": 56,
+    "distributors": [
+      "Aurora 99",
+      "Emerald Green Gardens",
+      "Folium Farms",
+      "Galaxy Gardens",
+      "Gron Chocolate",
+      "Half Baked Farms",
+      "Herbington Farm",
+      "Kerby Kush Farms",
+      "Million Elephants",
+      "Million Elephants, LLC",
+      "The Delta Company",
+      "The Oregon Horticulture Company, LLC",
+      "Uku Oregon, LLC"
+    ],
+    "byMonth": {
+      "Oct": 394.50000000000006,
+      "Nov": 1085.2599999999993,
+      "Dec": 1381.1800000000003
+    },
+    "byCategory": {
+      "Edibles (Solid)": 2860.940000000001
+    },
+    "byType": {
+      "Sativa": 298.4
+    }
+  },
+  {
+    "name": "National",
+    "rank": 43,
+    "revenue": 2847.51,
+    "marketShare": 0.47,
+    "transactions": 346,
+    "customers": 86,
+    "distributors": [
+      "Chronic Herbivores, LLC",
+      "Circle D Farm",
+      "Frontier Farms",
+      "JoCo Green",
+      "Rebel Spirit",
+      "Southern Oregon Moonshine",
+      "Urban Pharms"
+    ],
+    "byMonth": {
+      "Aug": 160.04999999999998,
+      "Sep": 270.1299999999998,
+      "Oct": 224.4899999999999,
+      "Nov": 842.3200000000002,
+      "Dec": 1350.5200000000013
+    },
+    "byCategory": {
+      "Infused Pre-Rolls": 1697.7900000000038,
+      "Cartridges": 1149.7200000000003
+    },
+    "byType": {
+      "Sativa": 915.2900000000003,
+      "Indica": 602.8099999999996,
+      "50/50": 179.69
+    }
+  },
+  {
+    "name": "Gud Gardens",
+    "rank": 44,
+    "revenue": 2697.1,
+    "marketShare": 0.45,
+    "transactions": 119,
+    "customers": 36,
+    "distributors": [
+      "Gud Gardens"
+    ],
+    "byMonth": {
+      "Jun": 171.9,
+      "Jul": 513.9000000000001,
+      "Aug": 704.9499999999999,
+      "Sep": 730.4500000000002,
+      "Oct": 575.9000000000001
+    },
+    "byCategory": {
+      "Pre-Roll": 2697.1
+    },
+    "byType": {
+      "50/50": 1869.0999999999992,
+      "Indica": 525.0,
+      "Sativa": 276.0
+    }
+  },
+  {
+    "name": "Mr. Moxey's",
+    "rank": 45,
+    "revenue": 2661.28,
+    "marketShare": 0.44,
+    "transactions": 78,
+    "customers": 24,
+    "distributors": [
+      "High Point"
+    ],
+    "byMonth": {
+      "Jul": 39.9,
+      "Aug": 450.84999999999997,
+      "Sep": 308.21999999999997,
+      "Oct": 532.65,
+      "Nov": 762.0900000000001,
+      "Dec": 567.5700000000002
+    },
+    "byCategory": {
+      "Edibles (Solid)": 2661.2800000000007
+    },
+    "byType": {}
+  },
+  {
+    "name": "Black Wolf",
+    "rank": 46,
+    "revenue": 2657.57,
+    "marketShare": 0.44,
+    "transactions": 134,
+    "customers": 72,
+    "distributors": [
+      "Black Wolf Cannabis"
+    ],
+    "byMonth": {
+      "Jul": 486.13,
+      "Aug": 1003.6600000000002,
+      "Sep": 679.8900000000001,
+      "Oct": 227.71999999999997,
+      "Nov": 220.17000000000002,
+      "Dec": 40.0
+    },
+    "byCategory": {
+      "Flower": 2657.5699999999993
+    },
+    "byType": {
+      "Indica-dom": 1159.9899999999998,
+      "50/50": 1497.5800000000008
+    }
+  },
+  {
+    "name": "BBrand",
+    "rank": 47,
+    "revenue": 2552.56,
+    "marketShare": 0.42,
+    "transactions": 238,
+    "customers": 42,
+    "distributors": [
+      "Self Made Cannabis Company",
+      "Self Made Farms, LLC"
+    ],
+    "byMonth": {
+      "May": 247.04,
+      "Jun": 390.5,
+      "Jul": 383.03,
+      "Aug": 370.0200000000001,
+      "Sep": 380.9999999999999,
+      "Oct": 371.3199999999998,
+      "Nov": 267.7,
+      "Dec": 141.94999999999996
+    },
+    "byCategory": {
+      "Concentrates": 2552.5600000000018
+    },
+    "byType": {
+      "Indica": 702.3100000000007,
+      "Sativa": 977.6000000000007,
+      "50/50": 688.6500000000005,
+      "Indica-dom": 184.0
+    }
+  },
+  {
+    "name": "Decibel",
+    "rank": 48,
+    "revenue": 2548.14,
+    "marketShare": 0.42,
+    "transactions": 118,
+    "customers": 28,
+    "distributors": [
+      "Decibel Farms",
+      "Infinite Tree"
+    ],
+    "byMonth": {
+      "May": 63.75,
+      "Jun": 352.5,
+      "Jul": 353.75,
+      "Aug": 302.0899999999999,
+      "Sep": 368.0899999999999,
+      "Oct": 473.78999999999985,
+      "Nov": 443.96999999999986,
+      "Dec": 190.19999999999996
+    },
+    "byCategory": {
+      "Infused Pre-Rolls": 2548.140000000001
+    },
+    "byType": {
+      "Sativa-dom": 20.0,
+      "Sativa": 246.14,
+      "Indica": 715.2000000000002
+    }
+  },
+  {
+    "name": "Gaia's Ganja Garden",
+    "rank": 49,
+    "revenue": 2272.46,
+    "marketShare": 0.38,
+    "transactions": 70,
+    "customers": 39,
+    "distributors": [
+      "Gaia's Ganja Garden"
+    ],
+    "byMonth": {
+      "May": 29.98,
+      "Jun": 515.2,
+      "Jul": 573.71,
+      "Aug": 880.6399999999999,
+      "Sep": 172.28999999999996,
+      "Oct": 100.64
+    },
+    "byCategory": {
+      "Flower": 2272.4600000000005
+    },
+    "byType": {
+      "Sativa": 1687.3399999999997,
+      "50/50": 267.62,
+      "Indica-dom": 317.5
+    }
+  },
+  {
+    "name": "The Crop Shop",
+    "rank": 50,
+    "revenue": 2164.97,
+    "marketShare": 0.36,
+    "transactions": 54,
+    "customers": 26,
+    "distributors": [
+      "The Crop Shop Cannabis"
+    ],
+    "byMonth": {
+      "May": 239.1,
+      "Jun": 540.75,
+      "Jul": 410.04999999999995,
+      "Aug": 70.6,
+      "Sep": 55.2,
+      "Oct": 562.99,
+      "Nov": 286.28000000000003
+    },
+    "byCategory": {
+      "Flower": 2164.9700000000003
+    },
+    "byType": {
+      "50/50": 2155.8700000000003
+    }
+  },
+  {
+    "name": "Angel",
+    "rank": 51,
+    "revenue": 2110.91,
+    "marketShare": 0.35,
+    "transactions": 56,
+    "customers": 24,
+    "distributors": [
+      "ABC1",
+      "Angel1",
+      "Gong-Ji Farm LLC",
+      "Hill Ventures",
+      "JJ Farms Oregon, LLC",
+      "Self Made Cannabis Company",
+      "The Delta Company"
+    ],
+    "byMonth": {
+      "May": 58.75,
+      "Jun": 512.8,
+      "Jul": 471.17,
+      "Aug": 310.95,
+      "Sep": 149.25,
+      "Oct": 243.02,
+      "Nov": 147.51,
+      "Dec": 217.46
+    },
+    "byCategory": {
+      "Hemp": 1541.9100000000003,
+      "Tinctures": 510.2,
+      "Edibles (Solid)": 58.8
+    },
+    "byType": {}
+  },
+  {
+    "name": "Koru Cannabis",
+    "rank": 52,
+    "revenue": 2073.35,
+    "marketShare": 0.34,
+    "transactions": 81,
+    "customers": 33,
+    "distributors": [
+      "Koru Cannabis"
+    ],
+    "byMonth": {
+      "Aug": 294.53,
+      "Sep": 200.89999999999998,
+      "Oct": 420.58000000000004,
+      "Nov": 785.9100000000001,
+      "Dec": 371.43
+    },
+    "byCategory": {
+      "Flower": 2073.349999999999
+    },
+    "byType": {
+      "Sativa": 2073.349999999999
+    }
+  },
+  {
+    "name": "Grown",
+    "rank": 53,
+    "revenue": 2062.21,
+    "marketShare": 0.34,
+    "transactions": 91,
+    "customers": 53,
+    "distributors": [
+      "Grown Rogue - Airport"
+    ],
+    "byMonth": {
+      "Jun": 2062.2,
+      "Jul": 0.01
+    },
+    "byCategory": {
+      "Flower": 2062.21
+    },
+    "byType": {
+      "Indica-dom": 2062.21
+    }
+  },
+  {
+    "name": "Forte",
+    "rank": 54,
+    "revenue": 1965.41,
+    "marketShare": 0.32,
+    "transactions": 100,
+    "customers": 37,
+    "distributors": [
+      "Decibel Farms",
+      "Infinite Tree"
+    ],
+    "byMonth": {
+      "May": 59.16,
+      "Jun": 256.6,
+      "Jul": 251.5,
+      "Aug": 410.81,
+      "Sep": 157.34,
+      "Oct": 206.0,
+      "Nov": 304.0,
+      "Dec": 320.0
+    },
+    "byCategory": {
+      "Concentrates": 1965.41
+    },
+    "byType": {
+      "Indica-dom": 566.96,
+      "Sativa-dom": 395.73999999999995,
+      "50/50": 512.01
+    }
+  },
+  {
+    "name": "Joybombs",
+    "rank": 55,
+    "revenue": 1749.07,
+    "marketShare": 0.29,
+    "transactions": 83,
+    "customers": 30,
+    "distributors": [
+      "Half Baked Farms",
+      "Mike's Green Farm",
+      "The Delta Company"
+    ],
+    "byMonth": {
+      "May": 125.0,
+      "Jun": 188.0,
+      "Jul": 178.0,
+      "Aug": 306.2,
+      "Sep": 241.0,
+      "Oct": 246.0,
+      "Nov": 280.0,
+      "Dec": 184.87
+    },
+    "byCategory": {
+      "Edibles (Solid)": 1749.07
+    },
+    "byType": {}
+  },
+  {
+    "name": "Happy Cabbage",
+    "rank": 56,
+    "revenue": 1724.05,
+    "marketShare": 0.28,
+    "transactions": 120,
+    "customers": 47,
+    "distributors": [
+      "Cultiv8",
+      "Folium Farms",
+      "Happy Cabbage Farms",
+      "Kaprikorn"
+    ],
+    "byMonth": {
+      "May": 127.2,
+      "Jun": 142.24,
+      "Jul": 287.58000000000004,
+      "Aug": 346.96,
+      "Sep": 204.57000000000002,
+      "Oct": 86.65,
+      "Nov": 196.32000000000002,
+      "Dec": 332.53000000000003
+    },
+    "byCategory": {
+      "Concentrates": 648.24,
+      "Edibles (Solid)": 979.8099999999993,
+      "Cartridges": 96.0
+    },
+    "byType": {
+      "Indica-dom": 522.1299999999998,
+      "Indica": 634.38,
+      "Sativa": 212.2,
+      "Sativa-dom": 259.3400000000001
+    }
+  },
+  {
+    "name": "Meraki",
+    "rank": 57,
+    "revenue": 1722.54,
+    "marketShare": 0.28,
+    "transactions": 286,
+    "customers": 72,
+    "distributors": [
+      "Meraki Gardens"
+    ],
+    "byMonth": {
+      "Oct": 252.13999999999987,
+      "Nov": 859.6199999999999,
+      "Dec": 610.7799999999997
+    },
+    "byCategory": {
+      "Pre-Roll": 1722.5400000000016
+    },
+    "byType": {
+      "Indica": 814.9599999999999,
+      "Sativa": 413.7299999999998,
+      "50/50": 493.84999999999974
+    }
+  },
+  {
+    "name": "Focus North",
+    "rank": 58,
+    "revenue": 1563.2,
+    "marketShare": 0.26,
+    "transactions": 83,
+    "customers": 39,
+    "distributors": [
+      "Focus North"
+    ],
+    "byMonth": {
+      "May": 443.0,
+      "Jun": 419.2,
+      "Jul": 156.0,
+      "Aug": 78.0,
+      "Sep": 53.0,
+      "Oct": 100.0,
+      "Nov": 202.0,
+      "Dec": 112.0
+    },
+    "byCategory": {
+      "Pre-Roll": 1563.2
+    },
+    "byType": {
+      "50/50": 796.2,
+      "Sativa": 312.0,
+      "Indica-dom": 212.0
+    }
+  },
+  {
+    "name": "G\u00fcd Garden",
+    "rank": 59,
+    "revenue": 1523.68,
+    "marketShare": 0.25,
+    "transactions": 60,
+    "customers": 33,
+    "distributors": [
+      "Gud Gardens"
+    ],
+    "byMonth": {
+      "Oct": 1523.6799999999996
+    },
+    "byCategory": {
+      "Flower": 1523.6799999999996
+    },
+    "byType": {
+      "Indica-dom": 1311.6699999999998,
+      "Sativa": 98.61000000000001,
+      "50/50": 113.4
+    }
+  },
+  {
+    "name": "Kola Brand",
+    "rank": 60,
+    "revenue": 1455.38,
+    "marketShare": 0.24,
+    "transactions": 54,
+    "customers": 34,
+    "distributors": [
+      "Flower Family Farms"
+    ],
+    "byMonth": {
+      "Jun": 499.02,
+      "Jul": 956.3599999999999
+    },
+    "byCategory": {
+      "Flower": 1455.38
+    },
+    "byType": {
+      "Sativa": 1455.38
+    }
+  },
+  {
+    "name": "Piff Stixs",
+    "rank": 61,
+    "revenue": 1349.85,
+    "marketShare": 0.22,
+    "transactions": 27,
+    "customers": 9,
+    "distributors": [
+      "Galaxy Gardens",
+      "His and Her Grow",
+      "Oregon's Top Shelf",
+      "Piff Stixs",
+      "Stardust Cultivation"
+    ],
+    "byMonth": {
+      "May": 235.8,
+      "Jun": 473.25,
+      "Jul": 201.6,
+      "Aug": 133.2,
+      "Oct": 188.4,
+      "Nov": 57.6,
+      "Dec": 60.00000000000001
+    },
+    "byCategory": {
+      "Cartridges": 1134.6,
+      "Infused Pre-Rolls": 215.25000000000003
+    },
+    "byType": {
+      "Indica": 79.6,
+      "50/50": 101.25,
+      "Sativa": 34.400000000000006
+    }
+  },
+  {
+    "name": "WYN",
+    "rank": 62,
+    "revenue": 1288.05,
+    "marketShare": 0.21,
+    "transactions": 102,
+    "customers": 44,
+    "distributors": [],
+    "byMonth": {
+      "May": 47.5,
+      "Jun": 166.25,
+      "Jul": 327.92999999999995,
+      "Aug": 249.84999999999997,
+      "Sep": 73.65,
+      "Oct": 164.62,
+      "Nov": 107.95000000000002,
+      "Dec": 150.3
+    },
+    "byCategory": {
+      "Accessories": 1069.37,
+      "Apparel": 21.25,
+      "Accessories- Not Taxed": 197.42999999999992
+    },
+    "byType": {}
+  },
+  {
+    "name": "Eastwood Gardens",
+    "rank": 63,
+    "revenue": 1274.06,
+    "marketShare": 0.21,
+    "transactions": 56,
+    "customers": 32,
+    "distributors": [
+      "Eastwood",
+      "Eastwood Gardens"
+    ],
+    "byMonth": {
+      "May": 386.3,
+      "Jun": 298.57,
+      "Jul": 146.77,
+      "Aug": 44.88,
+      "Sep": 30.4,
+      "Oct": 209.76000000000005,
+      "Nov": 157.38
+    },
+    "byCategory": {
+      "Pre-Roll": 106.0,
+      "Flower": 1168.0599999999997
+    },
+    "byType": {
+      "Sativa-dom": 307.92,
+      "50/50": 966.1399999999998
+    }
+  },
+  {
+    "name": "CannaCrispy",
+    "rank": 64,
+    "revenue": 1238.38,
+    "marketShare": 0.2,
+    "transactions": 178,
+    "customers": 44,
+    "distributors": [
+      "Frontier Farms",
+      "Southern Oregon Moonshine"
+    ],
+    "byMonth": {
+      "May": 77.39999999999999,
+      "Jun": 162.68,
+      "Jul": 119.4,
+      "Aug": 145.3,
+      "Sep": 87.60000000000001,
+      "Oct": 141.89999999999998,
+      "Nov": 277.69999999999993,
+      "Dec": 226.4
+    },
+    "byCategory": {
+      "Edibles (Solid)": 1238.379999999998
+    },
+    "byType": {
+      "50/50": 531.8000000000005,
+      "Indica": 372.0500000000002,
+      "Sativa": 334.5300000000001
+    }
+  },
+  {
+    "name": "Skunk Train Farms",
+    "rank": 65,
+    "revenue": 1188.7,
+    "marketShare": 0.2,
+    "transactions": 44,
+    "customers": 19,
+    "distributors": [
+      "Green Pine Farms LLC",
+      "Skunk Train Farm LLC"
+    ],
+    "byMonth": {
+      "May": 162.2,
+      "Jun": 406.9,
+      "Jul": 214.0,
+      "Aug": 28.0,
+      "Oct": 174.39999999999998,
+      "Nov": 203.20000000000002
+    },
+    "byCategory": {
+      "Concentrates": 934.3,
+      "Pre-Roll": 254.39999999999998
+    },
+    "byType": {
+      "Sativa-dom": 583.1999999999999,
+      "50/50": 440.49999999999994
+    }
+  },
+  {
+    "name": "Upcountry Cannabis",
+    "rank": 66,
+    "revenue": 1142.33,
+    "marketShare": 0.19,
+    "transactions": 34,
+    "customers": 18,
+    "distributors": [
+      "Upcountry"
+    ],
+    "byMonth": {
+      "May": 128.72,
+      "Jun": 408.26,
+      "Jul": 347.14000000000004,
+      "Aug": 258.21
+    },
+    "byCategory": {
+      "Flower": 1142.33
+    },
+    "byType": {
+      "Sativa": 1055.83
+    }
+  },
+  {
+    "name": "TAO Gardens",
+    "rank": 67,
+    "revenue": 1126.28,
+    "marketShare": 0.19,
+    "transactions": 30,
+    "customers": 20,
+    "distributors": [
+      "Tao Gardens"
+    ],
+    "byMonth": {
+      "May": 952.7500000000002,
+      "Jun": 173.53
+    },
+    "byCategory": {
+      "Flower": 1126.2800000000002
+    },
+    "byType": {
+      "Indica-dom": 1126.2800000000002
+    }
+  },
+  {
+    "name": "Mr Nug",
+    "rank": 68,
+    "revenue": 1118.31,
+    "marketShare": 0.18,
+    "transactions": 75,
+    "customers": 29,
+    "distributors": [
+      "5150 Cannabis",
+      "Cultivated Industries (Cultivated Farms)",
+      "Evergrande Farm",
+      "Pot For Planet"
+    ],
+    "byMonth": {
+      "Oct": 17.45,
+      "Nov": 674.5900000000001,
+      "Dec": 426.2699999999998
+    },
+    "byCategory": {
+      "Concentrates": 1118.310000000001
+    },
+    "byType": {
+      "50/50": 809.1600000000005,
+      "Indica": 239.35000000000005,
+      "Sativa": 69.80000000000001
+    }
+  },
+  {
+    "name": "Piff Stix",
+    "rank": 69,
+    "revenue": 1097.75,
+    "marketShare": 0.18,
+    "transactions": 40,
+    "customers": 13,
+    "distributors": [
+      "Cultivate Jo",
+      "Deep Creek Gardens LLC"
+    ],
+    "byMonth": {
+      "May": 27.0,
+      "Jun": 479.0,
+      "Jul": 195.75,
+      "Aug": 215.0,
+      "Sep": 122.5,
+      "Oct": 58.5
+    },
+    "byCategory": {
+      "Infused Pre-Rolls": 1097.75
+    },
+    "byType": {
+      "Indica": 532.25,
+      "Sativa": 565.5
+    }
+  },
+  {
+    "name": "Sugarbud",
+    "rank": 70,
+    "revenue": 1097.69,
+    "marketShare": 0.18,
+    "transactions": 48,
+    "customers": 23,
+    "distributors": [
+      "Sugarbud"
+    ],
+    "byMonth": {
+      "Jun": 201.1,
+      "Jul": 896.5899999999999
+    },
+    "byCategory": {
+      "Flower": 1097.69
+    },
+    "byType": {
+      "Sativa": 1097.69
+    }
+  },
+  {
+    "name": "Simply Sol",
+    "rank": 71,
+    "revenue": 1078.85,
+    "marketShare": 0.18,
+    "transactions": 61,
+    "customers": 22,
+    "distributors": [
+      "Simply Sol LLC"
+    ],
+    "byMonth": {
+      "May": 92.42000000000002,
+      "Jun": 79.0,
+      "Jul": 147.07999999999998,
+      "Aug": 345.65000000000003,
+      "Sep": 81.1,
+      "Oct": 134.96,
+      "Nov": 64.77,
+      "Dec": 133.87
+    },
+    "byCategory": {
+      "Hemp": 1078.8500000000004
+    },
+    "byType": {}
+  },
+  {
+    "name": "Higher Heads",
+    "rank": 72,
+    "revenue": 939.77,
+    "marketShare": 0.16,
+    "transactions": 25,
+    "customers": 10,
+    "distributors": [
+      "Eagle Creek Growers LLC",
+      "Eve Gardens",
+      "PureJoy Gardens LLC",
+      "Remedy River",
+      "Wildman Genetics"
+    ],
+    "byMonth": {
+      "May": 170.39999999999998,
+      "Jun": 180.0,
+      "Jul": 265.21,
+      "Aug": 147.28,
+      "Sep": 29.64,
+      "Oct": 147.24
+    },
+    "byCategory": {
+      "Concentrates": 813.7699999999999,
+      "Cartridges": 126.0
+    },
+    "byType": {
+      "Sativa-dom": 206.39999999999998
+    }
+  },
+  {
+    "name": "Tasty's",
+    "rank": 73,
+    "revenue": 923.52,
+    "marketShare": 0.15,
+    "transactions": 64,
+    "customers": 13,
+    "distributors": [
+      "Bubba Botanicals",
+      "Sasha Gardens",
+      "Siering Farms LLC",
+      "Skunk Valley Farm, LLC"
+    ],
+    "byMonth": {
+      "May": 39.25,
+      "Jun": 209.4,
+      "Jul": 158.4,
+      "Oct": 124.03,
+      "Nov": 109.28,
+      "Dec": 283.15999999999997
+    },
+    "byCategory": {
+      "Edibles (Solid)": 923.5199999999999
+    },
+    "byType": {
+      "Sativa": 303.4000000000001,
+      "50/50": 378.66,
+      "Indica": 119.46
+    }
+  },
+  {
+    "name": "Nug Co.",
+    "rank": 74,
+    "revenue": 838.41,
+    "marketShare": 0.14,
+    "transactions": 27,
+    "customers": 17,
+    "distributors": [
+      "Pot For Planet"
+    ],
+    "byMonth": {
+      "May": 190.11,
+      "Jun": 57.550000000000004,
+      "Jul": 162.73,
+      "Sep": 47.6,
+      "Oct": 150.68,
+      "Nov": 127.34,
+      "Dec": 102.4
+    },
+    "byCategory": {
+      "Flower": 838.4100000000001
+    },
+    "byType": {
+      "50/50": 719.9000000000001
+    }
+  },
+  {
+    "name": "Skunk Train Farm",
+    "rank": 75,
+    "revenue": 809.85,
+    "marketShare": 0.13,
+    "transactions": 37,
+    "customers": 19,
+    "distributors": [
+      "Skunk Train Farm LLC"
+    ],
+    "byMonth": {
+      "May": 120.0,
+      "Jun": 135.0,
+      "Jul": 115.25,
+      "Aug": 151.6,
+      "Sep": 177.6,
+      "Oct": 110.4
+    },
+    "byCategory": {
+      "Pre-Roll": 773.8500000000003,
+      "Flower": 36.0
+    },
+    "byType": {
+      "50/50": 725.8500000000003
+    }
+  },
+  {
+    "name": "Northwest Oiltech",
+    "rank": 76,
+    "revenue": 768.16,
+    "marketShare": 0.13,
+    "transactions": 21,
+    "customers": 13,
+    "distributors": [
+      "Northwest Soiltech LLC"
+    ],
+    "byMonth": {
+      "May": 172.56,
+      "Jun": 278.0,
+      "Jul": 152.0,
+      "Aug": 21.6,
+      "Sep": 48.0,
+      "Nov": 48.0,
+      "Dec": 48.0
+    },
+    "byCategory": {
+      "Concentrates": 768.16
+    },
+    "byType": {
+      "50/50": 218.4,
+      "Indica": 93.0,
+      "Sativa-dom": 159.0
+    }
+  },
+  {
+    "name": "Spinello",
+    "rank": 77,
+    "revenue": 764.8,
+    "marketShare": 0.13,
+    "transactions": 50,
+    "customers": 10,
+    "distributors": [
+      "Mike's Green Farm",
+      "Nectar Stick",
+      "Oregon Model Farms",
+      "River Grown",
+      "Wildman Genetics"
+    ],
+    "byMonth": {
+      "May": 15.3,
+      "Jun": 102.0,
+      "Jul": 198.00000000000003,
+      "Aug": 241.3,
+      "Sep": 82.1,
+      "Oct": 79.25,
+      "Nov": 46.85
+    },
+    "byCategory": {
+      "Edibles (Solid)": 764.8000000000001
+    },
+    "byType": {
+      "50/50": 334.30000000000007,
+      "Indica": 188.2,
+      "Sativa": 242.29999999999998
+    }
+  },
+  {
+    "name": "Garden First",
+    "rank": 78,
+    "revenue": 751.65,
+    "marketShare": 0.12,
+    "transactions": 30,
+    "customers": 14,
+    "distributors": [
+      "Garden First Cannabis"
+    ],
+    "byMonth": {
+      "May": 32.0,
+      "Jun": 198.41000000000003,
+      "Jul": 293.65,
+      "Aug": 141.26,
+      "Sep": 66.33,
+      "Oct": 20.0
+    },
+    "byCategory": {
+      "Pre-Roll": 751.6500000000001
+    },
+    "byType": {
+      "Sativa": 279.72,
+      "Indica": 244.35,
+      "50/50": 227.57999999999998
+    }
+  },
+  {
+    "name": "Smoky Flower",
+    "rank": 79,
+    "revenue": 749.63,
+    "marketShare": 0.12,
+    "transactions": 41,
+    "customers": 20,
+    "distributors": [
+      "ARC Gardens",
+      "Foley Farms",
+      "Steven D Hanlin Sole proprietor"
+    ],
+    "byMonth": {
+      "May": 574.63,
+      "Jun": 175.0
+    },
+    "byCategory": {
+      "Cartridges": 749.63
+    },
+    "byType": {}
+  },
+  {
+    "name": "gr\u00f6n chocolate",
+    "rank": 80,
+    "revenue": 718.65,
+    "marketShare": 0.12,
+    "transactions": 51,
+    "customers": 21,
+    "distributors": [
+      "Aurora 99",
+      "Emerald Green Gardens",
+      "Frontier Farms - Dee",
+      "Gron Chocolate",
+      "Half Baked Farms",
+      "Million Elephants, LLC",
+      "Stardust Cultivation",
+      "The Delta Company",
+      "The Oregon Horticulture Company, LLC"
+    ],
+    "byMonth": {
+      "May": 97.5,
+      "Jun": 156.23,
+      "Jul": 102.6,
+      "Aug": 167.39999999999998,
+      "Sep": 95.0,
+      "Oct": 99.92
+    },
+    "byCategory": {
+      "Edibles (Solid)": 718.65
+    },
+    "byType": {}
+  },
+  {
+    "name": "Harmony Roots",
+    "rank": 81,
+    "revenue": 632.46,
+    "marketShare": 0.1,
+    "transactions": 71,
+    "customers": 18,
+    "distributors": [
+      "Harmony Roots LLC"
+    ],
+    "byMonth": {
+      "Nov": 63.53000000000001,
+      "Dec": 568.93
+    },
+    "byCategory": {
+      "Concentrates": 632.4600000000004
+    },
+    "byType": {
+      "50/50": 632.4600000000004
+    }
+  },
+  {
+    "name": "Buddies",
+    "rank": 82,
+    "revenue": 585.11,
+    "marketShare": 0.1,
+    "transactions": 34,
+    "customers": 18,
+    "distributors": [
+      "BUCO Farms, LLC",
+      "Buddies Farms",
+      "Galaxy Gardens",
+      "MACDADDY FARMS, LLC"
+    ],
+    "byMonth": {
+      "May": 23.67,
+      "Jun": 62.4,
+      "Jul": 40.0,
+      "Aug": 25.599999999999998,
+      "Sep": 164.89999999999998,
+      "Oct": 69.6,
+      "Nov": 177.95,
+      "Dec": 20.99
+    },
+    "byCategory": {
+      "Topicals": 132.47,
+      "Cartridges": 452.6400000000001
+    },
+    "byType": {}
+  },
+  {
+    "name": "The Nug",
+    "rank": 83,
+    "revenue": 556.37,
+    "marketShare": 0.09,
+    "transactions": 33,
+    "customers": 20,
+    "distributors": [
+      "5150 Cannabis",
+      "Cultivated Industries (Cultivated Farms)",
+      "Evergrande Farm",
+      "Pot For Planet"
+    ],
+    "byMonth": {
+      "Dec": 556.37
+    },
+    "byCategory": {
+      "Concentrates": 556.37
+    },
+    "byType": {
+      "50/50": 259.42,
+      "Sativa": 157.05,
+      "Indica": 139.90000000000003
+    }
+  },
+  {
+    "name": "BIC",
+    "rank": 84,
+    "revenue": 457.75,
+    "marketShare": 0.08,
+    "transactions": 190,
+    "customers": 55,
+    "distributors": [],
+    "byMonth": {
+      "May": 44.35,
+      "Jun": 89.5,
+      "Jul": 49.699999999999996,
+      "Aug": 51.50000000000001,
+      "Sep": 55.699999999999996,
+      "Oct": 55.4,
+      "Nov": 51.7,
+      "Dec": 59.900000000000006
+    },
+    "byCategory": {
+      "Accessories": 457.7500000000003
+    },
+    "byType": {}
+  },
+  {
+    "name": "Sufr Select",
+    "rank": 85,
+    "revenue": 386.09,
+    "marketShare": 0.06,
+    "transactions": 12,
+    "customers": 9,
+    "distributors": [
+      "High Latitude Farms"
+    ],
+    "byMonth": {
+      "May": 30.67,
+      "Jun": 10.08,
+      "Jul": 214.38,
+      "Aug": 130.96
+    },
+    "byCategory": {
+      "Flower": 386.09
+    },
+    "byType": {
+      "Indica": 355.42
+    }
+  },
+  {
+    "name": "Entourage",
+    "rank": 86,
+    "revenue": 381.3,
+    "marketShare": 0.06,
+    "transactions": 10,
+    "customers": 9,
+    "distributors": [
+      "Luminous Gardens"
+    ],
+    "byMonth": {
+      "Aug": 38.7,
+      "Sep": 269.5,
+      "Oct": 73.1
+    },
+    "byCategory": {
+      "Cartridges": 381.3
+    },
+    "byType": {}
+  },
+  {
+    "name": "Black Crown",
+    "rank": 87,
+    "revenue": 363.12,
+    "marketShare": 0.06,
+    "transactions": 22,
+    "customers": 12,
+    "distributors": [
+      "Alta Gardens",
+      "Stash Mountain"
+    ],
+    "byMonth": {
+      "May": 43.09,
+      "Jun": 68.39999999999999,
+      "Jul": 69.84,
+      "Aug": 18.0,
+      "Sep": 102.59,
+      "Oct": 14.4,
+      "Nov": 46.8
+    },
+    "byCategory": {
+      "Pre-Roll": 363.11999999999995
+    },
+    "byType": {
+      "50/50": 320.0299999999999
+    }
+  },
+  {
+    "name": "High Latitude Farms",
+    "rank": 88,
+    "revenue": 350.0,
+    "marketShare": 0.06,
+    "transactions": 3,
+    "customers": 2,
+    "distributors": [
+      "High Latitude Farms"
+    ],
+    "byMonth": {
+      "May": 125.0,
+      "Jul": 225.0
+    },
+    "byCategory": {
+      "Flower": 350.0
+    },
+    "byType": {
+      "Indica-dom": 350.0
+    }
+  },
+  {
+    "name": "Ben Lonian",
+    "rank": 89,
+    "revenue": 315.0,
+    "marketShare": 0.05,
+    "transactions": 3,
+    "customers": 1,
+    "distributors": [],
+    "byMonth": {
+      "Jul": 55.0,
+      "Oct": 160.0,
+      "Dec": 100.0
+    },
+    "byCategory": {
+      "Accessories": 315.0
+    },
+    "byType": {}
+  },
+  {
+    "name": "Siskiyou Sungrown",
+    "rank": 90,
+    "revenue": 289.01,
+    "marketShare": 0.05,
+    "transactions": 8,
+    "customers": 2,
+    "distributors": [
+      "Siskiyou Sungrown"
+    ],
+    "byMonth": {
+      "Jul": 0.01,
+      "Sep": 136.5,
+      "Nov": 79.0,
+      "Dec": 73.5
+    },
+    "byCategory": {
+      "Tinctures": 289.01
+    },
+    "byType": {}
+  },
+  {
+    "name": "Raw",
+    "rank": 91,
+    "revenue": 275.85,
+    "marketShare": 0.05,
+    "transactions": 96,
+    "customers": 41,
+    "distributors": [],
+    "byMonth": {
+      "May": 8.43,
+      "Jun": 19.8,
+      "Jul": 74.0,
+      "Aug": 28.0,
+      "Sep": 31.750000000000007,
+      "Oct": 25.62,
+      "Nov": 53.28,
+      "Dec": 34.97
+    },
+    "byCategory": {
+      "Accessories": 275.85000000000014
+    },
+    "byType": {}
+  },
+  {
+    "name": "Select",
+    "rank": 92,
+    "revenue": 275.37,
+    "marketShare": 0.05,
+    "transactions": 7,
+    "customers": 3,
+    "distributors": [
+      "Phoenix Rising Farm"
+    ],
+    "byMonth": {
+      "May": 34.51,
+      "Jun": 36.0,
+      "Jul": 71.66,
+      "Aug": 36.0,
+      "Sep": 32.4,
+      "Oct": 28.8,
+      "Nov": 36.0
+    },
+    "byCategory": {
+      "Tinctures": 275.37
+    },
+    "byType": {}
+  },
+  {
+    "name": "Lookah",
+    "rank": 93,
+    "revenue": 268.0,
+    "marketShare": 0.04,
+    "transactions": 12,
+    "customers": 4,
+    "distributors": [],
+    "byMonth": {
+      "Jun": 30.0,
+      "Jul": 98.5,
+      "Aug": 30.0,
+      "Sep": 30.0,
+      "Nov": 30.0,
+      "Dec": 49.5
+    },
+    "byCategory": {
+      "Accessories": 268.0
+    },
+    "byType": {}
+  },
+  {
+    "name": "Miralce Farms",
+    "rank": 94,
+    "revenue": 264.68,
+    "marketShare": 0.04,
+    "transactions": 33,
+    "customers": 13,
+    "distributors": [
+      "Miracle Farms"
+    ],
+    "byMonth": {
+      "Jun": 151.87,
+      "Jul": 107.81,
+      "Aug": 5.0
+    },
+    "byCategory": {
+      "Pre-Roll": 264.68
+    },
+    "byType": {
+      "Indica-dom": 264.68
+    }
+  },
+  {
+    "name": "Myster",
+    "rank": 95,
+    "revenue": 228.75,
+    "marketShare": 0.04,
+    "transactions": 12,
+    "customers": 4,
+    "distributors": [],
+    "byMonth": {
+      "May": 165.75,
+      "Jun": 27.0,
+      "Sep": 36.0
+    },
+    "byCategory": {
+      "Accessories": 228.75
+    },
+    "byType": {}
+  },
+  {
+    "name": "Not feminized",
+    "rank": 96,
+    "revenue": 207.51,
+    "marketShare": 0.03,
+    "transactions": 7,
+    "customers": 0,
+    "distributors": [],
+    "byMonth": {
+      "May": 87.50999999999999,
+      "Jun": 60.0,
+      "Jul": 30.0,
+      "Aug": 15.0,
+      "Sep": 15.0
+    },
+    "byCategory": {
+      "Seed": 207.51
+    },
+    "byType": {}
+  },
+  {
+    "name": "Synergy Skin Worx",
+    "rank": 97,
+    "revenue": 203.74,
+    "marketShare": 0.03,
+    "transactions": 10,
+    "customers": 3,
+    "distributors": [
+      "New Breed Seed",
+      "Urban Pharms"
+    ],
+    "byMonth": {
+      "May": 60.4,
+      "Jun": 16.67,
+      "Jul": 16.67,
+      "Aug": 18.0,
+      "Sep": 16.0,
+      "Oct": 76.0
+    },
+    "byCategory": {
+      "Topicals": 203.74
+    },
+    "byType": {}
+  },
+  {
+    "name": "Pacific Northwest Provisions",
+    "rank": 98,
+    "revenue": 197.6,
+    "marketShare": 0.03,
+    "transactions": 25,
+    "customers": 15,
+    "distributors": [
+      "Galaxy Gardens",
+      "Special Branded"
+    ],
+    "byMonth": {
+      "Dec": 197.6
+    },
+    "byCategory": {
+      "Edibles (Solid)": 197.6
+    },
+    "byType": {}
+  },
+  {
+    "name": "Nifty",
+    "rank": 99,
+    "revenue": 186.0,
+    "marketShare": 0.03,
+    "transactions": 10,
+    "customers": 6,
+    "distributors": [],
+    "byMonth": {
+      "Jun": 31.0,
+      "Jul": 80.0,
+      "Sep": 57.0,
+      "Oct": 18.0
+    },
+    "byCategory": {
+      "Accessories": 186.0
+    },
+    "byType": {}
+  },
+  {
+    "name": "Rip City Roots",
+    "rank": 100,
+    "revenue": 167.1,
+    "marketShare": 0.03,
+    "transactions": 15,
+    "customers": 9,
+    "distributors": [
+      "Rip City Roots, LLC"
+    ],
+    "byMonth": {
+      "Jun": 140.1,
+      "Jul": 27.0
+    },
+    "byCategory": {
+      "Pre-Roll": 167.1
+    },
+    "byType": {
+      "50/50": 167.1
+    }
+  },
+  {
+    "name": "Hashiez",
+    "rank": 101,
+    "revenue": 153.7,
+    "marketShare": 0.03,
+    "transactions": 13,
+    "customers": 2,
+    "distributors": [
+      "Galaxy Gardens"
+    ],
+    "byMonth": {
+      "May": 48.0,
+      "Jun": 105.69999999999999
+    },
+    "byCategory": {
+      "Edibles (Solid)": 153.7
+    },
+    "byType": {}
+  },
+  {
+    "name": "Zig Zag",
+    "rank": 102,
+    "revenue": 133.65,
+    "marketShare": 0.02,
+    "transactions": 38,
+    "customers": 18,
+    "distributors": [],
+    "byMonth": {
+      "May": 1.0,
+      "Jun": 6.8,
+      "Aug": 2.0,
+      "Sep": 2.0,
+      "Oct": 17.7,
+      "Nov": 55.79,
+      "Dec": 48.36
+    },
+    "byCategory": {
+      "Accessories": 133.65
+    },
+    "byType": {}
+  },
+  {
+    "name": "Coke",
+    "rank": 103,
+    "revenue": 131.17,
+    "marketShare": 0.02,
+    "transactions": 80,
+    "customers": 26,
+    "distributors": [],
+    "byMonth": {
+      "May": 6.989999999999999,
+      "Jun": 17.06,
+      "Jul": 11.67,
+      "Aug": 41.35,
+      "Sep": 11.7,
+      "Oct": 16.020000000000003,
+      "Nov": 14.349999999999998,
+      "Dec": 12.03
+    },
+    "byCategory": {
+      "Accessories": 131.17000000000002
+    },
+    "byType": {}
+  },
+  {
+    "name": "Purejoy",
+    "rank": 104,
+    "revenue": 128.64,
+    "marketShare": 0.02,
+    "transactions": 3,
+    "customers": 2,
+    "distributors": [
+      "Eagle Creek Growers LLC"
+    ],
+    "byMonth": {
+      "May": 80.64,
+      "Jun": 48.0
+    },
+    "byCategory": {
+      "Concentrates": 128.64
+    },
+    "byType": {}
+  },
+  {
+    "name": "Poppi",
+    "rank": 105,
+    "revenue": 125.25,
+    "marketShare": 0.02,
+    "transactions": 65,
+    "customers": 18,
+    "distributors": [],
+    "byMonth": {
+      "May": 4.0,
+      "Jun": 20.03,
+      "Jul": 22.799999999999997,
+      "Aug": 17.07,
+      "Sep": 16.61,
+      "Oct": 9.82,
+      "Nov": 15.84,
+      "Dec": 19.08
+    },
+    "byCategory": {
+      "Accessories": 125.24999999999994
+    },
+    "byType": {}
+  },
+  {
+    "name": "Bonsai",
+    "rank": 106,
+    "revenue": 110.0,
+    "marketShare": 0.02,
+    "transactions": 3,
+    "customers": 3,
+    "distributors": [
+      "Blue Star Farming Co"
+    ],
+    "byMonth": {
+      "Jul": 78.0,
+      "Nov": 32.0
+    },
+    "byCategory": {
+      "Concentrates": 110.0
+    },
+    "byType": {}
+  },
+  {
+    "name": "High Bastard Boro",
+    "rank": 107,
+    "revenue": 108.0,
+    "marketShare": 0.02,
+    "transactions": 2,
+    "customers": 1,
+    "distributors": [],
+    "byMonth": {
+      "May": 80.0,
+      "Dec": 28.0
+    },
+    "byCategory": {
+      "Accessories": 108.0
+    },
+    "byType": {}
+  },
+  {
+    "name": "Decibel Dabs",
+    "rank": 108,
+    "revenue": 98.4,
+    "marketShare": 0.02,
+    "transactions": 2,
+    "customers": 2,
+    "distributors": [
+      "Decibel Farms"
+    ],
+    "byMonth": {
+      "Jun": 60.0,
+      "Oct": 38.4
+    },
+    "byCategory": {
+      "Infused Pre-Rolls": 98.4
+    },
+    "byType": {
+      "Indica": 98.4
+    }
+  },
+  {
+    "name": "Altered  Alchemy",
+    "rank": 109,
+    "revenue": 97.21,
+    "marketShare": 0.02,
+    "transactions": 6,
+    "customers": 2,
+    "distributors": [
+      "High Point",
+      "Pin Farms"
+    ],
+    "byMonth": {
+      "May": 46.8,
+      "Jun": 16.2,
+      "Jul": 0.01,
+      "Aug": 16.2,
+      "Sep": 18.0
+    },
+    "byCategory": {
+      "Concentrates": 46.809999999999995,
+      "Extracts": 50.4
+    },
+    "byType": {
+      "50/50": 46.8
+    }
+  },
+  {
+    "name": "OG Chillum",
+    "rank": 110,
+    "revenue": 90.45,
+    "marketShare": 0.01,
+    "transactions": 29,
+    "customers": 10,
+    "distributors": [],
+    "byMonth": {
+      "May": 15.0,
+      "Jun": 16.05,
+      "Jul": 12.0,
+      "Aug": 6.0,
+      "Sep": 3.0,
+      "Oct": 11.4,
+      "Nov": 15.0,
+      "Dec": 12.0
+    },
+    "byCategory": {
+      "Accessories": 90.44999999999999
+    },
+    "byType": {}
+  },
+  {
+    "name": "Monster",
+    "rank": 111,
+    "revenue": 90.42,
+    "marketShare": 0.01,
+    "transactions": 18,
+    "customers": 5,
+    "distributors": [],
+    "byMonth": {
+      "Jun": 54.01,
+      "Aug": 9.0,
+      "Oct": 3.59,
+      "Nov": 10.18,
+      "Dec": 13.64
+    },
+    "byCategory": {
+      "Accessories": 90.42000000000002
+    },
+    "byType": {}
+  },
+  {
+    "name": "HighBastardBoro",
+    "rank": 112,
+    "revenue": 80.0,
+    "marketShare": 0.01,
+    "transactions": 1,
+    "customers": 0,
+    "distributors": [],
+    "byMonth": {
+      "Jul": 80.0
+    },
+    "byCategory": {
+      "Accessories": 80.0
+    },
+    "byType": {}
+  },
+  {
+    "name": "Gitnes Glass",
+    "rank": 113,
+    "revenue": 70.0,
+    "marketShare": 0.01,
+    "transactions": 1,
+    "customers": 0,
+    "distributors": [],
+    "byMonth": {
+      "Jul": 70.0
+    },
+    "byCategory": {
+      "Accessories": 70.0
+    },
+    "byType": {}
+  },
+  {
+    "name": "Petals",
+    "rank": 114,
+    "revenue": 69.0,
+    "marketShare": 0.01,
+    "transactions": 4,
+    "customers": 2,
+    "distributors": [],
+    "byMonth": {
+      "Oct": 15.0,
+      "Nov": 24.0,
+      "Dec": 30.0
+    },
+    "byCategory": {
+      "Accessories": 69.0
+    },
+    "byType": {}
+  },
+  {
+    "name": "Encore",
+    "rank": 115,
+    "revenue": 67.91,
+    "marketShare": 0.01,
+    "transactions": 2,
+    "customers": 1,
+    "distributors": [],
+    "byMonth": {
+      "Nov": 67.91
+    },
+    "byCategory": {
+      "Accessories": 67.91
+    },
+    "byType": {}
+  },
+  {
+    "name": "Gatorade",
+    "rank": 116,
+    "revenue": 67.14,
+    "marketShare": 0.01,
+    "transactions": 105,
+    "customers": 19,
+    "distributors": [],
+    "byMonth": {
+      "Jun": 16.740000000000002,
+      "Jul": 10.409999999999997,
+      "Aug": 2.24,
+      "Sep": 6.949999999999998,
+      "Oct": 9.419999999999998,
+      "Nov": 11.98,
+      "Dec": 9.399999999999999
+    },
+    "byCategory": {
+      "Accessories- Not Taxed": 54.25,
+      "Accessories": 12.889999999999997
+    },
+    "byType": {}
+  },
+  {
+    "name": "Celsius",
+    "rank": 117,
+    "revenue": 66.82,
+    "marketShare": 0.01,
+    "transactions": 46,
+    "customers": 18,
+    "distributors": [],
+    "byMonth": {
+      "May": 3.0,
+      "Jun": 16.68,
+      "Jul": 15.079999999999998,
+      "Aug": 14.639999999999997,
+      "Sep": 6.02,
+      "Oct": 8.4,
+      "Nov": 3.0
+    },
+    "byCategory": {
+      "Accessories": 66.81999999999998
+    },
+    "byType": {}
+  },
+  {
+    "name": "High Mountain",
+    "rank": 118,
+    "revenue": 64.3,
+    "marketShare": 0.01,
+    "transactions": 17,
+    "customers": 11,
+    "distributors": [],
+    "byMonth": {
+      "May": 2.0,
+      "Jun": 6.5,
+      "Jul": 8.0,
+      "Sep": 26.2,
+      "Oct": 17.0,
+      "Nov": 4.6
+    },
+    "byCategory": {
+      "Accessories": 64.3
+    },
+    "byType": {}
+  },
+  {
+    "name": "Grandma's",
+    "rank": 119,
+    "revenue": 63.88,
+    "marketShare": 0.01,
+    "transactions": 51,
+    "customers": 13,
+    "distributors": [],
+    "byMonth": {
+      "Jun": 11.09,
+      "Jul": 17.310000000000002,
+      "Aug": 15.580000000000004,
+      "Sep": 5.43,
+      "Oct": 5.98,
+      "Nov": 6.739999999999999,
+      "Dec": 1.75
+    },
+    "byCategory": {
+      "Accessories": 63.88
+    },
+    "byType": {}
+  },
+  {
+    "name": "G Star",
+    "rank": 120,
+    "revenue": 63.2,
+    "marketShare": 0.01,
+    "transactions": 29,
+    "customers": 13,
+    "distributors": [],
+    "byMonth": {
+      "Jun": 6.0,
+      "Jul": 20.0,
+      "Aug": 20.0,
+      "Sep": 14.0,
+      "Oct": 1.6,
+      "Nov": 1.6
+    },
+    "byCategory": {
+      "Accessories": 63.2
+    },
+    "byType": {}
+  },
+  {
+    "name": "Oscar Allen",
+    "rank": 121,
+    "revenue": 63.0,
+    "marketShare": 0.01,
+    "transactions": 2,
+    "customers": 0,
+    "distributors": [],
+    "byMonth": {
+      "Jul": 63.0
+    },
+    "byCategory": {
+      "Accessories": 63.0
+    },
+    "byType": {}
+  },
+  {
+    "name": "Nogero",
+    "rank": 122,
+    "revenue": 62.32,
+    "marketShare": 0.01,
+    "transactions": 3,
+    "customers": 3,
+    "distributors": [
+      "Boring Glory LLC"
+    ],
+    "byMonth": {
+      "May": 62.32
+    },
+    "byCategory": {
+      "Cartridges": 62.32
+    },
+    "byType": {}
+  },
+  {
+    "name": "High Latitude Extracts",
+    "rank": 123,
+    "revenue": 60.0,
+    "marketShare": 0.01,
+    "transactions": 2,
+    "customers": 2,
+    "distributors": [
+      "Highly Cultivated"
+    ],
+    "byMonth": {
+      "Jun": 30.0,
+      "Jul": 30.0
+    },
+    "byCategory": {
+      "Cartridges": 60.0
+    },
+    "byType": {}
+  },
+  {
+    "name": "Purejoy Gardens",
+    "rank": 124,
+    "revenue": 60.0,
+    "marketShare": 0.01,
+    "transactions": 1,
+    "customers": 0,
+    "distributors": [
+      "PureJoy Gardens LLC"
+    ],
+    "byMonth": {
+      "Jun": 60.0
+    },
+    "byCategory": {
+      "Concentrates": 60.0
+    },
+    "byType": {}
+  },
+  {
+    "name": "Ben Lonien Glass",
+    "rank": 125,
+    "revenue": 55.0,
+    "marketShare": 0.01,
+    "transactions": 1,
+    "customers": 0,
+    "distributors": [],
+    "byMonth": {
+      "Jul": 55.0
+    },
+    "byCategory": {
+      "Accessories": 55.0
+    },
+    "byType": {}
+  },
+  {
+    "name": "Red Bull",
+    "rank": 126,
+    "revenue": 54.63,
+    "marketShare": 0.01,
+    "transactions": 28,
+    "customers": 7,
+    "distributors": [],
+    "byMonth": {
+      "Oct": 4.54,
+      "Nov": 22.339999999999996,
+      "Dec": 27.749999999999996
+    },
+    "byCategory": {
+      "Accessories": 54.630000000000024
+    },
+    "byType": {}
+  },
+  {
+    "name": "Resse's",
+    "rank": 127,
+    "revenue": 54.61,
+    "marketShare": 0.01,
+    "transactions": 36,
+    "customers": 11,
+    "distributors": [],
+    "byMonth": {
+      "May": 1.79,
+      "Jun": 8.120000000000001,
+      "Jul": 8.02,
+      "Aug": 1.99,
+      "Sep": 6.87,
+      "Oct": 10.840000000000002,
+      "Nov": 6.569999999999999,
+      "Dec": 10.409999999999998
+    },
+    "byCategory": {
+      "Accessories": 54.61
+    },
+    "byType": {}
+  },
+  {
+    "name": "Chomps",
+    "rank": 128,
+    "revenue": 53.45,
+    "marketShare": 0.01,
+    "transactions": 27,
+    "customers": 3,
+    "distributors": [],
+    "byMonth": {
+      "Oct": 9.36,
+      "Nov": 30.299999999999997,
+      "Dec": 13.790000000000001
+    },
+    "byCategory": {
+      "Accessories": 53.45000000000002
+    },
+    "byType": {}
+  },
+  {
+    "name": "M&M",
+    "rank": 129,
+    "revenue": 53.0,
+    "marketShare": 0.01,
+    "transactions": 30,
+    "customers": 3,
+    "distributors": [],
+    "byMonth": {
+      "Aug": 6.7,
+      "Sep": 7.7,
+      "Oct": 7.6,
+      "Nov": 16.43,
+      "Dec": 14.57
+    },
+    "byCategory": {
+      "Accessories": 53.00000000000002
+    },
+    "byType": {}
+  },
+  {
+    "name": "Miracle Farm",
+    "rank": 130,
+    "revenue": 52.44,
+    "marketShare": 0.01,
+    "transactions": 7,
+    "customers": 4,
+    "distributors": [
+      "Miracle Farms"
+    ],
+    "byMonth": {
+      "Jun": 42.44,
+      "Jul": 10.0
+    },
+    "byCategory": {
+      "Pre-Roll": 52.44
+    },
+    "byType": {
+      "50/50": 52.44
+    }
+  },
+  {
+    "name": "Boring Glory",
+    "rank": 131,
+    "revenue": 49.0,
+    "marketShare": 0.01,
+    "transactions": 5,
+    "customers": 4,
+    "distributors": [
+      "Boring Glory LLC"
+    ],
+    "byMonth": {
+      "Aug": 49.0
+    },
+    "byCategory": {
+      "Flower": 49.0
+    },
+    "byType": {
+      "50/50": 49.0
+    }
+  },
+  {
+    "name": "Maples",
+    "rank": 132,
+    "revenue": 46.8,
+    "marketShare": 0.01,
+    "transactions": 2,
+    "customers": 0,
+    "distributors": [
+      "CRUISE CONTROL"
+    ],
+    "byMonth": {
+      "Aug": 26.0,
+      "Oct": 20.8
+    },
+    "byCategory": {
+      "Tinctures": 46.8
+    },
+    "byType": {}
+  },
+  {
+    "name": "Doritos",
+    "rank": 133,
+    "revenue": 44.24,
+    "marketShare": 0.01,
+    "transactions": 26,
+    "customers": 9,
+    "distributors": [],
+    "byMonth": {
+      "Jun": 7.16,
+      "Jul": 1.99,
+      "Aug": 15.81,
+      "Sep": 1.29,
+      "Oct": 2.52,
+      "Nov": 12.889999999999997,
+      "Dec": 2.58
+    },
+    "byCategory": {
+      "Accessories": 44.23999999999999
+    },
+    "byType": {}
+  },
+  {
+    "name": "Ebb & Flow",
+    "rank": 134,
+    "revenue": 44.0,
+    "marketShare": 0.01,
+    "transactions": 3,
+    "customers": 3,
+    "distributors": [
+      "Ebb & Flow"
+    ],
+    "byMonth": {
+      "Jun": 20.0,
+      "Aug": 24.0
+    },
+    "byCategory": {
+      "Flower": 44.0
+    },
+    "byType": {
+      "50/50": 44.0
+    }
+  },
+  {
+    "name": "Pepsi",
+    "rank": 135,
+    "revenue": 41.88,
+    "marketShare": 0.01,
+    "transactions": 30,
+    "customers": 10,
+    "distributors": [],
+    "byMonth": {
+      "May": 0.01,
+      "Jun": 6.72,
+      "Jul": 5.7,
+      "Aug": 5.7299999999999995,
+      "Sep": 2.0,
+      "Oct": 3.3,
+      "Nov": 7.21,
+      "Dec": 11.209999999999999
+    },
+    "byCategory": {
+      "Accessories": 41.88
+    },
+    "byType": {}
+  },
+  {
+    "name": "King Palm",
+    "rank": 136,
+    "revenue": 37.93,
+    "marketShare": 0.01,
+    "transactions": 6,
+    "customers": 5,
+    "distributors": [],
+    "byMonth": {
+      "May": 3.83,
+      "Jul": 30.1,
+      "Aug": 4.0
+    },
+    "byCategory": {
+      "Accessories": 37.93
+    },
+    "byType": {}
+  },
+  {
+    "name": "Hershey's",
+    "rank": 137,
+    "revenue": 36.01,
+    "marketShare": 0.01,
+    "transactions": 26,
+    "customers": 6,
+    "distributors": [],
+    "byMonth": {
+      "Jun": 8.440000000000001,
+      "Jul": 12.180000000000001,
+      "Aug": 5.86,
+      "Sep": 5.2700000000000005,
+      "Oct": 1.29,
+      "Nov": 0.0,
+      "Dec": 2.9699999999999998
+    },
+    "byCategory": {
+      "Accessories": 36.009999999999984
+    },
+    "byType": {}
+  },
+  {
+    "name": "Dr. Pepper",
+    "rank": 138,
+    "revenue": 33.06,
+    "marketShare": 0.01,
+    "transactions": 24,
+    "customers": 10,
+    "distributors": [],
+    "byMonth": {
+      "May": 3.4,
+      "Jun": 7.41,
+      "Jul": 4.01,
+      "Aug": 3.41,
+      "Sep": 7.3100000000000005,
+      "Oct": 7.31,
+      "Nov": 0.21000000000000002
+    },
+    "byCategory": {
+      "Accessories": 33.06
+    },
+    "byType": {}
+  },
+  {
+    "name": "Miss Vickie's",
+    "rank": 139,
+    "revenue": 32.91,
+    "marketShare": 0.01,
+    "transactions": 23,
+    "customers": 8,
+    "distributors": [],
+    "byMonth": {
+      "Jun": 13.709999999999997,
+      "Jul": 12.219999999999999,
+      "Aug": 3.29,
+      "Sep": 1.69,
+      "Oct": 1.99,
+      "Dec": 0.01
+    },
+    "byCategory": {
+      "Accessories": 32.90999999999999
+    },
+    "byType": {}
+  },
+  {
+    "name": "Sprite",
+    "rank": 140,
+    "revenue": 32.14,
+    "marketShare": 0.01,
+    "transactions": 21,
+    "customers": 6,
+    "distributors": [],
+    "byMonth": {
+      "Jun": 4.01,
+      "Jul": 10.49,
+      "Aug": 4.02,
+      "Oct": 9.6,
+      "Nov": 4.02
+    },
+    "byCategory": {
+      "Accessories": 32.14000000000001
+    },
+    "byType": {}
+  },
+  {
+    "name": "Ben Lonian 4200",
+    "rank": 141,
+    "revenue": 32.0,
+    "marketShare": 0.01,
+    "transactions": 1,
+    "customers": 1,
+    "distributors": [],
+    "byMonth": {
+      "Jun": 32.0
+    },
+    "byCategory": {
+      "Accessories": 32.0
+    },
+    "byType": {}
+  },
+  {
+    "name": "Spindrift",
+    "rank": 142,
+    "revenue": 31.14,
+    "marketShare": 0.01,
+    "transactions": 21,
+    "customers": 11,
+    "distributors": [],
+    "byMonth": {
+      "May": 2.0,
+      "Jun": 5.9399999999999995,
+      "Jul": 6.0,
+      "Aug": 11.8,
+      "Sep": 3.8,
+      "Oct": 1.6
+    },
+    "byCategory": {
+      "Accessories": 31.14
+    },
+    "byType": {}
+  },
+  {
+    "name": "eovape",
+    "rank": 143,
+    "revenue": 30.0,
+    "marketShare": 0.0,
+    "transactions": 1,
+    "customers": 0,
+    "distributors": [],
+    "byMonth": {
+      "Aug": 30.0
+    },
+    "byCategory": {
+      "Accessories": 30.0
+    },
+    "byType": {}
+  },
+  {
+    "name": "High Lattitude",
+    "rank": 144,
+    "revenue": 28.5,
+    "marketShare": 0.0,
+    "transactions": 1,
+    "customers": 1,
+    "distributors": [
+      "Otis Gardens"
+    ],
+    "byMonth": {
+      "Aug": 28.5
+    },
+    "byCategory": {
+      "Cartridges": 28.5
+    },
+    "byType": {}
+  },
+  {
+    "name": "Cheech & Chong",
+    "rank": 145,
+    "revenue": 27.2,
+    "marketShare": 0.0,
+    "transactions": 6,
+    "customers": 3,
+    "distributors": [],
+    "byMonth": {
+      "Jun": 8.0,
+      "Aug": 4.0,
+      "Dec": 15.2
+    },
+    "byCategory": {
+      "Accessories": 27.2
+    },
+    "byType": {}
+  },
+  {
+    "name": "Snickers",
+    "rank": 146,
+    "revenue": 26.27,
+    "marketShare": 0.0,
+    "transactions": 22,
+    "customers": 3,
+    "distributors": [],
+    "byMonth": {
+      "Aug": 4.9,
+      "Sep": 4.51,
+      "Oct": 6.15,
+      "Nov": 8.370000000000001,
+      "Dec": 2.34
+    },
+    "byCategory": {
+      "Accessories": 26.27
+    },
+    "byType": {}
+  },
+  {
+    "name": "Lay's",
+    "rank": 147,
+    "revenue": 25.66,
+    "marketShare": 0.0,
+    "transactions": 18,
+    "customers": 3,
+    "distributors": [],
+    "byMonth": {
+      "Jun": 1.29,
+      "Jul": 2.45,
+      "Aug": 2.45,
+      "Oct": 7.15,
+      "Nov": 5.86,
+      "Dec": 6.46
+    },
+    "byCategory": {
+      "Accessories": 25.659999999999993
+    },
+    "byType": {}
+  },
+  {
+    "name": "Planters",
+    "rank": 148,
+    "revenue": 25.3,
+    "marketShare": 0.0,
+    "transactions": 24,
+    "customers": 4,
+    "distributors": [],
+    "byMonth": {
+      "Jun": 9.75,
+      "Jul": 9.719999999999999,
+      "Aug": 5.83
+    },
+    "byCategory": {
+      "Accessories": 25.300000000000004
+    },
+    "byType": {}
+  },
+  {
+    "name": "West Coast Distributors",
+    "rank": 149,
+    "revenue": 25.0,
+    "marketShare": 0.0,
+    "transactions": 1,
+    "customers": 0,
+    "distributors": [],
+    "byMonth": {
+      "Dec": 25.0
+    },
+    "byCategory": {
+      "Accessories": 25.0
+    },
+    "byType": {}
+  },
+  {
+    "name": "Kit Kat",
+    "rank": 150,
+    "revenue": 21.67,
+    "marketShare": 0.0,
+    "transactions": 16,
+    "customers": 6,
+    "distributors": [],
+    "byMonth": {
+      "Jun": 8.440000000000001,
+      "Aug": 1.29,
+      "Sep": 1.29,
+      "Oct": 7.2,
+      "Dec": 3.45
+    },
+    "byCategory": {
+      "Accessories": 21.67
+    },
+    "byType": {}
+  },
+  {
+    "name": "Tim's",
+    "rank": 151,
+    "revenue": 21.6,
+    "marketShare": 0.0,
+    "transactions": 15,
+    "customers": 7,
+    "distributors": [],
+    "byMonth": {
+      "Jun": 8.5,
+      "Jul": 1.3,
+      "Aug": 4.0,
+      "Oct": 2.6,
+      "Nov": 2.6,
+      "Dec": 2.6
+    },
+    "byCategory": {
+      "Accessories": 21.600000000000005
+    },
+    "byType": {}
+  },
+  {
+    "name": "Skittles",
+    "rank": 152,
+    "revenue": 19.82,
+    "marketShare": 0.0,
+    "transactions": 10,
+    "customers": 6,
+    "distributors": [],
+    "byMonth": {
+      "Jun": 2.5,
+      "Jul": 3.79,
+      "Aug": 3.98,
+      "Oct": 5.97,
+      "Dec": 3.58
+    },
+    "byCategory": {
+      "Accessories": 19.819999999999997
+    },
+    "byType": {}
+  },
+  {
+    "name": "Cheetos",
+    "rank": 153,
+    "revenue": 16.7,
+    "marketShare": 0.0,
+    "transactions": 10,
+    "customers": 5,
+    "distributors": [],
+    "byMonth": {
+      "Jul": 3.98,
+      "Aug": 3.98,
+      "Oct": 2.88,
+      "Nov": 3.2800000000000002,
+      "Dec": 2.58
+    },
+    "byCategory": {
+      "Accessories": 16.7
+    },
+    "byType": {}
+  },
+  {
+    "name": "Arrowhead",
+    "rank": 154,
+    "revenue": 16.09,
+    "marketShare": 0.0,
+    "transactions": 18,
+    "customers": 9,
+    "distributors": [],
+    "byMonth": {
+      "Jun": 0.67,
+      "Jul": 7.0,
+      "Aug": 4.0,
+      "Sep": 3.0,
+      "Oct": 1.42
+    },
+    "byCategory": {
+      "Accessories": 16.09
+    },
+    "byType": {}
+  },
+  {
+    "name": "I-Tal Hemp wick",
+    "rank": 155,
+    "revenue": 15.92,
+    "marketShare": 0.0,
+    "transactions": 7,
+    "customers": 5,
+    "distributors": [],
+    "byMonth": {
+      "May": 1.92,
+      "Jun": 4.0,
+      "Jul": 4.0,
+      "Aug": 4.0,
+      "Nov": 2.0
+    },
+    "byCategory": {
+      "Accessories": 15.92
+    },
+    "byType": {}
+  },
+  {
+    "name": "Bee Wick",
+    "rank": 156,
+    "revenue": 14.85,
+    "marketShare": 0.0,
+    "transactions": 16,
+    "customers": 4,
+    "distributors": [],
+    "byMonth": {
+      "May": 2.0,
+      "Jun": 2.0,
+      "Jul": 2.0,
+      "Aug": 4.0,
+      "Sep": 1.0,
+      "Nov": 2.85,
+      "Dec": 1.0
+    },
+    "byCategory": {
+      "Accessories": 14.85
+    },
+    "byType": {}
+  },
+  {
+    "name": "1000 Grand",
+    "rank": 157,
+    "revenue": 14.79,
+    "marketShare": 0.0,
+    "transactions": 10,
+    "customers": 5,
+    "distributors": [],
+    "byMonth": {
+      "Jun": 5.16,
+      "Oct": 4.05,
+      "Nov": 5.58
+    },
+    "byCategory": {
+      "Accessories": 14.790000000000001
+    },
+    "byType": {}
+  },
+  {
+    "name": "Sun Chips",
+    "rank": 158,
+    "revenue": 14.41,
+    "marketShare": 0.0,
+    "transactions": 9,
+    "customers": 4,
+    "distributors": [],
+    "byMonth": {
+      "Jun": 3.87,
+      "Aug": 3.98,
+      "Sep": 3.2800000000000002,
+      "Oct": 1.99,
+      "Nov": 1.29
+    },
+    "byCategory": {
+      "Accessories": 14.41
+    },
+    "byType": {}
+  },
+  {
+    "name": "HOSTESS",
+    "rank": 159,
+    "revenue": 14.36,
+    "marketShare": 0.0,
+    "transactions": 10,
+    "customers": 1,
+    "distributors": [],
+    "byMonth": {
+      "Jul": 8.18,
+      "Aug": 4.890000000000001,
+      "Sep": 1.29
+    },
+    "byCategory": {
+      "Accessories": 14.36
+    },
+    "byType": {}
+  },
+  {
+    "name": "Crunch",
+    "rank": 160,
+    "revenue": 13.52,
+    "marketShare": 0.0,
+    "transactions": 9,
+    "customers": 1,
+    "distributors": [],
+    "byMonth": {
+      "Jun": 6.56,
+      "Oct": 1.17,
+      "Nov": 4.62,
+      "Dec": 1.17
+    },
+    "byCategory": {
+      "Accessories": 13.519999999999998
+    },
+    "byType": {}
+  },
+  {
+    "name": "Babyruth",
+    "rank": 161,
+    "revenue": 13.26,
+    "marketShare": 0.0,
+    "transactions": 11,
+    "customers": 2,
+    "distributors": [],
+    "byMonth": {
+      "Jun": 5.16,
+      "Oct": 1.17,
+      "Nov": 1.08,
+      "Dec": 5.85
+    },
+    "byCategory": {
+      "Accessories": 13.26
+    },
+    "byType": {}
+  },
+  {
+    "name": "Rockstar",
+    "rank": 162,
+    "revenue": 12.5,
+    "marketShare": 0.0,
+    "transactions": 5,
+    "customers": 2,
+    "distributors": [],
+    "byMonth": {
+      "Oct": 3.29,
+      "Dec": 9.21
+    },
+    "byCategory": {
+      "Accessories": 12.5
+    },
+    "byType": {}
+  },
+  {
+    "name": "Butterfinger",
+    "rank": 163,
+    "revenue": 10.79,
+    "marketShare": 0.0,
+    "transactions": 6,
+    "customers": 5,
+    "distributors": [],
+    "byMonth": {
+      "Jun": 5.97,
+      "Jul": 3.38,
+      "Nov": 1.44
+    },
+    "byCategory": {
+      "Accessories": 10.79
+    },
+    "byType": {}
+  },
+  {
+    "name": "Baho Buds",
+    "rank": 164,
+    "revenue": 9.6,
+    "marketShare": 0.0,
+    "transactions": 1,
+    "customers": 1,
+    "distributors": [
+      "Baho Buds"
+    ],
+    "byMonth": {
+      "Aug": 9.6
+    },
+    "byCategory": {
+      "Flower": 9.6
+    },
+    "byType": {
+      "Indica": 9.6
+    }
+  },
+  {
+    "name": "Twix",
+    "rank": 165,
+    "revenue": 8.1,
+    "marketShare": 0.0,
+    "transactions": 7,
+    "customers": 2,
+    "distributors": [],
+    "byMonth": {
+      "Oct": 1.17,
+      "Nov": 3.42,
+      "Dec": 3.51
+    },
+    "byCategory": {
+      "Accessories": 8.1
+    },
+    "byType": {}
+  },
+  {
+    "name": "Chester's",
+    "rank": 166,
+    "revenue": 7.74,
+    "marketShare": 0.0,
+    "transactions": 6,
+    "customers": 1,
+    "distributors": [],
+    "byMonth": {
+      "May": 1.29,
+      "Jun": 1.29,
+      "Jul": 5.16
+    },
+    "byCategory": {
+      "Accessories": 7.74
+    },
+    "byType": {}
+  },
+  {
+    "name": "Clipper",
+    "rank": 167,
+    "revenue": 7.5,
+    "marketShare": 0.0,
+    "transactions": 3,
+    "customers": 0,
+    "distributors": [],
+    "byMonth": {
+      "Jul": 5.0,
+      "Aug": 2.5
+    },
+    "byCategory": {
+      "Accessories": 7.5
+    },
+    "byType": {}
+  },
+  {
+    "name": "Starburst",
+    "rank": 168,
+    "revenue": 6.12,
+    "marketShare": 0.0,
+    "transactions": 7,
+    "customers": 4,
+    "distributors": [],
+    "byMonth": {
+      "Jun": 3.53,
+      "Jul": 1.3,
+      "Oct": 0.0,
+      "Dec": 1.29
+    },
+    "byCategory": {
+      "Accessories": 6.12
+    },
+    "byType": {}
+  },
+  {
+    "name": "Funnyuns",
+    "rank": 169,
+    "revenue": 5.87,
+    "marketShare": 0.0,
+    "transactions": 5,
+    "customers": 2,
+    "distributors": [],
+    "byMonth": {
+      "Jun": 4.58,
+      "Jul": 1.29
+    },
+    "byCategory": {
+      "Accessories": 5.87
+    },
+    "byType": {}
+  },
+  {
+    "name": "Fritos",
+    "rank": 170,
+    "revenue": 5.5,
+    "marketShare": 0.0,
+    "transactions": 4,
+    "customers": 3,
+    "distributors": [],
+    "byMonth": {
+      "Jun": 1.69,
+      "Oct": 1.23,
+      "Nov": 1.29,
+      "Dec": 1.29
+    },
+    "byCategory": {
+      "Accessories": 5.5
+    },
+    "byType": {}
+  },
+  {
+    "name": "Milky Way",
+    "rank": 171,
+    "revenue": 5.31,
+    "marketShare": 0.0,
+    "transactions": 4,
+    "customers": 3,
+    "distributors": [],
+    "byMonth": {
+      "Nov": 5.31
+    },
+    "byCategory": {
+      "Accessories": 5.31
+    },
+    "byType": {}
+  },
+  {
+    "name": "Blue Diamond",
+    "rank": 172,
+    "revenue": 1.97,
+    "marketShare": 0.0,
+    "transactions": 5,
+    "customers": 2,
+    "distributors": [],
+    "byMonth": {
+      "Jun": 0.03,
+      "Aug": 1.94,
+      "Nov": 0.0,
+      "Dec": 0.0
+    },
+    "byCategory": {
+      "Accessories": 1.97
+    },
+    "byType": {}
+  },
+  {
+    "name": "Luvbuds",
+    "rank": 173,
+    "revenue": 1.0,
+    "marketShare": 0.0,
+    "transactions": 1,
+    "customers": 0,
+    "distributors": [],
+    "byMonth": {
+      "Nov": 1.0
+    },
+    "byCategory": {
+      "Accessories": 1.0
+    },
+    "byType": {}
+  },
+  {
+    "name": "High Latitude",
+    "rank": 174,
+    "revenue": 0.0,
+    "marketShare": 0.0,
+    "transactions": 1,
+    "customers": 0,
+    "distributors": [
+      "Highly Cultivated"
+    ],
+    "byMonth": {
+      "Sep": 0.0
+    },
+    "byCategory": {
+      "Cartridges": 0.0
+    },
+    "byType": {}
+  }
+]
