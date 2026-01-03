@@ -1,20 +1,34 @@
 // Format units based on category
+// Oregon cannabis producers think in ounces for flower
 export function formatUnits(units, category) {
-  const rounded = Math.round(units);
-  const formatted = rounded.toLocaleString();
-
   switch (category) {
-    case "Flower":
-      return { value: formatted, label: "g" };
+    case "Flower": {
+      // Convert grams to ounces (1 oz = 28.35g)
+      const oz = units / 28.35;
+      if (oz >= 1) {
+        const rounded = Math.round(oz * 10) / 10; // one decimal
+        return { value: rounded.toLocaleString(), label: "oz" };
+      }
+      // Under 1 oz, show grams
+      return { value: Math.round(units).toLocaleString(), label: "g" };
+    }
     case "Concentrates":
     case "Extracts":
-      return { value: formatted, label: "g" };
+      return { value: Math.round(units).toLocaleString(), label: "g" };
     case "Pre-Roll":
     case "Infused Pre-Rolls":
-      return { value: formatted, label: rounded === 1 ? "pack" : "packs" };
+      const packs = Math.round(units);
+      return {
+        value: packs.toLocaleString(),
+        label: packs === 1 ? "pack" : "packs",
+      };
     case "Tinctures":
     case "Edibles (Liquid)":
-      return { value: formatted, label: rounded === 1 ? "bottle" : "bottles" };
+      const bottles = Math.round(units);
+      return {
+        value: bottles.toLocaleString(),
+        label: bottles === 1 ? "bottle" : "bottles",
+      };
     case "Cartridges":
     case "Edibles (Solid)":
     case "Topicals":
@@ -22,7 +36,11 @@ export function formatUnits(units, category) {
     case "Hemp":
     case "Infuseds":
     default:
-      return { value: formatted, label: rounded === 1 ? "unit" : "units" };
+      const count = Math.round(units);
+      return {
+        value: count.toLocaleString(),
+        label: count === 1 ? "unit" : "units",
+      };
   }
 }
 
@@ -30,6 +48,7 @@ export function formatUnits(units, category) {
 export function getCategoryUnitLabel(category) {
   switch (category) {
     case "Flower":
+      return "Ounces";
     case "Concentrates":
     case "Extracts":
       return "Grams";

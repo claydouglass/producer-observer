@@ -96,17 +96,17 @@ export default function ProductSection({ selected, timeframe = "all" }) {
                   </div>
                 </div>
               </div>
-              <div className="flex items-center gap-4">
-                <div className="text-right">
-                  <div className="font-semibold text-gray-900">
+              <div className="flex items-center gap-6">
+                <div className="text-right min-w-[80px]">
+                  <span className="font-semibold text-gray-900">
                     {unitInfo.value}
-                  </div>
-                  <div className="text-xs text-gray-400">{unitInfo.label}</div>
+                  </span>
+                  <span className="text-gray-500 ml-1">{unitInfo.label}</span>
                 </div>
-                <div className="text-right">
-                  <div className="font-medium text-gray-900">
+                <div className="text-right min-w-[90px]">
+                  <span className="font-medium text-gray-900">
                     ${p.wholesale.toLocaleString()}
-                  </div>
+                  </span>
                 </div>
               </div>
             </div>
